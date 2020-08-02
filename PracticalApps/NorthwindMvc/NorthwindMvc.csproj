@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-NorthwindMvc-72F8E5E5-AF15-4520-91A9-EF8090AF2961</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.0-preview.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.0-preview.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.0-preview.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.0-preview.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0-preview.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include=
+      "..\NorthwindContextLib\NorthwindContextLib.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,63 @@
+@page
+@using Packt.Shared
+@model NorthwindWeb.Pages.CustomerModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="row">
+  <div>
+  @if(Model.Customer == null)
+  {
+    <h1>Customer</h1>
+    <div>No customer found.</div>
+  }
+  else
+  {
+    <h1>@Model.Customer.CompanyName</h1>
+    <p>
+      <dl>
+        <dt>Contact</dt><dd>@Model.Customer.ContactTitle @Model.Customer.ContactName</dd>
+        <dt>Address</dt><dd>@Model.Customer.Address</dd>
+        <dt>City</dt><dd>@Model.Customer.City</dd>
+        <dt>Region</dt><dd>@Model.Customer.Region</dd>
+        <dt>Postal Code</dt><dd>@Model.Customer.PostalCode</dd>
+        <dt>Country</dt><dd>@Model.Customer.Country</dd>
+        <dt>Phone</dt><dd>@Model.Customer.Phone</dd>
+      </dl>
+    </p>
+    <table class="table">
+      <thead class="thead-inverse">
+        <tr><th>Order ID</th><th>Order Date</th><th>Order Details</th></tr>
+      </thead>
+      <tbody>
+      @foreach(Order order in Model.Customer.Orders)
+      {
+        <tr>
+            <td>@order.OrderID</td>
+            <td>@order.OrderDate.Value.ToString("MMMM d, yyyy")</td>
+            <td>
+              <table class="table">
+                      <thead class="thead-inverse">
+        <tr><th>Product</th><th>Quantity</th><th>Unit Cost</th><th>Subtotal</th></tr>
+      </thead>
+      <tbody>
+
+              @foreach(OrderDetail detail in order.OrderDetails)
+              {
+                <tr>
+                  <td>@detail.Product.ProductName</td>
+                  <td>@detail.Quantity</td>
+                  <td>@detail.UnitPrice.ToString("c")</td>
+                  <td>@((detail.Quantity * detail.UnitPrice).ToString("c"))</td>
+                </tr>
+              }
+
+      </tbody>
+              </table>
+              <p>Total: @order.OrderDetails.Sum(od => od.UnitPrice * od.Quantity).ToString("c")</p>
+            </td>
+          </tr>
+      }
+      </tbody>
+    </table>
+  }
+  </div>
+</div>

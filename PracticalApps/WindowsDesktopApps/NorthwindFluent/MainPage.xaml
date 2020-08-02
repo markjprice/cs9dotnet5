@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="NorthwindFluent.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NorthwindFluent"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+  <NavigationView x:Name="NavView"
+                  ItemInvoked="NavView_ItemInvoked" 
+                  Loaded="NavView_Loaded">
+
+    <NavigationView.AutoSuggestBox>
+      <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
+    </NavigationView.AutoSuggestBox>
+
+    <NavigationView.HeaderTemplate>
+      <DataTemplate>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+          </Grid.ColumnDefinitions>
+          <TextBlock Style="{StaticResource TitleTextBlockStyle}" 
+                     FontSize="28"
+                     VerticalAlignment="Center" Margin="12,0" 
+                     Text="Northwind Fluent"/>
+          <CommandBar Grid.Column="1"
+                      HorizontalAlignment="Right" 
+                      DefaultLabelPosition="Right" 
+     Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
+            <AppBarButton Label="Refresh" Icon="Refresh" 
+                          Name="RefreshButton" 
+                          Click="RefreshButton_Click"/>
+          </CommandBar>
+        </Grid>
+      </DataTemplate>
+    </NavigationView.HeaderTemplate>
+
+    <Frame x:Name="ContentFrame">
+      <Frame.ContentTransitions>
+        <TransitionCollection>
+          <NavigationThemeTransition/>
+        </TransitionCollection>
+      </Frame.ContentTransitions>
+    </Frame>
+  </NavigationView>
+</Page>

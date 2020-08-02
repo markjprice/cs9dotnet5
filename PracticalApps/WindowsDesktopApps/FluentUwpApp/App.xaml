@@ -1,0 +1,59 @@
+﻿<Application
+    x:Class="FluentUwpApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FluentUwpApp">
+
+  <Application.Resources>
+    
+    <LinearGradientBrush x:Key="rainbow">
+      <GradientStop Color="Red" Offset="0" />
+      <GradientStop Color="Orange" Offset="0.1" />
+      <GradientStop Color="Yellow" Offset="0.3" />
+      <GradientStop Color="Green" Offset="0.5" />
+      <GradientStop Color="Blue" Offset="0.7" />
+      <GradientStop Color="Indigo" Offset="0.9" />
+      <GradientStop Color="Violet" Offset="1" />
+    </LinearGradientBrush>
+
+    <ControlTemplate x:Key="DarkGlassButton" TargetType="Button">
+      <Border BorderBrush="#FFFFFFFF"
+          BorderThickness="1,1,1,1" CornerRadius="4,4,4,4">
+        <Border x:Name="border" Background="#7F000000" 
+            BorderBrush="#FF000000" BorderThickness="1,1,1,1" 
+            CornerRadius="4,4,4,4">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Opacity="0" HorizontalAlignment="Stretch" x:Name="glow" 
+                Width="Auto" Grid.RowSpan="2" CornerRadius="4,4,4,4">
+            </Border>
+            <ContentPresenter HorizontalAlignment="Center"
+                          VerticalAlignment="Center" Width="Auto" 
+                          Grid.RowSpan="2" Padding="4"/>
+            <Border HorizontalAlignment="Stretch" Margin="0,0,0,0" 
+                x:Name="shine" Width="Auto" CornerRadius="4,4,0,0">
+              <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,0.9"
+                                 StartPoint="0.5,0.03">
+                  <GradientStop Color="#99FFFFFF" Offset="0"/>
+                  <GradientStop Color="#33FFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+              </Border.Background>
+            </Border>
+          </Grid>
+        </Border>
+      </Border>
+    </ControlTemplate>
+    
+    <Style TargetType="Button">
+      <Setter Property="Template"
+          Value="{StaticResource DarkGlassButton}" />
+      <Setter Property="Foreground" Value="White" />
+    </Style>
+
+  </Application.Resources>
+  
+</Application>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NorthwindMobile.Views.CustomerDetails"
+    Title="Edit">
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Fill"
+                     HorizontalOptions="Fill">
+            <Grid BackgroundColor="Silver">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Text="Customer ID"
+                       VerticalOptions="Center"
+                       Margin="6" />
+                <Entry Text="{Binding CustomerID, Mode=TwoWay}"
+                        Grid.Column="1" />
+                <Label Text="Company Name"
+                       Grid.Row="1"
+                       VerticalOptions="Center"
+                       Margin="6" />
+                <Entry Text="{Binding CompanyName, Mode=TwoWay}"
+                        Grid.Column="1"
+                        Grid.Row="1" />
+                <Label Text="Contact Name"
+                       Grid.Row="2"
+                       VerticalOptions="Center"
+                       Margin="6" />
+                <Entry Text="{Binding ContactName, Mode=TwoWay}"
+                        Grid.Column="1"
+                        Grid.Row="2" />
+                <Label Text="City"
+                       Grid.Row="3"
+                       VerticalOptions="Center"
+                       Margin="6" />
+                <Entry Text="{Binding City, Mode=TwoWay}"
+                        Grid.Column="1"
+                        Grid.Row="3" />
+                <Label Text="Country"
+                       Grid.Row="4"
+                       VerticalOptions="Center"
+                       Margin="6" />
+                <Entry Text="{Binding Country, Mode=TwoWay}"
+                        Grid.Column="1"
+                        Grid.Row="4" />
+                <Label Text="Phone"
+                       Grid.Row="5"
+                       VerticalOptions="Center"
+                       Margin="6" />
+                <Entry Text="{Binding Phone, Mode=TwoWay}"
+                        Grid.Column="1"
+                        Grid.Row="5" />
+            </Grid>
+            <Button x:Name="InsertButton"
+                    Text="Insert Customer"
+                    Clicked="InsertButton_Clicked" />
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

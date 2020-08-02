@@ -1,0 +1,29 @@
+@page "/deletecustomer/{customerid}"
+@inject HttpClient http
+@inject NavigationManager navigation
+<h3>Delete Customer</h3>
+<div class="alert alert-danger">
+  Warning! This action cannot be undone!
+</div>
+<CustomerDetail ButtonText="Delete Customer" 
+                ButtonStyle="danger"
+                Customer="@customer"
+                OnValidSubmit="@Delete" />
+@code {
+  [Parameter]
+  public string CustomerID { get; set; }
+
+  private Customer customer = new Customer();
+
+  protected async override Task OnParametersSetAsync()
+  {
+    customer = await http.GetFromJsonAsync<Customer>(
+      $"api/customers/{CustomerID}");
+  }
+
+  private async Task Delete()
+  {
+    await http.DeleteAsync($"api/customers/{CustomerID}");
+    navigation.NavigateTo("customers");
+  }
+}

@@ -1,0 +1,26 @@
+@*Not the best solution but meanwhile... class = d-sm-block d-md-none is hiding on md screen solution*@
+<nav class="navbar navbar-toggleable-sm d-sm-block d-md-none float-left">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">&#9776;</span>
+    </button>
+    <a class="navbar-brand" href="#"></a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            @foreach (var item in WebApp.Site.Sitemap)
+            {
+                <a class="nav-item nav-link @(item.Id == WebApp.PageId ? "active" : "")" href="@item.Permalink">@item.MenuTitle</a>
+            }
+        </div>
+    </div>
+</nav>
+@*Not the best solution but meanwhile... class =  d-none d-md-block is hiding on sm screen solution*@
+<nav class="navbar d-none d-md-block float-left">
+    <ul class="nav">
+        @foreach (var item in WebApp.Site.Sitemap)
+        {
+            <li class="nav-item @(item.Id == WebApp.PageId ? "active" : "")">
+                <a class="nav-link" href="@item.Permalink">@item.MenuTitle</a>
+            </li>
+        }
+    </ul>
+</nav>

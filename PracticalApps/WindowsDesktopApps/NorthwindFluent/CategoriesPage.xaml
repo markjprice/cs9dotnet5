@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="NorthwindFluent.CategoriesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NorthwindFluent"
+    xmlns:nw="using:Packt.Shared" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <Page.Resources>
+    <local:CategoryIDToImageConverter x:Key="id2image" />
+  </Page.Resources>
+
+  <Grid>
+    <ParallaxView Source="{x:Bind ForegroundElement}" VerticalShift="50">
+      <Image x:Name="BackgroundImage" 
+           Source="Assets/categories.jpeg" 
+           Stretch="UniformToFill"/>
+    </ParallaxView>
+
+    <ListView x:Name="ForegroundElement" 
+            ItemsSource="{x:Bind ViewModel.Categories}">
+      <ListView.Header>
+        <Grid Padding="20" 
+            Background="{ThemeResource SystemControlAcrylicElementBrush}">
+          <TextBlock Style="{StaticResource TitleTextBlockStyle}" 
+                   FontSize="24" VerticalAlignment="Center" 
+                   Margin="12,0" Text="Categories"/>
+        </Grid>
+      </ListView.Header>
+
+      <ListView.ItemTemplate>
+        <DataTemplate x:DataType="nw:Category">
+          <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition />
+              <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image 
+Source="{x:Bind CategoryID, Converter={StaticResource id2image}}" 
+            Stretch="UniformToFill" Height="200" Width="300" />
+
+            <StackPanel Padding="10" Grid.Column="1" Background=
+            "{ThemeResource SystemControlAcrylicElementMediumHighBrush}">
+              <TextBlock Text="{x:Bind CategoryName}" FontSize="20" />
+              <TextBlock Text="{x:Bind Description}" FontSize="16" />
+            </StackPanel>
+          </Grid>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Grid>
+</Page>

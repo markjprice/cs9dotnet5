@@ -1,0 +1,10 @@
+@model Packt.Shared.Category
+@{
+  ViewData["Title"] = "Category - " + Model.CategoryName;
+}
+<h1>@Model.CategoryName</h1>
+<h2>Category ID: @Model.CategoryID</h1>
+<p>@Model.Description</p>
+<img class="d-block w-100" 
+    src="~/images/category@(Model.CategoryID).jpeg" 
+    alt="Photo of @Model.CategoryName" />

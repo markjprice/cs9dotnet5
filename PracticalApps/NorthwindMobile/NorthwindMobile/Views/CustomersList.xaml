@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="NorthwindMobile.Views.CustomersList"
+	Title="List">
+	<ContentPage.Content>
+    <ListView ItemsSource="{Binding .}" 
+              VerticalOptions="Center" 
+              HorizontalOptions="Center"
+              IsPullToRefreshEnabled="True" 
+              ItemTapped="Customer_Tapped" 
+              Refreshing="Customers_Refreshing">
+      <ListView.Header>
+        <Label Text="Northwind Customers" 
+               BackgroundColor="Silver" />
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding CompanyName}" 
+                    Detail="{Binding Location}">
+            <TextCell.ContextActions>
+              <MenuItem Clicked="Customer_Phoned" Text="Phone" />
+              <MenuItem Clicked="Customer_Deleted" Text="Delete" 
+                        IsDestructive="True" />
+            </TextCell.ContextActions>
+          </TextCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+	</ContentPage.Content>
+
+	<ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add" Activated="Add_Activated" 
+                 Order="Primary" Priority="0" />
+  </ContentPage.ToolbarItems>
+
+</ContentPage>

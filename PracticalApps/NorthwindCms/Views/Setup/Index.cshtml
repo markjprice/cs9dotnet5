@@ -1,0 +1,88 @@
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Setup CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400"> 
+    <link rel="stylesheet" href="//piranhacms.org/assets/setup/css/style.css">
+
+    <title>Welcome to Piranha CMS</title>
+</head>
+<body style="background-image:url('http://piranhacms.org/assets/setup/img/ocean.jpg') !important">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-sm-12">
+                <h1>Welcome to Piranha CMS!</h1>
+                <p class="lead">
+                    Thanks for using Piranha CMS. This is the Basic Blog template which contains
+                    Models, Views and Controllers for the following:
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center block">
+            <div class="col">
+                <div class="box">
+                    <strong>Blog archive</strong>
+                    <img class="img-fluid" src="//piranhacms.org/assets/setup/img/blog-1-archive.png">
+                    <p class="small">
+                        With filtering and paging
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box">
+                    <strong>Post detail</strong>
+                    <img class="img-fluid" src="//piranhacms.org/assets/setup/img/blog-2-post.png">
+                    <p class="small">
+                        With an image &amp; block based content
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="box">
+                    <strong>Regular page</strong>
+                    <img class="img-fluid" src="//piranhacms.org/assets/setup/img/blog-3-page.png">
+                    <p class="small">
+                        With block based content
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center block">
+            <div class="col-md-10 col-sm-12">
+                <p>
+                    You can log into the admin panel at <code>~/manager</code> 
+                    with the default credentials <code>admin / password</code>. 
+                </p>
+                <p>
+                    Also, if you want we can seed some data for you so you get a hang
+                    of how to setup these page types. After you're done with the setup 
+                    you can delete the <code>SeedController</code> and the <code>~/seed</code> 
+                    directory in your project.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-sm-12">
+                <a href="@Url.Action("Seed")" class="btn btn-secondary">Seed some data</a>
+                <a href="~/manager/login" class="btn btn-secondary">Take me to the manager</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

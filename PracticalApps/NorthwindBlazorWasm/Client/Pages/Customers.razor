@@ -1,0 +1,54 @@
+@page "/customers"
+@inject HttpClient http
+
+<h1>Customers</h1>
+
+<div class="form-group">
+  <a class="btn btn-info" href="createcustomer"><i class="oi oi-plus"></i> Create New</a>
+</div>
+@if (customers == null)
+{
+  <p><em>Loading...</em></p>
+}
+else
+{
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Company Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var customer in customers)
+      {
+        <tr>
+        <td>@customer.CustomerID</td>
+        <td>@customer.CompanyName</td>
+        <td>@customer.Address<br/>
+        @customer.City<br/>
+        @customer.PostalCode<br/>
+        @customer.Country</td>
+        <td>@customer.Phone</td>
+        <td>
+          <a class="btn btn-info" href="editcustomer/@customer.CustomerID"><i class="oi oi-pencil"></i></a>
+          <a class="btn btn-danger" href="deletecustomer/@customer.CustomerID"><i class="oi oi-trash"></i></a>
+        </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
+
+@code {
+  private IEnumerable<Customer> customers;
+
+  protected override async Task OnInitializedAsync()
+  {
+    customers = await http.GetFromJsonAsync
+      <List<Customer>>("api/customers");
+  }
+}

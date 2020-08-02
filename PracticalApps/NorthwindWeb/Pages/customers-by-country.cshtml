@@ -1,0 +1,32 @@
+@page
+@using Packt.Shared
+@model NorthwindWeb.Pages.CustomersByCountryModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="row">
+  <h1 class="display-2">Customers By Country</h1>
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr><th>Country</th><th>Company</th></tr>
+    </thead>
+    <tbody>
+    @foreach(IGrouping<string, Customer> country in Model.CustomersByCountry)
+    {
+      <tr>
+        <td>@country.Key</td>
+        <td>
+          <ul>
+          @foreach (Customer customer in country)
+          {
+            <li>
+              <a asp-page="customer" asp-route-id="@customer.CustomerID">
+                @customer.CompanyName
+              </a>
+            </li>
+          }
+          </ul>
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>

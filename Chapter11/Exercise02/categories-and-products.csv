@@ -1,0 +1,78 @@
+CategoryID,CategoryName,Description,ProductID,ProductName,Cost,Stock,Discontinued
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",1,"Chai",18,39,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",2,"Chang",19,17,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",24,"Guaraná Fantástica",4.5,20,True
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",34,"Sasquatch Ale",14,111,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",35,"Steeleye Stout",18,20,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",38,"Côte de Blaye",263.5,17,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",39,"Chartreuse verte",18,69,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",43,"Ipoh Coffee",46,17,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",67,"Laughing Lumberjack Lager",14,52,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",70,"Outback Lager",15,15,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",75,"Rhönbräu Klosterbier",7.75,125,False
+1,"Beverages","Soft drinks, coffees, teas, beers, and ales",76,"Lakkalikööri",18,57,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",3,"Aniseed Syrup",10,13,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",4,"Chef Anton's Cajun Seasoning",22,53,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",5,"Chef Anton's Gumbo Mix",21.35,0,True
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",6,"Grandma's Boysenberry Spread",25,120,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",8,"Northwoods Cranberry Sauce",40,6,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",15,"Genen Shouyu",15.5,39,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",44,"Gula Malacca",19.45,27,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",61,"Sirop d'érable",28.5,113,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",63,"Vegie-spread",43.9,24,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",65,"Louisiana Fiery Hot Pepper Sauce",21.05,76,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",66,"Louisiana Hot Spiced Okra",17,4,False
+2,"Condiments","Sweet and savory sauces, relishes, spreads, and seasonings",77,"Original Frankfurter grüne Soße",13,32,False
+3,"Confections","Desserts, candies, and sweet breads",16,"Pavlova",17.45,29,False
+3,"Confections","Desserts, candies, and sweet breads",19,"Teatime Chocolate Biscuits",9.2,25,False
+3,"Confections","Desserts, candies, and sweet breads",20,"Sir Rodney's Marmalade",81,40,False
+3,"Confections","Desserts, candies, and sweet breads",21,"Sir Rodney's Scones",10,3,False
+3,"Confections","Desserts, candies, and sweet breads",25,"NuNuCa Nuß-Nougat-Creme",14,76,False
+3,"Confections","Desserts, candies, and sweet breads",26,"Gumbär Gummibärchen",31.23,15,False
+3,"Confections","Desserts, candies, and sweet breads",27,"Schoggi Schokolade",43.9,49,False
+3,"Confections","Desserts, candies, and sweet breads",47,"Zaanse koeken",9.5,36,False
+3,"Confections","Desserts, candies, and sweet breads",48,"Chocolade",12.75,15,False
+3,"Confections","Desserts, candies, and sweet breads",49,"Maxilaku",20,10,False
+3,"Confections","Desserts, candies, and sweet breads",50,"Valkoinen suklaa",16.25,65,False
+3,"Confections","Desserts, candies, and sweet breads",62,"Tarte au sucre",49.3,17,False
+3,"Confections","Desserts, candies, and sweet breads",68,"Scottish Longbreads",12.5,6,False
+4,"Dairy Products","Cheeses",11,"Queso Cabrales",21,22,False
+4,"Dairy Products","Cheeses",12,"Queso Manchego La Pastora",38,86,False
+4,"Dairy Products","Cheeses",31,"Gorgonzola Telino",12.5,0,False
+4,"Dairy Products","Cheeses",32,"Mascarpone Fabioli",32,9,False
+4,"Dairy Products","Cheeses",33,"Geitost",2.5,112,False
+4,"Dairy Products","Cheeses",59,"Raclette Courdavault",55,79,False
+4,"Dairy Products","Cheeses",60,"Camembert Pierrot",34,19,False
+4,"Dairy Products","Cheeses",69,"Gudbrandsdalsost",36,26,False
+4,"Dairy Products","Cheeses",71,"Flotemysost",21.5,26,False
+4,"Dairy Products","Cheeses",72,"Mozzarella di Giovanni",34.8,14,False
+5,"Grains/Cereals","Breads, crackers, pasta, and cereal",22,"Gustaf's Knäckebröd",21,104,False
+5,"Grains/Cereals","Breads, crackers, pasta, and cereal",23,"Tunnbröd",9,61,False
+5,"Grains/Cereals","Breads, crackers, pasta, and cereal",42,"Singaporean Hokkien Fried Mee",14,26,True
+5,"Grains/Cereals","Breads, crackers, pasta, and cereal",52,"Filo Mix",7,38,False
+5,"Grains/Cereals","Breads, crackers, pasta, and cereal",56,"Gnocchi di nonna Alice",38,21,False
+5,"Grains/Cereals","Breads, crackers, pasta, and cereal",57,"Ravioli Angelo",19.5,36,False
+5,"Grains/Cereals","Breads, crackers, pasta, and cereal",64,"Wimmers gute Semmelknödel",33.25,22,False
+6,"Meat/Poultry","Prepared meats",9,"Mishi Kobe Niku",97,29,True
+6,"Meat/Poultry","Prepared meats",17,"Alice Mutton",39,0,True
+6,"Meat/Poultry","Prepared meats",29,"Thüringer Rostbratwurst",123.79,0,True
+6,"Meat/Poultry","Prepared meats",53,"Perth Pasties",32.8,0,True
+6,"Meat/Poultry","Prepared meats",54,"Tourtière",7.45,21,False
+6,"Meat/Poultry","Prepared meats",55,"Pâté chinois",24,115,False
+7,"Produce","Dried fruit and bean curd",7,"Uncle Bob's Organic Dried Pears",30,15,False
+7,"Produce","Dried fruit and bean curd",14,"Tofu",23.25,35,False
+7,"Produce","Dried fruit and bean curd",28,"Rössle Sauerkraut",45.6,26,True
+7,"Produce","Dried fruit and bean curd",51,"Manjimup Dried Apples",53,20,False
+7,"Produce","Dried fruit and bean curd",74,"Longlife Tofu",10,4,False
+8,"Seafood","Seaweed and fish",10,"Ikura",31,31,False
+8,"Seafood","Seaweed and fish",13,"Konbu",6,24,False
+8,"Seafood","Seaweed and fish",18,"Carnarvon Tigers",62.5,42,False
+8,"Seafood","Seaweed and fish",30,"Nord-Ost Matjeshering",25.89,10,False
+8,"Seafood","Seaweed and fish",36,"Inlagd Sill",19,112,False
+8,"Seafood","Seaweed and fish",37,"Gravad lax",26,11,False
+8,"Seafood","Seaweed and fish",40,"Boston Crab Meat",18.4,123,False
+8,"Seafood","Seaweed and fish",41,"Jack's New England Clam Chowder",9.65,85,False
+8,"Seafood","Seaweed and fish",45,"Rogede sild",9.5,5,False
+8,"Seafood","Seaweed and fish",46,"Spegesild",12,95,False
+8,"Seafood","Seaweed and fish",58,"Escargots de Bourgogne",13.25,62,False
+8,"Seafood","Seaweed and fish",73,"Röd Kaviar",15,101,False

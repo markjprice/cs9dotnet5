@@ -1,0 +1,24 @@
+@model NorthwindCms.Models.Blocks.YouTubeBlock
+@{
+  string allowfullscreen = string.Empty;
+  string autoplay = string.Empty;
+  string start = string.Empty;
+
+  if (Model.AllowFullscreen)
+  {
+    allowfullscreen = "allowfullscreen";
+  }
+
+  if (Model.Autoplay)
+  {
+    autoplay = "&autoplay=1";
+  }
+
+  if (Model.Start > 0)
+  {
+    autoplay = "&start=" + Model.Start;
+  }
+}
+<iframe width="@Model.Width" height="@Model.Height" frameborder="0" @allowfullscreen
+  src="https://www.youtube.com/embed/@(Model.VideoID)?@(autoplay)@(start)">
+</iframe>

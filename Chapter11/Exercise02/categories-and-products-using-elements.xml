@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<categories>
+  <category>
+    <id>1</id>
+    <name>Beverages</name>
+    <desc>Soft drinks, coffees, teas, beers, and ales</desc>
+    <product_count>12</product_count>
+    <products>
+      <product>
+        <id>1</id>
+        <name>Chai</name>
+        <cost>18</cost>
+        <stock>39</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>2</id>
+        <name>Chang</name>
+        <cost>19</cost>
+        <stock>17</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>24</id>
+        <name>Guaraná Fantástica</name>
+        <cost>4.5</cost>
+        <stock>20</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>34</id>
+        <name>Sasquatch Ale</name>
+        <cost>14</cost>
+        <stock>111</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>35</id>
+        <name>Steeleye Stout</name>
+        <cost>18</cost>
+        <stock>20</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>38</id>
+        <name>Côte de Blaye</name>
+        <cost>263.5</cost>
+        <stock>17</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>39</id>
+        <name>Chartreuse verte</name>
+        <cost>18</cost>
+        <stock>69</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>43</id>
+        <name>Ipoh Coffee</name>
+        <cost>46</cost>
+        <stock>17</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>67</id>
+        <name>Laughing Lumberjack Lager</name>
+        <cost>14</cost>
+        <stock>52</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>70</id>
+        <name>Outback Lager</name>
+        <cost>15</cost>
+        <stock>15</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>75</id>
+        <name>Rhönbräu Klosterbier</name>
+        <cost>7.75</cost>
+        <stock>125</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>76</id>
+        <name>Lakkalikööri</name>
+        <cost>18</cost>
+        <stock>57</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+  <category>
+    <id>2</id>
+    <name>Condiments</name>
+    <desc>Sweet and savory sauces, relishes, spreads, and seasonings</desc>
+    <product_count>12</product_count>
+    <products>
+      <product>
+        <id>3</id>
+        <name>Aniseed Syrup</name>
+        <cost>10</cost>
+        <stock>13</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>4</id>
+        <name>Chef Anton's Cajun Seasoning</name>
+        <cost>22</cost>
+        <stock>53</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>5</id>
+        <name>Chef Anton's Gumbo Mix</name>
+        <cost>21.35</cost>
+        <stock>0</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>6</id>
+        <name>Grandma's Boysenberry Spread</name>
+        <cost>25</cost>
+        <stock>120</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>8</id>
+        <name>Northwoods Cranberry Sauce</name>
+        <cost>40</cost>
+        <stock>6</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>15</id>
+        <name>Genen Shouyu</name>
+        <cost>15.5</cost>
+        <stock>39</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>44</id>
+        <name>Gula Malacca</name>
+        <cost>19.45</cost>
+        <stock>27</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>61</id>
+        <name>Sirop d'érable</name>
+        <cost>28.5</cost>
+        <stock>113</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>63</id>
+        <name>Vegie-spread</name>
+        <cost>43.9</cost>
+        <stock>24</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>65</id>
+        <name>Louisiana Fiery Hot Pepper Sauce</name>
+        <cost>21.05</cost>
+        <stock>76</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>66</id>
+        <name>Louisiana Hot Spiced Okra</name>
+        <cost>17</cost>
+        <stock>4</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>77</id>
+        <name>Original Frankfurter grüne Soße</name>
+        <cost>13</cost>
+        <stock>32</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+  <category>
+    <id>3</id>
+    <name>Confections</name>
+    <desc>Desserts, candies, and sweet breads</desc>
+    <product_count>13</product_count>
+    <products>
+      <product>
+        <id>16</id>
+        <name>Pavlova</name>
+        <cost>17.45</cost>
+        <stock>29</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>19</id>
+        <name>Teatime Chocolate Biscuits</name>
+        <cost>9.2</cost>
+        <stock>25</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>20</id>
+        <name>Sir Rodney's Marmalade</name>
+        <cost>81</cost>
+        <stock>40</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>21</id>
+        <name>Sir Rodney's Scones</name>
+        <cost>10</cost>
+        <stock>3</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>25</id>
+        <name>NuNuCa Nuß-Nougat-Creme</name>
+        <cost>14</cost>
+        <stock>76</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>26</id>
+        <name>Gumbär Gummibärchen</name>
+        <cost>31.23</cost>
+        <stock>15</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>27</id>
+        <name>Schoggi Schokolade</name>
+        <cost>43.9</cost>
+        <stock>49</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>47</id>
+        <name>Zaanse koeken</name>
+        <cost>9.5</cost>
+        <stock>36</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>48</id>
+        <name>Chocolade</name>
+        <cost>12.75</cost>
+        <stock>15</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>49</id>
+        <name>Maxilaku</name>
+        <cost>20</cost>
+        <stock>10</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>50</id>
+        <name>Valkoinen suklaa</name>
+        <cost>16.25</cost>
+        <stock>65</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>62</id>
+        <name>Tarte au sucre</name>
+        <cost>49.3</cost>
+        <stock>17</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>68</id>
+        <name>Scottish Longbreads</name>
+        <cost>12.5</cost>
+        <stock>6</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+  <category>
+    <id>4</id>
+    <name>Dairy Products</name>
+    <desc>Cheeses</desc>
+    <product_count>10</product_count>
+    <products>
+      <product>
+        <id>11</id>
+        <name>Queso Cabrales</name>
+        <cost>21</cost>
+        <stock>22</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>12</id>
+        <name>Queso Manchego La Pastora</name>
+        <cost>38</cost>
+        <stock>86</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>31</id>
+        <name>Gorgonzola Telino</name>
+        <cost>12.5</cost>
+        <stock>0</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>32</id>
+        <name>Mascarpone Fabioli</name>
+        <cost>32</cost>
+        <stock>9</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>33</id>
+        <name>Geitost</name>
+        <cost>2.5</cost>
+        <stock>112</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>59</id>
+        <name>Raclette Courdavault</name>
+        <cost>55</cost>
+        <stock>79</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>60</id>
+        <name>Camembert Pierrot</name>
+        <cost>34</cost>
+        <stock>19</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>69</id>
+        <name>Gudbrandsdalsost</name>
+        <cost>36</cost>
+        <stock>26</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>71</id>
+        <name>Flotemysost</name>
+        <cost>21.5</cost>
+        <stock>26</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>72</id>
+        <name>Mozzarella di Giovanni</name>
+        <cost>34.8</cost>
+        <stock>14</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+  <category>
+    <id>5</id>
+    <name>Grains/Cereals</name>
+    <desc>Breads, crackers, pasta, and cereal</desc>
+    <product_count>7</product_count>
+    <products>
+      <product>
+        <id>22</id>
+        <name>Gustaf's Knäckebröd</name>
+        <cost>21</cost>
+        <stock>104</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>23</id>
+        <name>Tunnbröd</name>
+        <cost>9</cost>
+        <stock>61</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>42</id>
+        <name>Singaporean Hokkien Fried Mee</name>
+        <cost>14</cost>
+        <stock>26</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>52</id>
+        <name>Filo Mix</name>
+        <cost>7</cost>
+        <stock>38</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>56</id>
+        <name>Gnocchi di nonna Alice</name>
+        <cost>38</cost>
+        <stock>21</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>57</id>
+        <name>Ravioli Angelo</name>
+        <cost>19.5</cost>
+        <stock>36</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>64</id>
+        <name>Wimmers gute Semmelknödel</name>
+        <cost>33.25</cost>
+        <stock>22</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+  <category>
+    <id>6</id>
+    <name>Meat/Poultry</name>
+    <desc>Prepared meats</desc>
+    <product_count>6</product_count>
+    <products>
+      <product>
+        <id>9</id>
+        <name>Mishi Kobe Niku</name>
+        <cost>97</cost>
+        <stock>29</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>17</id>
+        <name>Alice Mutton</name>
+        <cost>39</cost>
+        <stock>0</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>29</id>
+        <name>Thüringer Rostbratwurst</name>
+        <cost>123.79</cost>
+        <stock>0</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>53</id>
+        <name>Perth Pasties</name>
+        <cost>32.8</cost>
+        <stock>0</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>54</id>
+        <name>Tourtière</name>
+        <cost>7.45</cost>
+        <stock>21</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>55</id>
+        <name>Pâté chinois</name>
+        <cost>24</cost>
+        <stock>115</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+  <category>
+    <id>7</id>
+    <name>Produce</name>
+    <desc>Dried fruit and bean curd</desc>
+    <product_count>5</product_count>
+    <products>
+      <product>
+        <id>7</id>
+        <name>Uncle Bob's Organic Dried Pears</name>
+        <cost>30</cost>
+        <stock>15</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>14</id>
+        <name>Tofu</name>
+        <cost>23.25</cost>
+        <stock>35</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>28</id>
+        <name>Rössle Sauerkraut</name>
+        <cost>45.6</cost>
+        <stock>26</stock>
+        <discontinued>True</discontinued>
+      </product>
+      <product>
+        <id>51</id>
+        <name>Manjimup Dried Apples</name>
+        <cost>53</cost>
+        <stock>20</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>74</id>
+        <name>Longlife Tofu</name>
+        <cost>10</cost>
+        <stock>4</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+  <category>
+    <id>8</id>
+    <name>Seafood</name>
+    <desc>Seaweed and fish</desc>
+    <product_count>12</product_count>
+    <products>
+      <product>
+        <id>10</id>
+        <name>Ikura</name>
+        <cost>31</cost>
+        <stock>31</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>13</id>
+        <name>Konbu</name>
+        <cost>6</cost>
+        <stock>24</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>18</id>
+        <name>Carnarvon Tigers</name>
+        <cost>62.5</cost>
+        <stock>42</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>30</id>
+        <name>Nord-Ost Matjeshering</name>
+        <cost>25.89</cost>
+        <stock>10</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>36</id>
+        <name>Inlagd Sill</name>
+        <cost>19</cost>
+        <stock>112</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>37</id>
+        <name>Gravad lax</name>
+        <cost>26</cost>
+        <stock>11</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>40</id>
+        <name>Boston Crab Meat</name>
+        <cost>18.4</cost>
+        <stock>123</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>41</id>
+        <name>Jack's New England Clam Chowder</name>
+        <cost>9.65</cost>
+        <stock>85</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>45</id>
+        <name>Rogede sild</name>
+        <cost>9.5</cost>
+        <stock>5</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>46</id>
+        <name>Spegesild</name>
+        <cost>12</cost>
+        <stock>95</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>58</id>
+        <name>Escargots de Bourgogne</name>
+        <cost>13.25</cost>
+        <stock>62</stock>
+        <discontinued>False</discontinued>
+      </product>
+      <product>
+        <id>73</id>
+        <name>Röd Kaviar</name>
+        <cost>15</cost>
+        <stock>101</stock>
+        <discontinued>False</discontinued>
+      </product>
+    </products>
+  </category>
+</categories>

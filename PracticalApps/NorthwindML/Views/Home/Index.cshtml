@@ -1,0 +1,65 @@
+﻿@using Packt.Shared
+@model HomeIndexViewModel
+@{
+  ViewData["Title"] = "Products - Northwind ML";
+}
+<h1 class="display-3">@ViewData["Title"]</h1>
+<p class="lead">
+  <div>See product recommendations in your shopping cart.</div>
+  <ol>
+    <li>First, 
+      <a asp-controller="Home" asp-action="GenerateDatasets">
+        generate some datasets</a>.</li>
+    <li>Second, 
+      <a asp-controller="Home" asp-action="TrainModels">
+        train the models</a>.</li>
+    <li>Third, add some products to your 
+      <a asp-controller="Home" asp-action="Cart">cart</a>.</li>
+  </ol>
+  <div>
+    @if (Model.GermanyDatasetExists || Model.UKDatasetExists)
+    {
+    <text>Datasets for training:</text>
+    }
+    @if (Model.GermanyDatasetExists)
+    {
+    <a href="/Data/germany-dataset.txt">Germany</a>
+    }
+    @if (Model.UKDatasetExists)
+    {
+    <a href="/Data/uk-dataset.txt">UK</a>
+    }
+    @if (Model.USADatasetExists)
+    {
+    <text>Dataset for testing:</text>
+    <a href="/Data/usa-dataset.txt">USA</a>
+    }
+  </div>
+  @if (Model.Milliseconds > 0)
+  {
+  <div>
+    It took @Model.Milliseconds milliseconds to train the models.
+  </div>
+  }
+</p>
+<hr />
+<h2>Products</h2>
+@foreach (Category category in Model.Categories)
+{
+<h3>@category.CategoryName <small>@category.Description</small></h3>
+<table>
+@foreach (Product product in category.Products)
+{
+  <tr>
+    <td>
+      <a asp-controller="Home" asp-action="Cart" 
+         asp-route-id="@product.ProductID"
+         class="btn btn-primary">Add to Cart</a>
+    </td>
+    <td>
+      @product.ProductName
+    </td>
+  </tr>
+}
+</table>
+}

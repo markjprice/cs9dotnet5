@@ -1,0 +1,95 @@
+﻿<Page
+  x:Class="FluentUwpApp.MainPage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="using:FluentUwpApp"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:kit="using:Microsoft.Toolkit.Uwp.UI.Controls"
+  mc:Ignorable="d"
+  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+  Loaded="Page_Loaded">
+
+  <StackPanel Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+    <StackPanel Orientation="Horizontal" Padding="4" 
+                Background="{StaticResource rainbow}" Name="toolbar">
+      <Button Margin="6" Padding="6" Name="ClickMeButton"
+              Click="ClickMeButton_Click">
+        Click Me
+      </Button>
+      <TextBlock Text="First name:"
+        VerticalAlignment="Center" Margin="4" />
+      <TextBox PlaceholderText="Enter your name"   
+        VerticalAlignment="Center" Width="200" />
+    </StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <Grid Background="DarkGray" Margin="10" 
+        Padding="5" Name="gridCalculator">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Content="X" />
+        <Button Grid.Row="0" Grid.Column="1" Content="/" />
+        <Button Grid.Row="0" Grid.Column="2" Content="+" />
+        <Button Grid.Row="0" Grid.Column="3" Content="-" />
+        <Button Grid.Row="1" Grid.Column="0" Content="7" />
+        <Button Grid.Row="1" Grid.Column="1" Content="8" />
+        <Button Grid.Row="1" Grid.Column="2" Content="9" />
+        <Button Grid.Row="1" Grid.Column="3" Content="0" />
+        <Button Grid.Row="2" Grid.Column="0" Content="4" />
+        <Button Grid.Row="2" Grid.Column="1" Content="5" />
+        <Button Grid.Row="2" Grid.Column="2" Content="6" />
+        <Button Grid.Row="2" Grid.Column="3" Content="." />
+        <Button Grid.Row="3" Grid.Column="0" Content="1" />
+        <Button Grid.Row="3" Grid.Column="1" Content="2" />
+        <Button Grid.Row="3" Grid.Column="2" Content="3" />
+        <Button Grid.Row="3" Grid.Column="3" Content="=" />
+      </Grid>
+      <TextBox Name="markdownSource" Text="# Welcome" 
+         Header="Enter some Markdown text:" 
+         VerticalAlignment="Stretch" Margin="5" AcceptsReturn="True" />
+      <kit:MarkdownTextBlock Margin="5"
+        Text="{Binding ElementName=markdownSource, Path=Text}" 
+        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+    </StackPanel>
+    
+    <TextBlock Grid.ColumnSpan="2" Margin="10">
+      Use the slider to rotate the square:
+    </TextBlock>
+    <Slider Value="180" Minimum="0" Maximum="360" 
+            Name="sliderRotation" Margin="10,0" />
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <StackPanel Orientation="Horizontal"
+                  VerticalAlignment="Center" 
+                  HorizontalAlignment="Center">
+        <TextBlock FontSize="30"
+          Text="{Binding ElementName=sliderRotation, Path=Value}" />
+        <TextBlock Text="degrees" FontSize="30" Margin="10,0" />
+      </StackPanel>
+      <kit:RadialGauge Grid.Column="1" Minimum="0" Maximum="360"
+        Value="{Binding ElementName=sliderRotation, Path=Value}"
+        Height="200" Width="200" />
+      <Rectangle Grid.Column="2" Height="100" Width="100" Fill="Red">
+        <Rectangle.RenderTransform>
+          <RotateTransform
+            Angle="{Binding ElementName=sliderRotation, Path=Value}" />
+        </Rectangle.RenderTransform>
+      </Rectangle>
+    </Grid>
+    
+  </StackPanel>
+</Page>
