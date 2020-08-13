@@ -60,8 +60,26 @@ namespace SelectionStatements
       string path = "/Users/markjprice/Code/Chapter03";
       // string path = @"C:\Code\Chapter03";
 
-      Stream s = File.Open(
-        Path.Combine(path, "file.txt"), FileMode.OpenOrCreate);
+      Write("Press R for readonly or W for write: ");
+      ConsoleKeyInfo key = ReadKey();
+      WriteLine();
+
+      Stream s = null;
+
+      if (key.Key == ConsoleKey.R)
+      {
+        s = File.Open(
+          Path.Combine(path, "file.txt"),
+          FileMode.OpenOrCreate,
+          FileAccess.Read);
+      }
+      else
+      {
+        s = File.Open(
+          Path.Combine(path, "file.txt"),
+          FileMode.OpenOrCreate,
+          FileAccess.Write);
+      }
 
       string message = string.Empty;
 

@@ -16,6 +16,8 @@ namespace AssembliesAndNamespaces
       string s1 = "Hello";
       String s2 = "World";
 
+      WriteLine($"{s1} {s2}");
+
       // Testing your package
 
       Write("Enter a color value in hex: ");
@@ -24,10 +26,10 @@ namespace AssembliesAndNamespaces
       WriteLine("Is {0} a valid color value? {1}",
         arg0: hex, arg1: hex.IsValidHex());
 
-      Write("Enter an XML tag: ");
+      Write("Enter an XML element: ");
       string xmlTag = ReadLine();
 
-      WriteLine("Is {0} a valid XML tag? {1}",
+      WriteLine("Is {0} a valid XML element? {1}",
         arg0: xmlTag, arg1: xmlTag.IsValidXmlTag());
 
       Write("Enter a password: ");

@@ -2,22 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Packt.CS8.SharedLibrary</PackageId>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageId>Packt.CSdotnet.SharedLibrary</PackageId>
+    <Title>C# 9 and .NET 5 Shared Library</Title>
+    <PackageVersion>5.0.0.0</PackageVersion>
     <Authors>Mark J Price</Authors>
     <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/markjprice/cs8dotnetcore3</PackageProjectUrl>
-    <PackageIcon>packt-cs8-sharedlibrary.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/markjprice/cs9dotnet5</PackageProjectUrl>
+    <PackageIcon>packt-csdotnet-sharedlibrary.png</PackageIcon>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Example shared library packaged for NuGet.</PackageReleaseNotes>
     <Description>Three extension methods to validate a string value.</Description>
-    <Copyright>Copyright © 2019 Packt Publishing Limited</Copyright>
-    <PackageTags>string extension packt cs8</PackageTags>
+    <Copyright>Copyright © 2020 Packt Publishing Limited</Copyright>
+    <PackageTags>string extensions packt csharp net5</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="packt-cs8-sharedlibrary.png">
+    <None Include="packt-csdotnet-sharedlibrary.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

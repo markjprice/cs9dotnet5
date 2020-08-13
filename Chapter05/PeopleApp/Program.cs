@@ -34,7 +34,7 @@ namespace PeopleApp
 
       bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
 
-      WriteLine(format: 
+      WriteLine(format:
         "{0}'s favorite wonder is {1}. It's integer is {2}.",
         arg0: bob.Name,
         arg1: bob.FavoriteAncientWonder,
@@ -42,7 +42,7 @@ namespace PeopleApp
 
       // Storing multiple values using an enum type
 
-      bob.BucketList = 
+      bob.BucketList =
         WondersOfTheAncientWorld.HangingGardensOfBabylon
         | WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
 
@@ -52,7 +52,7 @@ namespace PeopleApp
 
       // Storing multiple values using collections
 
-      bob.Children.Add(new Person { Name = "Alfred" }); 
+      bob.Children.Add(new Person { Name = "Alfred" });
       bob.Children.Add(new Person { Name = "Zoe" });
 
       WriteLine(
@@ -95,7 +95,7 @@ namespace PeopleApp
 
       var blankPerson = new Person();
 
-      WriteLine(format: 
+      WriteLine(format:
         "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
         arg0: blankPerson.Name,
         arg1: blankPerson.HomePlanet,
@@ -103,7 +103,7 @@ namespace PeopleApp
 
       var gunny = new Person("Gunny", "Mars");
 
-      WriteLine(format: 
+      WriteLine(format:
         "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
         arg0: gunny.Name,
         arg1: gunny.HomePlanet,
@@ -191,7 +191,7 @@ namespace PeopleApp
       // Defining settable properties
 
       sam.FavoriteIceCream = "Chocolate Fudge";
-      
+
       WriteLine($"Sam's favorite ice-cream flavor is {sam.FavoriteIceCream}.");
 
       sam.FavoritePrimaryColor = "Red";
@@ -207,6 +207,57 @@ namespace PeopleApp
       WriteLine($"Sam's second child is {sam.Children[1].Name}");
       WriteLine($"Sam's first child is {sam[0].Name}");
       WriteLine($"Sam's second child is {sam[1].Name}");
+
+      // Exploring pattern matching
+
+      object[] passengers = {
+        new FirstClassPassenger { AirMiles = 1_419 },
+        new FirstClassPassenger { AirMiles = 16_562 },
+        new BusinessClassPassenger(),
+        new CoachClassPassenger { CarryOnKG = 25.7 },
+        new CoachClassPassenger { CarryOnKG = 0 },
+      };
+
+      foreach (object passenger in passengers)
+      {
+        decimal flightCost = passenger switch
+        {
+          
+          // C# 8 syntax
+          FirstClassPassenger p when p.AirMiles > 35000 => 1500M,
+          FirstClassPassenger p when p.AirMiles > 15000 => 1750M,
+          FirstClassPassenger                           => 2000M,
+          
+          /* C# 9 syntax
+          FirstClassPassenger p when p.AirMiles switch
+          {
+            > 35000 => 1500M,
+            > 15000 => 1750M,
+            _       => 2000M
+          },
+          */
+          BusinessClassPassenger                        => 1000M,
+          CoachClassPassenger p when p.CarryOnKG < 10.0 => 500M,
+          CoachClassPassenger                           => 650M,
+          _                                             => 800M
+        };
+
+        WriteLine($"Flight costs {flightCost:C} for {passenger}");
+      }
+
+      var jeff = new ImmutablePerson
+      {
+        FirstName = "Jeff",
+        LastName = "Winger"
+      };
+
+      // the following is not allowed with init properties
+      // and data classes i.e. records
+      // jeff.LastName = "Geoff";
+
+      var geoff = jeff with { LastName = "Geoff" };
+
+
     }
   }
 }

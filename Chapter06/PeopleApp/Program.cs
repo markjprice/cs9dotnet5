@@ -16,6 +16,7 @@ namespace PeopleApp
 
       // call instance method
       var baby1 = mary.ProcreateWith(harry);
+      baby1.Name = "Gary";
 
       // call static method
       var baby2 = Person.Procreate(harry, jill);
@@ -58,14 +59,14 @@ namespace PeopleApp
       WriteLine("Initial list of people:");
       foreach (var person in people)
       {
-        WriteLine($"{person.Name}");
+        WriteLine($"  {person.Name}");
       }
 
       WriteLine("Use Person's IComparable implementation to sort:");
       Array.Sort(people);
       foreach (var person in people)
       {
-        WriteLine($"{person.Name}");
+        WriteLine($"  {person.Name}");
       }
 
       // Comparing objects using a separate class
@@ -194,14 +195,14 @@ namespace PeopleApp
         arg1: StringExtensions.IsValidEmail(email2));
 
       WriteLine(
-        "{0} is a valid e-mail address: {1}",
+        "Is {0} a valid e-mail address? {1}",
         arg0: email1,
-        arg1: email1.IsValidEmail());
+        arg1: email1.IsValidEmail() ? "Yes" : "No");
 
       WriteLine(
-        "{0} is a valid e-mail address: {1}",
+        "Is {0} a valid e-mail address? {1}",
         arg0: email2,
-        arg1: email2.IsValidEmail());
+        arg1: email2.IsValidEmail() ? "Yes" : "No");
     }
 
     private static void Harry_Shout(object sender, EventArgs e)

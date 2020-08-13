@@ -38,9 +38,13 @@ namespace WritingFunctions
     }
 
     static decimal CalculateTax(
-  decimal amount, string twoLetterRegionCode)
+      decimal amount, string twoLetterRegionCode)
     {
       decimal rate = 0.0M;
+
+      // since we are matching string values a switch
+      // statement is easier than a switch expression
+
       switch (twoLetterRegionCode)
       {
         case "CH": // Switzerland 
@@ -74,6 +78,7 @@ namespace WritingFunctions
           rate = 0.06M;
           break;
       }
+
       return amount * rate;
     }
 
@@ -105,29 +110,21 @@ namespace WritingFunctions
     {
       switch (number)
       {
-        case 11:
+        case 11: // special cases for 11th to 13th
         case 12:
         case 13:
           return $"{number}th";
         default:
           string numberAsText = number.ToString();
           char lastDigit = numberAsText[numberAsText.Length - 1];
-          string suffix = string.Empty;
-          switch (lastDigit)
+
+          string suffix = lastDigit switch
           {
-            case '1':
-              suffix = "st";
-              break;
-            case '2':
-              suffix = "nd";
-              break;
-            case '3':
-              suffix = "rd";
-              break;
-            default:
-              suffix = "th";
-              break;
-          }
+            '1' => "st",
+            '2' => "nd",
+            '3' => "rd",
+            _ => "th"
+          };
           return $"{number}{suffix}";
       }
     }
@@ -153,38 +150,25 @@ namespace WritingFunctions
       }
       else
       {
-        return number * Factorial(number - 1);
+        checked // for overflow
+        {
+          return number * Factorial(number - 1);
+        }
       }
     }
 
     static void RunFactorial()
     {
-      bool isNumber;
-      do
+      for (int i = 1; i < 15; i++)
       {
-        Write("Enter a number: ");
-
-        isNumber = int.TryParse(
-          ReadLine(), out int number);
-
-        if (isNumber)
+        try
         {
-          WriteLine(
-            $"{number:N0}! = {Factorial(number):N0}");
+          WriteLine($"{i}! = {Factorial(i):N0}");
         }
-        else
+        catch (System.OverflowException)
         {
-          WriteLine("You did not enter a valid number!");
+          WriteLine($"{i}! is too big for a 32-bit integer.");
         }
-      }
-      while (isNumber);
-    }
-
-    static void FactorialsList()
-    {
-      for(int i = 1; i < 14; i++)
-      {
-        WriteLine($"{i}! = {Factorial(i):N0}");
       }
     }
 
@@ -193,8 +177,7 @@ namespace WritingFunctions
       // RunTimesTable();
       // RunCalculateTax();
       // RunCardinalToOrdinal();
-      //RunFactorial();
-      FactorialsList();
+      RunFactorial();
     }
   }
 }

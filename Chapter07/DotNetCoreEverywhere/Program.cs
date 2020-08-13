@@ -2,11 +2,11 @@
 
 namespace DotNetCoreEverywhere
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            WriteLine("I can run everywhere!");
-        }
+      WriteLine("I can run everywhere!");
     }
+  }
 }
