@@ -19,8 +19,8 @@ namespace Packt.Shared
     public Category()
     {
       // to enable developers to add products to a Category we must
-      // initialize the navigation property to an empty list 
-      this.Products = new List<Product>();
+      // initialize the navigation property to an empty collection 
+      this.Products = new HashSet<Product>();
     }
   }
 }

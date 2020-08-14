@@ -64,6 +64,31 @@ namespace WorkingWithEFCore
       }
     }
 
+    static void FilteredIncludes()
+    {
+      using (var db = new Northwind())
+      {
+        Write("Enter a minimum for units in stock: ");
+        string unitsInStock = ReadLine();
+        int stock = int.Parse(unitsInStock);
+
+        IQueryable<Category> cats = db.Categories
+          .Include(c => c.Products.Where(p => p.Stock >= stock));
+
+        WriteLine($"ToQueryString: {cats.ToQueryString()}");
+
+        foreach (Category c in cats)
+        {
+          WriteLine($"{c.CategoryName} has {c.Products.Count} products with a minimum of {stock} units in stock.");
+
+          foreach(Product p in c.Products)
+          {
+            WriteLine($"  {p.ProductName} has {p.Stock} units in stock.");
+          }
+        }
+      }
+    }
+
     static void QueryingProducts()
     {
       using (var db = new Northwind())
@@ -196,8 +221,9 @@ namespace WorkingWithEFCore
 
     static void Main(string[] args)
     {
-      // QueryingCategories();
-      QueryingProducts();
+      QueryingCategories();
+      // FilteredIncludes();
+      // QueryingProducts();
       // QueryingWithLike();
 
       // if (AddProduct(6, "Bob's Burgers", 500M))

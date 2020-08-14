@@ -30,7 +30,7 @@ namespace Packt.Shared
         .IsRequired() // NOT NULL
         .HasMaxLength(15);
 
-      // added to "fix" the decimal support in SQLite
+      // added to "fix" the lack of decimal support in SQLite
       modelBuilder.Entity<Product>()
         .Property(product => product.Cost)
         .HasConversion<double>();
