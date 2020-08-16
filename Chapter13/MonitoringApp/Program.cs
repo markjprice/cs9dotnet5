@@ -24,8 +24,8 @@ namespace MonitoringApp
 
       int[] numbers = Enumerable.Range(1, 50_000).ToArray();
 
-      Recorder.Start();
       WriteLine("Using string with +");
+      Recorder.Start();
       string s = "";
       for (int i = 0; i < numbers.Length; i++)
       {
@@ -33,8 +33,8 @@ namespace MonitoringApp
       }
       Recorder.Stop();
 
-      Recorder.Start();
       WriteLine("Using StringBuilder");
+      Recorder.Start();
       var builder = new System.Text.StringBuilder();
       for (int i = 0; i < numbers.Length; i++)
       {

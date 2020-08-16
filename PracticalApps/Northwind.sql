@@ -30,8 +30,7 @@ CREATE TABLE "Employees" (
 	"Photo" "image" NULL ,
 	"Notes" "ntext" NULL ,
 	"ReportsTo" "int" NULL ,
-	"PhotoPath" nvarchar (255) NULL ,
-	CONSTRAINT "CK_Birthdate" CHECK (BirthDate < date("now"))
+	"PhotoPath" nvarchar (255) NULL 
 );
 CREATE INDEX "LastName" ON "Employees"("LastName");
 CREATE INDEX "PostalCodeEmployees" ON "Employees"("PostalCode");

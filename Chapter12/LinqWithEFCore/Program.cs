@@ -14,11 +14,12 @@ namespace LinqWithEFCore
       using (var db = new Northwind())
       {
         var query = db.Products
+          // query is a DbSet<Product>
           .ProcessSequence()
           .Where(product => product.UnitPrice < 10M)
-          // IQueryable<Product>
+          // query is now an IQueryable<Product>
           .OrderByDescending(product => product.UnitPrice)
-          // IOrderedQueryable<Product>
+          // query is now an IOrderedQueryable<Product>
           .Select(product => new // anonymous type
           {
             product.ProductID,
@@ -184,7 +185,7 @@ namespace LinqWithEFCore
       // JoinCategoriesAndProducts();
       // GroupJoinCategoriesAndProducts();
       // AggregateProducts();
-      CustomExtensionMethods();
+      // CustomExtensionMethods();
       // OutputProductsAsXml();
       // ProcessSettings();
     }

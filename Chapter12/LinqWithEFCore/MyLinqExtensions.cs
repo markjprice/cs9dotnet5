@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace System.Linq
+namespace System.Linq // extend Microsoft’s namespace
 {
   public static class MyLinqExtensions
   {
