@@ -12,13 +12,13 @@ namespace AsyncEnumerable
       var r = new Random();
 
       // simulate work
-      await Task.Run(() => System.Threading.Thread.Sleep(r.Next(1000, 2000)));
+      await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
       yield return r.Next(0, 101);
 
-      await Task.Run(() => System.Threading.Thread.Sleep(r.Next(1000, 2000)));
+      await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
       yield return r.Next(0, 101);
 
-      await Task.Run(() => System.Threading.Thread.Sleep(r.Next(1000, 2000)));
+      await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
       yield return r.Next(0, 101);
     }
 
