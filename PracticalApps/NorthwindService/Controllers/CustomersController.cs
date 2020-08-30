@@ -4,7 +4,7 @@ using NorthwindService.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http; // ProblemDetails
 
 namespace NorthwindService.Controllers
 {
@@ -22,11 +22,13 @@ namespace NorthwindService.Controllers
     }
 
     // GET: api/customers
-    // GET: api/customers/?country=[country] 
+    // GET: api/customers/?country=[country]
     // this will always return a list of customers even if its empty
     [HttpGet]
-    [ProducesResponseType(200, Type = typeof(IEnumerable<Customer>))]
-    public async Task<IEnumerable<Customer>> GetCustomers(string country)
+    [ProducesResponseType(200,
+      Type = typeof(IEnumerable<Customer>))]
+    public async Task<IEnumerable<Customer>> GetCustomers(
+      string country)
     {
       if (string.IsNullOrWhiteSpace(country))
       {
@@ -64,14 +66,11 @@ namespace NorthwindService.Controllers
       {
         return BadRequest(); // 400 Bad request
       }
-
       if (!ModelState.IsValid)
       {
         return BadRequest(ModelState); // 400 Bad request
       }
-
       Customer added = await repo.CreateAsync(c);
-
       return CreatedAtRoute( // 201 Created
         routeName: nameof(GetCustomer),
         routeValues: new { id = added.CustomerID.ToLower() },
@@ -94,21 +93,17 @@ namespace NorthwindService.Controllers
       {
         return BadRequest(); // 400 Bad request
       }
-
       if (!ModelState.IsValid)
       {
         return BadRequest(ModelState); // 400 Bad request
       }
 
       var existing = await repo.RetrieveAsync(id);
-
       if (existing == null)
       {
         return NotFound(); // 404 Resource not found
       }
-
       await repo.UpdateAsync(id, c);
-
       return new NoContentResult(); // 204 No content
     }
 
@@ -119,6 +114,7 @@ namespace NorthwindService.Controllers
     [ProducesResponseType(404)]
     public async Task<IActionResult> Delete(string id)
     {
+      // take control of problem details
       if (id == "bad")
       {
         var problemDetails = new ProblemDetails
@@ -139,7 +135,6 @@ namespace NorthwindService.Controllers
       }
 
       bool? deleted = await repo.DeleteAsync(id);
-
       if (deleted.HasValue && deleted.Value) // short circuit AND
       {
         return new NoContentResult(); // 204 No content

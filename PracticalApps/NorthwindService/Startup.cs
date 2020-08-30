@@ -11,16 +11,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.IO;
-using Microsoft.EntityFrameworkCore;
 using Packt.Shared;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using static System.Console;
 using NorthwindService.Repositories;
 using Swashbuckle.AspNetCore.Swagger;
-using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.AspNetCore.Mvc.Formatters.Xml;
-using static System.Console;
-using Microsoft.AspNetCore.Http; // GetEndpoint() extension method
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Http;    // GetEndpoint() extension method
 using Microsoft.AspNetCore.Routing; // RouteEndpoint
 
 namespace NorthwindService
@@ -40,7 +39,6 @@ namespace NorthwindService
       services.AddCors();
 
       string databasePath = Path.Combine("..", "Northwind.db");
-
       services.AddDbContext<Northwind>(options =>
         options.UseSqlite($"Data Source={databasePath}"));
 
@@ -50,16 +48,16 @@ namespace NorthwindService
           foreach(IOutputFormatter formatter in options.OutputFormatters)
           {
             var mediaFormatter = formatter as OutputFormatter;
-
             if (mediaFormatter == null)
             {
-              WriteLine($"  {formatter.GetType().Name}");
+              WriteLine($" {formatter.GetType().Name}");
             }
             else // OutputFormatter class has SupportedMediaTypes
             {
-              WriteLine("  {0}, Media types: {1}",
+              WriteLine(" {0}, Media types: {1}",
                 arg0: mediaFormatter.GetType().Name, 
-                arg1: string.Join(", ", mediaFormatter.SupportedMediaTypes));
+                arg1: string.Join(", ", 
+                  mediaFormatter.SupportedMediaTypes));
             }
           }
         })
@@ -72,13 +70,12 @@ namespace NorthwindService
       // Register the Swagger generator and define a Swagger document
       // for Northwind service 
       services.AddSwaggerGen(options =>
-      {
-        options.SwaggerDoc(name: "v1", info: new OpenApiInfo
-        { Title = "Northwind Service API", Version = "v1" });
-      });
+        {
+          options.SwaggerDoc(name: "v1", info: new OpenApiInfo 
+            { Title = "Northwind Service API", Version = "v1" });
+        });
 
-      services.AddHealthChecks()
-        .AddDbContextCheck<Northwind>();
+      services.AddHealthChecks().AddDbContextCheck<Northwind>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -89,36 +86,40 @@ namespace NorthwindService
         app.UseDeveloperExceptionPage();
       }
 
+      // commented out for mobile app in Chapter 21
       // app.UseHttpsRedirection();
 
       app.UseRouting();
 
       app.UseAuthorization();
 
-      // after UseRouting and before UseEndpoints
-      app.UseCors(configurePolicy: options =>
+      // must be after UseRouting and before UseEndpoints
+      app.UseCors(configurePolicy: options => 
       {
         options.WithMethods("GET", "POST", "PUT", "DELETE");
-
         options.WithOrigins(
           "https://localhost:5002" // for MVC client
         );
       });
 
+      app.UseHealthChecks(path: "/howdoyoufeel");
+
       app.Use(next => (context) =>
+      {
+        var endpoint = context.GetEndpoint();
+        if (endpoint != null)
         {
-          var endpoint = context.GetEndpoint();
+          WriteLine("*** Name: {0}; Route: {1}; Metadata: {2}",
+            arg0: endpoint.DisplayName,
+            arg1: (endpoint as RouteEndpoint)?.RoutePattern,
+            arg2: string.Join(", ", endpoint.Metadata));
+        }
 
-          if (endpoint != null)
-          {
-            WriteLine("*** Name: {0}; Route: {1}; Metadata: {2}",
-              arg0:  endpoint.DisplayName,
-              arg1: (endpoint as RouteEndpoint)?.RoutePattern,
-              arg2: string.Join(", ", endpoint.Metadata));
-          }
+        // pass context to next middleware in pipeline
+        return next(context);
+      });
 
-          return next(context); // pass context to next middleware in pipeline
-        });
+      app.UseMiddleware<SecurityHeaders>();
 
       app.UseEndpoints(endpoints =>
       {
@@ -126,18 +127,14 @@ namespace NorthwindService
       });
 
       app.UseSwagger();
-
       app.UseSwaggerUI(options =>
       {
         options.SwaggerEndpoint("/swagger/v1/swagger.json",
           "Northwind Service API Version 1");
-
-        options.SupportedSubmitMethods(new[] {
+        options.SupportedSubmitMethods(new[] { 
           SubmitMethod.Get, SubmitMethod.Post,
           SubmitMethod.Put, SubmitMethod.Delete });
       });
-
-      app.UseHealthChecks(path: "/howdoyoufeel");
     }
   }
 }

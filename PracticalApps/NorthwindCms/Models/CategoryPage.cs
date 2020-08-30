@@ -1,8 +1,6 @@
 using Piranha.AttributeBuilder;
 using Piranha.Extend;
-using Piranha.Extend.Fields;
 using Piranha.Models;
-using NorthwindCms.Models.Regions;
 using System.Collections.Generic;
 
 namespace NorthwindCms.Models
@@ -17,7 +15,7 @@ namespace NorthwindCms.Models
 
     [Region(Title = "Category products")]
     [RegionDescription("The products for this category.")]
-    public IList<ProductRegion> Products { get; set; }
-      = new List<ProductRegion>();
+    public IList<ProductRegion> Products
+      { get; set; } = new List<ProductRegion>();
   }
 }

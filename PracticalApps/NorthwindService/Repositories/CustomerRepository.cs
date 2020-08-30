@@ -10,9 +10,10 @@ namespace NorthwindService.Repositories
   public class CustomerRepository : ICustomerRepository
   {
     // use a static thread-safe dictionary field to cache the customers
-    private static ConcurrentDictionary<string, Customer> customersCache;
+    private static ConcurrentDictionary
+      <string, Customer> customersCache;
 
-    // use an instance data context field because it should not be 
+    // use an instance data context field because it should not be
     // cached due to their internal caching
     private Northwind db;
 
@@ -21,8 +22,8 @@ namespace NorthwindService.Repositories
       this.db = db;
 
       // pre-load customers from database as a normal
-      // Dictionary with CustomerID is the key,
-      // then convert to a thread-safe ConcurrentDictionary 
+      // Dictionary with CustomerID as the key,
+      // then convert to a thread-safe ConcurrentDictionary
       if (customersCache == null)
       {
         customersCache = new ConcurrentDictionary<string, Customer>(
@@ -32,7 +33,7 @@ namespace NorthwindService.Repositories
 
     public async Task<Customer> CreateAsync(Customer c)
     {
-      // normalize CustomerID into uppercase 
+      // normalize CustomerID into uppercase
       c.CustomerID = c.CustomerID.ToUpper();
 
       // add to database using EF Core
@@ -63,8 +64,7 @@ namespace NorthwindService.Repositories
       {
         // for performance, get from cache
         id = id.ToUpper();
-        Customer c;
-        customersCache.TryGetValue(id, out c);
+        customersCache.TryGetValue(id, out Customer c);
         return c;
       });
     }
@@ -91,7 +91,6 @@ namespace NorthwindService.Repositories
       // update in database
       db.Customers.Update(c);
       int affected = await db.SaveChangesAsync();
-
       if (affected == 1)
       {
         // update in cache
@@ -108,7 +107,6 @@ namespace NorthwindService.Repositories
       Customer c = db.Customers.Find(id);
       db.Customers.Remove(c);
       int affected = await db.SaveChangesAsync();
-
       if (affected == 1)
       {
         // remove from cache

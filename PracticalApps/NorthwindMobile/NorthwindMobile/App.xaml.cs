@@ -1,7 +1,7 @@
 ﻿using System;
-using NorthwindMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using NorthwindMobile.Views;
 
 namespace NorthwindMobile
 {
@@ -16,17 +16,14 @@ namespace NorthwindMobile
 
 		protected override void OnStart()
 		{
-			// Handle when your app starts
 		}
 
 		protected override void OnSleep()
 		{
-			// Handle when your app sleeps
 		}
 
 		protected override void OnResume()
 		{
-			// Handle when your app resumes
 		}
 	}
 }

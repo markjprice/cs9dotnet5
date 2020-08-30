@@ -1,5 +1,9 @@
 @model Piranha.Extend.Blocks.QuoteBlock
 
-<blockquote>
-    @Html.Raw(Model.Body)
+<blockquote class="blockquote">
+    <p>@Model.Body</p>
+    @if (!string.IsNullOrWhiteSpace(Model.Author))
+    {
+        <footer class="blockquote-footer">@Model.Author</footer>
+    }
 </blockquote>

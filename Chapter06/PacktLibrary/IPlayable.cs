@@ -8,8 +8,7 @@ namespace Packt.Shared
 
     void Pause();
 
-    // Default interface implementation
-    void Stop()
+    void Stop() // default interface implementation
     {
       WriteLine("Default implementation of Stop.");
     }

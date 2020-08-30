@@ -17,14 +17,14 @@ namespace NorthwindMvc
     }
 
     public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-              webBuilder.UseStartup<Startup>();
-              webBuilder.UseUrls(
-                "http://localhost:5000",
-                "https://localhost:5002"
-              );
-            });
+      Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+          webBuilder.UseStartup<Startup>();
+          webBuilder.UseUrls(
+            "http://localhost:5000",
+            "https://localhost:5002"
+          );
+        });
   }
 }

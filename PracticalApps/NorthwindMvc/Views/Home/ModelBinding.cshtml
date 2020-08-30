@@ -23,13 +23,13 @@
     <dd>@Model.Thing.Color</dd>
   </dl>
 </div>
-  @if (Model.HasErrors)
-  {
-  <div>
-    @foreach(string errorMessage in Model.ValidationErrors)
-    {
-    <div class="alert alert-danger" role="alert">@errorMessage</div>
-    }
-  </div>
-  }
+@if (Model.HasErrors)
+{
+<div>
+@foreach(string errorMessage in Model.ValidationErrors)
+{
+  <div class="alert alert-danger" role="alert">@errorMessage</div>
+}
+</div>
+}
 }

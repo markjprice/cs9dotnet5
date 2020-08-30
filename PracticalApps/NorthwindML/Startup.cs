@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
-using System.IO;
 using Packt.Shared;
+using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 namespace NorthwindML
 {
@@ -26,12 +26,11 @@ namespace NorthwindML
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      string databasePath = Path.Combine("..", "Northwind.db");
+      services.AddControllersWithViews();
 
+      string databasePath = Path.Combine("..", "Northwind.db");
       services.AddDbContext<Northwind>(options =>
         options.UseSqlite($"Data Source={databasePath}"));
-
-      services.AddControllersWithViews();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

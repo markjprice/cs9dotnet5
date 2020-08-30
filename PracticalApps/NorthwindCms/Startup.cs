@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Piranha;
-using Piranha.AspNetCore.Identity.SQLite;
 using Piranha.AttributeBuilder;
+using Piranha.AspNetCore.Identity.SQLite;
 using Piranha.Data.EF.SQLite;
 using Piranha.Manager.Editor;
 using System.IO;
@@ -15,10 +15,7 @@ namespace NorthwindCms
 {
   public class Startup
   {
-    /// <summary>
-    /// The application config.
-    /// </summary>
-    public IConfiguration Configuration { get; set; }
+    private readonly IConfiguration _config;
 
     /// <summary>
     /// Default constructor.
@@ -26,7 +23,7 @@ namespace NorthwindCms
     /// <param name="configuration">The current configuration</param>
     public Startup(IConfiguration configuration)
     {
-      Configuration = configuration;
+      _config = configuration;
     }
 
     // This method gets called by the runtime. Use this method to add services to the container.
@@ -36,19 +33,20 @@ namespace NorthwindCms
       // Service setup
       services.AddPiranha(options =>
       {
-        options.UseFileStorage();
+        options.AddRazorRuntimeCompilation = true;
+
+        options.UseFileStorage(naming: Piranha.Local.FileStorageNaming.UniqueFolderNames);
         options.UseImageSharp();
         options.UseManager();
         options.UseTinyMCE();
         options.UseMemoryCache();
         options.UseEF<SQLiteDb>(db =>
-          db.UseSqlite(Configuration.GetConnectionString("piranha")));
+                  db.UseSqlite(_config.GetConnectionString("piranha")));
         options.UseIdentityWithSeed<IdentitySQLiteDb>(db =>
-          db.UseSqlite(Configuration.GetConnectionString("piranha")));
+                  db.UseSqlite(_config.GetConnectionString("piranha")));
       });
 
       string databasePath = Path.Combine("..", "Northwind.db");
-
       services.AddDbContext<Packt.Shared.Northwind>(options =>
         options.UseSqlite($"Data Source={databasePath}"));
     }
@@ -64,14 +62,8 @@ namespace NorthwindCms
       // Initialize Piranha
       App.Init(api);
 
-      // register custom block
-      App.Blocks.Register<Models.Blocks.YouTubeBlock>();
-
       // register GIFs as a media type
       App.MediaTypes.Images.Add(".gif", "image/gif");
-
-      // Configure cache level
-      App.CacheLevel = Piranha.Cache.CacheLevel.Basic;
 
       // Build content types
       new ContentTypeBuilder(api)
@@ -89,8 +81,6 @@ namespace NorthwindCms
         options.UseTinyMCE();
         options.UseIdentity();
       });
-
-      app.UseHttpsRedirection();
     }
   }
 }

@@ -1,49 +1,57 @@
 @model HomeCartViewModel
 @{
-    ViewData["Title"] = "Shopping Cart - Northwind ML";
+  ViewData["Title"] = "Shopping Cart - Northwind ML";
 }
 <h1>@ViewData["Title"]</h1>
 <table class="table table-bordered">
+  <thead>
     <tr>
-        <th>Product ID</th>
-        <th>Product Name</th>
+      <th>Product ID</th>
+      <th>Product Name</th>
     </tr>
-@foreach (CartItem item in Model.Cart.Items)
-{
+  </thead>
+  <tbody>
+  @foreach (CartItem item in Model.Cart.Items)
+  {
     <tr>
-        <td>@item.ProductID</td>
-        <td>@item.ProductName</td>
+      <td>@item.ProductID</td>
+      <td>@item.ProductName</td>
     </tr>
 }
+  </tbody>
 </table>
 <h2>Customers who bought items in your cart also bought the following products</h2>
 @if (Model.Recommendations.Count() == 0)
 {
-    <div>No recommendations.</div>
+<div>No recommendations.</div>
 }
 else
 {
 <table class="table table-bordered">
+  <thead>
     <tr>
-        <th></th>
-        <th>Co-bought Product</th>
-        <th>Score</th>
+      <th></th>
+      <th>Co-bought Product</th>
+      <th>Score</th>
     </tr>
-@foreach (EnrichedRecommendation rec in Model.Recommendations)
-{
+  </thead>
+  <tbody>
+  @foreach (EnrichedRecommendation rec in Model.Recommendations)
+  {
     <tr>
-    <td>
+      <td>
         <a asp-controller="Home" asp-action="Cart" 
-            asp-route-id="@rec.CoboughtProductID"
-        class="btn btn-primary">Add to Cart</a>
-    </td>
-    <td>
+           asp-route-id="@rec.CoboughtProductID"
+           class="btn btn-outline-success">Add to Cart</a>
+      </td>
+      <td>
         @rec.ProductName
-    </td>
-    <td>
+      </td>
+      <td>
         @rec.Score
-    </td>
+      </td>
     </tr>
-}
+  }
+  </tbody>
 </table>
 }

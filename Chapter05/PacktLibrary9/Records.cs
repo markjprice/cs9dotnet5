@@ -1,22 +1,22 @@
 namespace Packt.Shared
 {
-  public data class ImmutablePerson // a record
+  public record ImmutablePerson
   {
-    string FirstName;
-    string LastName;
+    string FirstName {get; init;}
+    string LastName {get; init;}
 
-    public ImmutablePerson(string firstName, string lastName)
-    {
-      FirstName = firstName;
-      LastName = lastName;
-    }
+    // public ImmutablePerson(string FirstName, string LastName)
+    // {
+    //   this.FirstName = FirstName;
+    //   this.LastName = LastName;
+    // }
 
-    public void Deconstruct(out string firstName, out string lastName)
-    {
-      firstName = FirstName;
-      lastName = LastName;
-    }
+    // public void Deconstruct(out string firstName, out string lastName)
+    // {
+    //   firstName = FirstName;
+    //   lastName = LastName;
+    // }
   }
 
-  public data class ImmutablePerson2(string FirstName, string LastName);
+  public record ImmutablePerson2(string FirstName, string LastName);
 }

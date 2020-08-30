@@ -6,7 +6,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Packt.Shared;
 using NorthwindCms.Models;
-using NorthwindCms.Models.Regions;
 using Microsoft.EntityFrameworkCore; // Include() extension method
 
 namespace NorthwindCms.Controllers
@@ -14,7 +13,6 @@ namespace NorthwindCms.Controllers
   public class ImportController : Controller
   {
     private readonly IApi api;
-
     private readonly Northwind db;
 
     public ImportController(IApi api, Northwind injectedContext)
@@ -30,49 +28,50 @@ namespace NorthwindCms.Controllers
       int existCount = 0;
 
       var site = await api.Sites.GetDefaultAsync();
+
       var catalog = await api.Pages
         .GetBySlugAsync<CatalogPage>("catalog");
 
-      var categories = db.Categories.Include(c => c.Products);
-
-      foreach (var category in categories)
+      foreach (Category c in
+        db.Categories.Include(c => c.Products))
       {
         // if the category page already exists,
         // then skip to the next iteration of the loop
-        CategoryPage categoryPage =
-          await api.Pages.GetBySlugAsync<CategoryPage>(
-          $"catalog/{category.CategoryName.ToLower().Replace(' ', '-')}");
+        CategoryPage cp = await api.Pages.GetBySlugAsync<CategoryPage>(
+          $"catalog/{c.CategoryName.ToLower().Replace(' ', '-')}");
 
-        if (categoryPage == null)
+        if (cp == null)
         {
           importCount++;
 
-          categoryPage = await CategoryPage.CreateAsync(api);
+          cp = await CategoryPage.CreateAsync(api);
 
-          categoryPage.Id = Guid.NewGuid();
-          categoryPage.SiteId = site.Id;
-          categoryPage.ParentId = catalog.Id;
+          cp.Id = Guid.NewGuid();
+          cp.SiteId = site.Id;
+          cp.ParentId = catalog.Id;
+          cp.CategoryDetail.CategoryID = c.CategoryID;
+          cp.CategoryDetail.CategoryName = c.CategoryName;
+          cp.CategoryDetail.Description = c.Description;
 
-          categoryPage.CategoryDetail.CategoryID =
-            category.CategoryID;
-          categoryPage.CategoryDetail.CategoryName =
-            category.CategoryName;
-          categoryPage.CategoryDetail.Description =
-            category.Description;
+          // find the media folder named Categories
+          Guid categoriesFolderID =
+            (await api.Media.GetAllFoldersAsync())
+            .First(folder => folder.Name == "Categories").Id;
 
           // find image with correct filename for category id
-          var image = (await api.Media.GetAllByFolderIdAsync())
+          var image = (await api.Media
+            .GetAllByFolderIdAsync(categoriesFolderID))
             .First(media => media.Type == MediaType.Image
-            && media.Filename ==
-            $"category{category.CategoryID}.jpeg");
+            && media.Filename == $"category{c.CategoryID}.jpeg");
 
-          categoryPage.CategoryDetail.CategoryImage = image;
+          cp.CategoryDetail.CategoryImage = image;
 
-          if (categoryPage.Products.Count == 0)
+
+          if (cp.Products.Count == 0)
           {
             // convert the products for this category into
             // a list of instances of ProductRegion
-            categoryPage.Products = category.Products
+            cp.Products = c.Products
               .Select(p => new ProductRegion
               {
                 ProductID = p.ProductID,
@@ -83,12 +82,12 @@ namespace NorthwindCms.Controllers
               }).ToList();
           }
 
-          categoryPage.Title = category.CategoryName;
-          categoryPage.MetaDescription = category.Description;
-          categoryPage.NavigationTitle = category.CategoryName;
-          categoryPage.Published = DateTime.Now;
+          cp.Title = c.CategoryName;
+          cp.MetaDescription = c.Description;
+          cp.NavigationTitle = c.CategoryName;
+          cp.Published = DateTime.Now;
 
-          await api.Pages.SaveAsync(categoryPage);
+          await api.Pages.SaveAsync(cp);
         }
         else
         {
@@ -97,7 +96,7 @@ namespace NorthwindCms.Controllers
       }
 
       TempData["import_message"] = $"{existCount} categories already existed. {importCount} new categories imported.";
-
+      
       return Redirect("~/");
     }
   }

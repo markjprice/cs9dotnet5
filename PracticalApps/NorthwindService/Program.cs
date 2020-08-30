@@ -22,9 +22,9 @@ namespace NorthwindService
         {
           webBuilder.UseStartup<Startup>();
           webBuilder.UseUrls(
-            "https://localhost:5001", // for MVC
-            "http://localhost:5003"   // for iOS
-            );
+            "https://localhost:5001", // for MVC client
+            "http://localhost:5003" // for mobile client
+          );
         });
   }
 }

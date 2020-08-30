@@ -7,15 +7,12 @@
   <ItemGroup>
     <PackageReference 
       Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" 
-      Version="5.0.0-preview.7.*" />
+      Version="5.0.0-preview.*" />
     <PackageReference 
       Include="Microsoft.EntityFrameworkCore.Sqlite" 
-      Version="5.0.0-preview.7.*" />
-    <PackageReference 
-      Include="Microsoft.ML" 
-      Version="1.5.1" />
-    <PackageReference 
-      Include="Microsoft.ML.Recommender" 
+      Version="5.0.0-preview.*" />
+    <PackageReference Include="Microsoft.ML" Version="1.5.1" />
+    <PackageReference Include="Microsoft.ML.Recommender" 
       Version="0.17.1" />
   </ItemGroup>
 

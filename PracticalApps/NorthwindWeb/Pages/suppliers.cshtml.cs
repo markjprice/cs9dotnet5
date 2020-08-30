@@ -22,6 +22,10 @@ namespace NorthwindWeb.Pages
       ViewData["Title"] = "Northwind Web Site - Suppliers";
 
       Suppliers = db.Suppliers.Select(s => s.CompanyName);
+
+      // Suppliers = new[] {
+      //   "Alpha Co", "Beta Limited", "Gamma Corp"
+      // };
     }
 
     [BindProperty]

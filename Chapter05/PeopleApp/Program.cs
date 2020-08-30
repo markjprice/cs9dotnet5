@@ -245,19 +245,27 @@ namespace PeopleApp
         WriteLine($"Flight costs {flightCost:C} for {passenger}");
       }
 
-      var jeff = new ImmutablePerson
-      {
-        FirstName = "Jeff",
-        LastName = "Winger"
-      };
+      // var jeff = new ImmutablePerson
+      // {
+      //   FirstName = "Jeff",
+      //   LastName = "Winger"
+      // };
 
       // the following is not allowed with init properties
       // and data classes i.e. records
       // jeff.LastName = "Geoff";
 
-      var geoff = jeff with { LastName = "Geoff" };
+      //var geoff = jeff with { FirstName = "Geoff", LastName = jeff.LastName };
 
+      var annie = new ImmutablePerson2("Annie", "Edison");
 
+      var (firstName, lastName) = annie;
+
+      WriteLine($"annie: {firstName} {lastName}");
+
+      var annieMarried = annie with { LastName = "Winger" };
+
+      WriteLine($"annieMarried: {annieMarried.FirstName} {annieMarried.LastName}");
     }
   }
 }

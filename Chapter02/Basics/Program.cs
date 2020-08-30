@@ -10,8 +10,8 @@ namespace Basics
     {
       // declare some unused variables using types
       // in additional assemblies
-      System.Data.DataSet ds;
-      System.Net.Http.HttpClient client;
+      //System.Data.DataSet ds;
+      //System.Net.Http.HttpClient client;
 
       // loop through the assemblies that this app references 
       foreach (var r in Assembly.GetEntryAssembly()

@@ -1,4 +1,3 @@
-@using Piranha.Models
 @using NorthwindCms.Models
 @model CatalogViewModel
 @{
@@ -17,7 +16,7 @@
       <a class="card-link" href="@c.PageUrl">
         <div class="card border-dark" style="width: 18rem;">
           <img class="card-img-top" src="@c.ImageUrl" 
-               alt="Image of @c.Title" asp-append-version="true" />
+            alt="Image of @c.Title" asp-append-version="true" />
           <div class="card-body">
             <h5 class="card-title text-info">@c.Title</h5>
             <p class="card-text text-info">@c.Description</p>

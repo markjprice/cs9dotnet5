@@ -9,16 +9,14 @@ using NorthwindMvc.Models;
 using Packt.Shared;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http;
-using Newtonsoft.Json;
+using System.Net.Http.Json;
 
 namespace NorthwindMvc.Controllers
 {
   public class HomeController : Controller
   {
     private readonly ILogger<HomeController> _logger;
-
-    private readonly Northwind db;
-
+    private Northwind db;
     private readonly IHttpClientFactory clientFactory;
 
     public HomeController(
@@ -39,8 +37,18 @@ namespace NorthwindMvc.Controllers
         Categories = await db.Categories.ToListAsync(),
         Products = await db.Products.ToListAsync()
       };
-
       return View(model); // pass model to view
+    }
+
+    public IActionResult Privacy()
+    {
+      return View();
+    }
+
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+      return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
     public async Task<IActionResult> ProductDetail(int? id)
@@ -57,7 +65,6 @@ namespace NorthwindMvc.Controllers
       {
         return NotFound($"Product with ID of {id} not found.");
       }
-
       return View(model); // pass model to view and then return result
     }
 
@@ -79,7 +86,6 @@ namespace NorthwindMvc.Controllers
           .SelectMany(state => state.Errors)
           .Select(error => error.ErrorMessage)
       };
-
       return View(model);
     }
 
@@ -93,39 +99,21 @@ namespace NorthwindMvc.Controllers
       IEnumerable<Product> model = db.Products
         .Include(p => p.Category)
         .Include(p => p.Supplier)
-        .AsEnumerable() // switch to client-side
         .Where(p => p.UnitPrice > price);
 
       if (model.Count() == 0)
       {
-        return NotFound($"No products cost more than {price:C}.");
+        return NotFound(
+          $"No products cost more than {price:C}.");
       }
+
       ViewData["MaxPrice"] = price.Value.ToString("C");
-
       return View(model); // pass model to view
-    }
-
-    [Route("private")]
-    public IActionResult Privacy()
-    {
-      return View();
-    }
-
-    [ResponseCache(Duration = 0,
-      Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-      return View(new ErrorViewModel
-      {
-        RequestId =
-        Activity.Current?.Id ?? HttpContext.TraceIdentifier
-      });
     }
 
     public async Task<IActionResult> Customers(string country)
     {
       string uri;
-
       if (string.IsNullOrEmpty(country))
       {
         ViewData["Title"] = "All Customers Worldwide";
@@ -145,10 +133,8 @@ namespace NorthwindMvc.Controllers
 
       HttpResponseMessage response = await client.SendAsync(request);
 
-      string jsonString = await response.Content.ReadAsStringAsync();
-
-      IEnumerable<Customer> model = JsonConvert
-        .DeserializeObject<IEnumerable<Customer>>(jsonString);
+      var model = await response.Content
+        .ReadFromJsonAsync<IEnumerable<Customer>>();
 
       return View(model);
     }

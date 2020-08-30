@@ -1,10 +1,47 @@
-@model NorthwindCms.Models.StandardPage
+@model StandardPage
 @{
-    ViewBag.Title = Model.Title;
+    ViewData["Title"] = !string.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Title;
+    var hasImage = Model.PrimaryImage.HasValue;
+}
+@section head {
+    @WebApp.MetaTags(Model)
 }
 
-<div class="container">
+<header @(hasImage ? "class=has-image" : "") @(hasImage ? $"style=background-image:url({ @Url.Content(WebApp.Media.ResizeImage(Model.PrimaryImage, 1920, 400)) })" : "")>
+  <div class="dimmer"></div>
+  <div class="container text-center">
     <h1>@Model.Title</h1>
-    
-    @Html.DisplayFor(m => m.Blocks)
-</div>
+    @if (!string.IsNullOrWhiteSpace(Model.Excerpt))
+    {
+      <div class="row justify-content-center">
+        <div class="col-lg-8 lead">
+          @Html.Raw(Model.Excerpt)
+        </div>
+      </div>
+    }
+  </div>
+</header>
+
+<main>
+  @if(TempData["import_message"] != null)
+  {
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="alert alert-info" role="alert">
+          <h4 class="alert-heading">Import</h4>
+          <p>@TempData["import_message"]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+  @foreach (var block in Model.Blocks)
+  {
+    <div class="block @block.CssName()">
+      <div class="container">
+        @Html.DisplayFor(m => block, block.GetType().Name)
+      </div>
+    </div>
+  }
+</main>

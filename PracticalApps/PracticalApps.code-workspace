@@ -1,13 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "NorthwindWeb"
-		},
-		{
 			"path": "NorthwindEntitiesLib"
 		},
 		{
 			"path": "NorthwindContextLib"
+		},
+		{
+			"path": "NorthwindWeb"
 		},
 		{
 			"path": "NorthwindEmployees"
@@ -22,14 +22,10 @@
 			"path": "NorthwindService"
 		},
 		{
+			"path": "SimpleWeb"
+		},
+		{
 			"path": "NorthwindML"
-		},
-		{
-			"path": "NorthwindBlazorServer"
-		},
-		{
-			"path": "NorthwindBlazorWasm"
 		}
-	],
-	"settings": {}
+	]
 }

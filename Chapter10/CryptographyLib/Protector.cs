@@ -23,9 +23,12 @@ namespace Packt.Shared
     {
       byte[] encryptedBytes;
       byte[] plainBytes = Encoding.Unicode.GetBytes(plainText);
-      var aes = Aes.Create();
+
+      var aes = Aes.Create(); // abstract class factory method
+      
       var pbkdf2 = new Rfc2898DeriveBytes(
         password, salt, iterations);
+      
       aes.Key = pbkdf2.GetBytes(32); // set a 256-bit key 
       aes.IV = pbkdf2.GetBytes(16); // set a 128-bit IV 
 
@@ -47,9 +50,12 @@ namespace Packt.Shared
     {
       byte[] plainBytes;
       byte[] cryptoBytes = Convert.FromBase64String(cryptoText);
+
       var aes = Aes.Create();
+      
       var pbkdf2 = new Rfc2898DeriveBytes(
         password, salt, iterations);
+      
       aes.Key = pbkdf2.GetBytes(32);
       aes.IV = pbkdf2.GetBytes(16);
 
