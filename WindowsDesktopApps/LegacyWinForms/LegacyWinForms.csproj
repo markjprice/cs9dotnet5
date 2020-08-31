@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{941642ED-58FC-434D-A8F8-39CE8BA60C9F}</ProjectGuid>
+    <ProjectGuid>{DA2417D4-29E9-41F5-BF9C-E090C5FE5A0E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>LegacyWinForms</RootNamespace>
     <AssemblyName>LegacyWinForms</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>

@@ -36,24 +36,24 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(18, 18);
+            this.monthCalendar1.Location = new System.Drawing.Point(51, 54);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
             // btnGoToChristmas
             // 
-            this.btnGoToChristmas.Location = new System.Drawing.Point(463, 66);
+            this.btnGoToChristmas.Location = new System.Drawing.Point(505, 74);
             this.btnGoToChristmas.Name = "btnGoToChristmas";
-            this.btnGoToChristmas.Size = new System.Drawing.Size(281, 65);
+            this.btnGoToChristmas.Size = new System.Drawing.Size(243, 49);
             this.btnGoToChristmas.TabIndex = 1;
             this.btnGoToChristmas.Text = "Go to Christmas";
             this.btnGoToChristmas.UseVisualStyleBackColor = true;
-            this.btnGoToChristmas.Click += new System.EventHandler(this.BtnGoToChristmas_Click);
+            this.btnGoToChristmas.Click += new System.EventHandler(this.btnGoToChristmas_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(503, 172);
+            this.label1.Location = new System.Drawing.Point(505, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 2;
@@ -61,9 +61,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(485, 240);
+            this.textBox1.Location = new System.Drawing.Point(505, 272);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 31);
+            this.textBox1.Size = new System.Drawing.Size(196, 31);
             this.textBox1.TabIndex = 3;
             // 
             // Form1
