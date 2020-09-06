@@ -24,19 +24,21 @@
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="customers">
-                <span class="oi oi-people" aria-hidden="true"></span> Customers
+                <span class="oi oi-people" 
+                aria-hidden="true"></span> Customers
             </NavLink>
         </li>
+
     </ul>
 </div>
 
 @code {
-  private bool collapseNavMenu = true;
+    private bool collapseNavMenu = true;
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
     private void ToggleNavMenu()
     {
-      collapseNavMenu = !collapseNavMenu;
+        collapseNavMenu = !collapseNavMenu;
     }
 }

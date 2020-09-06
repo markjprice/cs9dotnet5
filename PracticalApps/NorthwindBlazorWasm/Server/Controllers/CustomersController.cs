@@ -31,24 +31,49 @@ namespace NorthwindBlazorWasm.Server.Controllers
     }
 
     [HttpPost]
-    public async Task<int> CreateCustomerAsync(Customer c)
+    public async Task<Customer> CreateCustomerAsync(Customer customerToAdd)
     {
-      db.Customers.Add(c);
-      return await db.SaveChangesAsync();
+      Customer existing = await db.Customers.FirstOrDefaultAsync
+        (c => c.CustomerID == customerToAdd.CustomerID);
+
+      if (existing == null)
+      {
+        db.Customers.Add(customerToAdd);
+        int affected = await db.SaveChangesAsync();
+        if (affected == 1)
+        {
+          return customerToAdd;
+        }
+      }
+      return existing;
     }
 
     [HttpPut]
-    public async Task<int> UpdateCustomerAsync(Customer c)
+    public async Task<Customer> UpdateCustomerAsync(Customer c)
     {
       db.Entry(c).State = EntityState.Modified;
-      return await db.SaveChangesAsync();
+      int affected = await db.SaveChangesAsync();
+      if (affected == 1)
+      {
+        return c;
+      }
+      return null;
     }
 
-    [HttpDelete]
-    public async Task<int> DeleteCustomerAsync(Customer c)
+    [HttpDelete("{id}")]
+    public async Task<int> DeleteCustomerAsync(string id)
     {
-      db.Customers.Remove(c);
-      return await db.SaveChangesAsync();
+      Customer c = await db.Customers.FirstOrDefaultAsync
+        (c => c.CustomerID == id);
+
+      if (c != null)
+      {
+        db.Customers.Remove(c);
+        int affected = await db.SaveChangesAsync();
+        return affected;
+      }
+      
+      return 0;
     }
   }
 }

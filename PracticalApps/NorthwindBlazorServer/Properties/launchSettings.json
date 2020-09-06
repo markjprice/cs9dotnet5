@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:31733",
-      "sslPort": 44380
+      "applicationUrl": "http://localhost:34369",
+      "sslPort": 44397
     }
   },
   "profiles": {
@@ -17,6 +17,7 @@
     },
     "NorthwindBlazorServer": {
       "commandName": "Project",
+      "dotnetRunMessages": "true",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {

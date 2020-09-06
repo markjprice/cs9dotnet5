@@ -1,5 +1,5 @@
 @page "/customers"
-@inject HttpClient http
+@inject INorthwindService service
 
 <h1>Customers</h1>
 
@@ -48,7 +48,6 @@ else
 
   protected override async Task OnInitializedAsync()
   {
-    customers = await http.GetFromJsonAsync
-      <List<Customer>>("api/customers");
+    customers = await service.GetCustomersAsync();
   }
 }

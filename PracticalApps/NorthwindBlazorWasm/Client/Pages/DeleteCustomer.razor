@@ -1,5 +1,5 @@
 @page "/deletecustomer/{customerid}"
-@inject HttpClient http
+@inject INorthwindService service
 @inject NavigationManager navigation
 <h3>Delete Customer</h3>
 <div class="alert alert-danger">
@@ -17,13 +17,12 @@
 
   protected async override Task OnParametersSetAsync()
   {
-    customer = await http.GetFromJsonAsync<Customer>(
-      $"api/customers/{CustomerID}");
+    customer = await service.GetCustomerAsync(CustomerID);
   }
 
   private async Task Delete()
   {
-    await http.DeleteAsync($"api/customers/{CustomerID}");
+    await service.DeleteCustomerAsync(CustomerID);
     navigation.NavigateTo("customers");
   }
 }

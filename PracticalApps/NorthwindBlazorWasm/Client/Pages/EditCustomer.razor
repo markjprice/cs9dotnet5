@@ -1,5 +1,5 @@
 @page "/editcustomer/{customerid}"
-@inject HttpClient http
+@inject INorthwindService service
 @inject NavigationManager navigation
 <h3>Edit Customer</h3>
 <CustomerDetail ButtonText="Update" 
@@ -13,13 +13,12 @@
 
   protected async override Task OnParametersSetAsync()
   {
-    customer = await http.GetFromJsonAsync<Customer>
-      ($"api/customers/{CustomerID}");
+    customer = await service.GetCustomerAsync(CustomerID);
   }
 
   private async Task Update()
   {
-    await http.PutAsJsonAsync<Customer>($"api/customers", customer);
+    await service.UpdateCustomerAsync(customer);
     navigation.NavigateTo("customers");
   }
 }

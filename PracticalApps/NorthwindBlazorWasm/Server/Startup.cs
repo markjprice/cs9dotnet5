@@ -7,8 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 using Packt.Shared;
-using System.IO;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace NorthwindBlazorWasm.Server
 {

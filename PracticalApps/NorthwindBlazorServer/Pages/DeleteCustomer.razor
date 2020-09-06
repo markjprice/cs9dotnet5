@@ -1,5 +1,5 @@
 @page "/deletecustomer/{customerid}"
-@inject NorthwindService service
+@inject INorthwindService service
 @inject NavigationManager navigation
 <h3>Delete Customer</h3>
 <div class="alert alert-danger">
@@ -22,7 +22,7 @@
 
   private async Task Delete()
   {
-    await service.DeleteCustomerAsync(customer);
+    await service.DeleteCustomerAsync(CustomerID);
     navigation.NavigateTo("customers");
   }
 }

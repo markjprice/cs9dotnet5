@@ -5,7 +5,7 @@ using Packt.Shared;
 
 namespace NorthwindBlazorServer.Data
 {
-  public class NorthwindService
+  public class NorthwindService : INorthwindService
   {
     private readonly Northwind db;
 
@@ -21,24 +21,29 @@ namespace NorthwindBlazorServer.Data
 
     public Task<Customer> GetCustomerAsync(string id)
     {
-      return db.Customers.FirstOrDefaultAsync(c => c.CustomerID == id);
+      return db.Customers.FirstOrDefaultAsync
+        (c => c.CustomerID == id);
     }
 
-    public Task<int> CreateCustomerAsync(Customer c)
+    public Task<Customer> CreateCustomerAsync(Customer c)
     {
       db.Customers.Add(c);
-      return db.SaveChangesAsync();
+      db.SaveChangesAsync();
+      return Task.FromResult<Customer>(c);
     }
 
-    public Task<int> UpdateCustomerAsync(Customer c)
+    public Task<Customer> UpdateCustomerAsync(Customer c)
     {
       db.Entry(c).State = EntityState.Modified;
-      return db.SaveChangesAsync();
+      db.SaveChangesAsync();
+      return Task.FromResult<Customer>(c);
     }
 
-    public Task<int> DeleteCustomerAsync(Customer c)
+    public Task DeleteCustomerAsync(string id)
     {
-      db.Customers.Remove(c);
+      Customer customer = db.Customers.FirstOrDefaultAsync
+        (c => c.CustomerID == id).Result;
+      db.Customers.Remove(customer);
       return db.SaveChangesAsync();
     }
   }

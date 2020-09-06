@@ -1,10 +1,10 @@
-﻿using NorthwindBlazorWasm.Shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using NorthwindBlazorWasm.Shared;
 
 namespace NorthwindBlazorWasm.Server.Controllers
 {
@@ -17,11 +17,14 @@ namespace NorthwindBlazorWasm.Server.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> logger;
+        private readonly ILogger<WeatherForecastController> _logger;
+
+        // The Web API will only accept tokens 1) for users, and 2) having the access_as_user scope for this API
+        static readonly string[] scopeRequiredByApi = new string[] { "user_impersonation" };
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
-            this.logger = logger;
+            _logger = logger;
         }
 
         [HttpGet]
