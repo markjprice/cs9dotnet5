@@ -115,14 +115,13 @@ namespace WritingFunctions
         case 13:
           return $"{number}th";
         default:
-          string numberAsText = number.ToString();
-          char lastDigit = numberAsText[numberAsText.Length - 1];
+          int lastDigit = number % 10;
 
           string suffix = lastDigit switch
           {
-            '1' => "st",
-            '2' => "nd",
-            '3' => "rd",
+            1 => "st",
+            2 => "nd",
+            3 => "rd",
             _ => "th"
           };
           return $"{number}{suffix}";
@@ -220,10 +219,10 @@ namespace WritingFunctions
     {
       // RunTimesTable();
       // RunCalculateTax();
-      // RunCardinalToOrdinal();
+      RunCardinalToOrdinal();
       // RunFactorial();
       // RunFibImperative();
-      RunFibFunctional();
+      // RunFibFunctional();
     }
   }
 }

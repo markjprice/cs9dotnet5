@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml;
 
 namespace Variables
 {
@@ -30,6 +32,18 @@ namespace Variables
       var fruit = "Apples"; // strings use double-quotes 
       var letter = 'Z'; // chars use single-quotes
       var happy = true; // Booleans have value of true or false
+
+      // good use of var because it avoids the repeated type
+      // as shown in the more verbose second statement
+      var xml1 = new XmlDocument();
+      XmlDocument xml2 = new XmlDocument();
+      XmlDocument xml3 = new(); // target-typed new in C# 9
+
+      // bad use of var because we cannot tell the type, so we 
+      // should use a specific type declaration as shown in 
+      // the second statement
+      var file1 = File.CreateText(@"C:\something.txt");
+      StreamWriter file2 = File.CreateText(@"C:\something.txt");
 
       Console.WriteLine($"default(int) = {default(int)}");
       Console.WriteLine($"default(bool) = {default(bool)}");

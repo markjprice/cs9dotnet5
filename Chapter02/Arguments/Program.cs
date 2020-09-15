@@ -14,10 +14,10 @@ namespace Arguments
         WriteLine(arg);
       }
 
-      if (args.Length < 4)
+      if (args.Length < 3)
       {
-        WriteLine("You must specify two colors and dimensions, e.g.");
-        WriteLine("dotnet run red yellow 80 40");
+        WriteLine("You must specify two colors and a cursor size, e.g.");
+        WriteLine("dotnet run red yellow 10");
         return; // stop running
       }
 
@@ -31,14 +31,14 @@ namespace Arguments
         value: args[1],
         ignoreCase: true);
 
+
       try
       {
-        WindowWidth = int.Parse(args[2]);
-        WindowHeight = int.Parse(args[3]);
+        CursorSize = int.Parse(args[2]);
       }
       catch (PlatformNotSupportedException)
       {
-        WriteLine("The current platform does not support changing the size of a console window.");
+        WriteLine("The current platform does not support changing the size of the cursor.");
       }
     }
   }

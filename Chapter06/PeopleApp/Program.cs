@@ -195,14 +195,14 @@ namespace PeopleApp
         arg1: StringExtensions.IsValidEmail(email2));
 
       WriteLine(
-        "Is {0} a valid e-mail address? {1}",
+        "{0} is a valid e-mail address: {1}",
         arg0: email1,
-        arg1: email1.IsValidEmail() ? "Yes" : "No");
+        arg1: email1.IsValidEmail());
 
       WriteLine(
-        "Is {0} a valid e-mail address? {1}",
+        "{0} is a valid e-mail address: {1}",
         arg0: email2,
-        arg1: email2.IsValidEmail() ? "Yes" : "No");
+        arg1: email2.IsValidEmail());
     }
 
     private static void Harry_Shout(object sender, EventArgs e)

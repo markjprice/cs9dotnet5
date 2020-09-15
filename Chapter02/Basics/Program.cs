@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Reflection;
 
+// #error version
+
 namespace Basics
 {
   class Program

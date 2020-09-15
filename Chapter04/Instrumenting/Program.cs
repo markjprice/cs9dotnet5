@@ -36,7 +36,6 @@ namespace Instrumenting
       Trace.WriteLineIf(ts.TraceWarning, "Trace warning");
       Trace.WriteLineIf(ts.TraceInfo, "Trace information");
       Trace.WriteLineIf(ts.TraceVerbose, "Trace verbose");
-
     }
   }
 }

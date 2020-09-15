@@ -35,7 +35,7 @@ namespace PeopleApp
       bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
 
       WriteLine(format:
-        "{0}'s favorite wonder is {1}. It's integer is {2}.",
+        "{0}'s favorite wonder is {1}. Its integer is {2}.",
         arg0: bob.Name,
         arg1: bob.FavoriteAncientWonder,
         arg2: (int)bob.FavoriteAncientWonder);
@@ -222,50 +222,55 @@ namespace PeopleApp
       {
         decimal flightCost = passenger switch
         {
-          
-          // C# 8 syntax
+
+          /* C# 8 syntax
           FirstClassPassenger p when p.AirMiles > 35000 => 1500M,
           FirstClassPassenger p when p.AirMiles > 15000 => 1750M,
-          FirstClassPassenger                           => 2000M,
-          
-          /* C# 9 syntax
-          FirstClassPassenger p when p.AirMiles switch
+          FirstClassPassenger                           => 2000M, */
+
+          // C# 9 syntax
+          FirstClassPassenger p => p.AirMiles switch
           {
             > 35000 => 1500M,
             > 15000 => 1750M,
-            _       => 2000M
+            _ => 2000M
           },
-          */
-          BusinessClassPassenger                        => 1000M,
+
+          BusinessClassPassenger => 1000M,
           CoachClassPassenger p when p.CarryOnKG < 10.0 => 500M,
-          CoachClassPassenger                           => 650M,
-          _                                             => 800M
+          CoachClassPassenger => 650M,
+          _ => 800M
         };
 
         WriteLine($"Flight costs {flightCost:C} for {passenger}");
       }
 
-      // var jeff = new ImmutablePerson
-      // {
-      //   FirstName = "Jeff",
-      //   LastName = "Winger"
-      // };
+      // Working with records
+
+      var jeff = new ImmutablePerson
+      {
+        FirstName = "Jeff",
+        LastName = "Winger"
+      };
 
       // the following is not allowed with init properties
-      // and data classes i.e. records
-      // jeff.LastName = "Geoff";
+      // jeff.FirstName = "Geoff";
 
-      //var geoff = jeff with { FirstName = "Geoff", LastName = jeff.LastName };
+      var car = new ImmutableVehicle
+      {
+        Brand = "Mazda MX-5",
+        Color = "Metallic Soul Red",
+        Wheels = 4
+      };
 
-      var annie = new ImmutablePerson2("Annie", "Edison");
+      var repaintedCar = car with { Color = "Polymetallic Grey" };
 
-      var (firstName, lastName) = annie;
+      WriteLine("Original color was {0}, new color is {1}.",
+        arg0: car.Color, arg1: repaintedCar.Color);
 
-      WriteLine($"annie: {firstName} {lastName}");
-
-      var annieMarried = annie with { LastName = "Winger" };
-
-      WriteLine($"annieMarried: {annieMarried.FirstName} {annieMarried.LastName}");
+      var oscar = new ImmutableAnimal("Oscar", "Labrador");
+      var (who, what) = oscar; // calls Deconstruct method
+      WriteLine($"{who} is a {what}.");
     }
   }
 }
