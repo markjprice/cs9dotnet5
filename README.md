@@ -1,7 +1,8 @@
 # Important
 - [Errata](errata.md)
-- [Appendix, Answers to the Test Your Knowledge Questions](https://static.packt-cdn.com/downloads/9781788478120_Appendix_Answers_to_the_Test_Your_Knowledge_Questions.pdf)
-- [Color images of the screenshots/diagrams used in this book](https://static.packt-cdn.com/downloads/9781788478120_ColorImages.pdf)
+- Color images of the screenshots/diagrams used in this book (coming soon)
+- Appendix A, Answers to the Test Your Knowledge Questions (coming soon)
+- Appendix B, Building Windows Desktop Apps (coming soon)
 # Repository for the Packt Publishing book
 ## C# 9 and .NET 5 - Modern Cross-Platform Development, Fifth Edition
 
