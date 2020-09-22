@@ -10,7 +10,7 @@ namespace HandlingExceptions
       WriteLine("Before parsing");
 
       Write("What is your age? ");
-      string input = Console.ReadLine();
+      string input = ReadLine();
 
       try
       {

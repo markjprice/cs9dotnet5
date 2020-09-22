@@ -91,7 +91,7 @@ namespace CastingConverting
 
       Write("How many eggs are there? ");
       int count;
-      string input = Console.ReadLine();
+      string input = ReadLine();
       if (int.TryParse(input, out count))
       {
         WriteLine($"There are {count} eggs.");
