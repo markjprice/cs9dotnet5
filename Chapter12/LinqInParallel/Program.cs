@@ -10,12 +10,12 @@ namespace LinqInParallel
   {
     static void Main(string[] args)
     {
-      var watch = Stopwatch.StartNew();
+      var watch = new Stopwatch();
       Write("Press ENTER to start: ");
       ReadLine();
       watch.Start();
 
-      IEnumerable<int> numbers = Enumerable.Range(1, 200_000_000);
+      IEnumerable<int> numbers = Enumerable.Range(1, 2_000_000_000);
 
       // var squares = numbers
       //   .Select(number => number * number).ToArray();
@@ -25,7 +25,7 @@ namespace LinqInParallel
 
       watch.Stop();
       WriteLine("{0:#,##0} elapsed milliseconds.",
-        watch.ElapsedMilliseconds);
+        arg0: watch.ElapsedMilliseconds);
     }
   }
 }

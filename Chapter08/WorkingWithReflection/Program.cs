@@ -3,6 +3,7 @@ using System.Reflection;
 using static System.Console;
 using System.Linq; // to use OrderByDescending
 using System.Runtime.CompilerServices; // to use CompilerGeneratedAttribute
+using Packt.Shared; // CoderAttribute
 
 namespace WorkingWithReflection
 {
@@ -38,6 +39,8 @@ namespace WorkingWithReflection
 
       foreach (Type type in types)
       {
+        // to skip over compiler-generated members like:
+        // Field: <>9__0_0 (<>c)
         var compilerGenerated = type.GetCustomAttribute<CompilerGeneratedAttribute>();
         if (compilerGenerated != null) break;
 

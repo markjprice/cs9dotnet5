@@ -26,6 +26,12 @@
 		},
 		{
 			"path": "NorthwindML"
+		},
+		{
+			"path": "NorthwindBlazorWasm"
+		},
+		{
+			"path": "NorthwindBlazorServer"
 		}
 	]
 }

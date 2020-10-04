@@ -51,8 +51,6 @@ namespace NorthwindBlazorWasm.Client.Data
     {
       HttpResponseMessage response = await
         http.DeleteAsync($"api/customers/{id}");
-
-      return;
     }
   }
 }

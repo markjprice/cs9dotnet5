@@ -34,13 +34,14 @@ namespace NorthwindMvc
       services.AddDbContext<ApplicationDbContext>(options =>
         options.UseSqlite(
           Configuration.GetConnectionString("DefaultConnection")));
+      
+      services.AddDatabaseDeveloperPageExceptionFilter();
 
       services.AddDefaultIdentity<IdentityUser>(
         options => options.SignIn.RequireConfirmedAccount = true)
         .AddEntityFrameworkStores<ApplicationDbContext>();
 
       services.AddControllersWithViews();
-      services.AddRazorPages();
 
       string databasePath = Path.Combine("..", "Northwind.db");
       services.AddDbContext<Northwind>(options => 
@@ -62,7 +63,6 @@ namespace NorthwindMvc
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
-        app.UseDatabaseErrorPage();
       }
       else
       {

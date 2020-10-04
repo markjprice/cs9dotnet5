@@ -13,13 +13,13 @@ namespace AsyncEnumerable
 
       // simulate work
       await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
-      yield return r.Next(0, 101);
+      yield return r.Next(0, 1001);
 
       await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
-      yield return r.Next(0, 101);
+      yield return r.Next(0, 1001);
 
       await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
-      yield return r.Next(0, 101);
+      yield return r.Next(0, 1001);
     }
 
     static async Task Main(string[] args)

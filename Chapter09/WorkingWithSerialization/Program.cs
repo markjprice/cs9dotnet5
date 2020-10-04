@@ -60,7 +60,7 @@ namespace WorkingWithSerialization
         foreach (var item in loadedPeople)
         {
           WriteLine("{0} has {1} children.",
-            item.LastName, item.Children.Count);
+            item.LastName, item.Children.Count ?? 0);
         }
       }
 
@@ -98,7 +98,7 @@ namespace WorkingWithSerialization
         foreach (var item in loadedPeople)
         {
           WriteLine("{0} has {1} children.",
-            item.LastName, item.Children?.Count);
+            item.LastName, item.Children?.Count ?? 0);
         }
       }
     }

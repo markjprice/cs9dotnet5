@@ -9,7 +9,7 @@
       "..\NorthwindEntitiesLib\NorthwindEntitiesLib.csproj" />
     <PackageReference
       Include="Microsoft.EntityFrameworkCore.SQLite" 
-      Version="5.0.0-preview.*" />
+      Version="5.0.0-rc.*" />
   </ItemGroup>
 
 </Project>

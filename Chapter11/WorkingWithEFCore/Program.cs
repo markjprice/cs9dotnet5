@@ -221,7 +221,7 @@ namespace WorkingWithEFCore
 
     static void Main(string[] args)
     {
-      QueryingCategories();
+      // QueryingCategories();
       // FilteredIncludes();
       // QueryingProducts();
       // QueryingWithLike();
@@ -238,7 +238,7 @@ namespace WorkingWithEFCore
 
       // int deleted = DeleteProducts("Bob");
       // WriteLine($"{deleted} product(s) were deleted.");
-      // ListProducts();
+      ListProducts();
     }
   }
 }

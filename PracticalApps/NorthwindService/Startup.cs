@@ -45,7 +45,7 @@ namespace NorthwindService
       services.AddControllers(options =>
         {
           WriteLine("Default output formatters:");
-          foreach(IOutputFormatter formatter in options.OutputFormatters)
+          foreach (IOutputFormatter formatter in options.OutputFormatters)
           {
             var mediaFormatter = formatter as OutputFormatter;
             if (mediaFormatter == null)
@@ -55,8 +55,8 @@ namespace NorthwindService
             else // OutputFormatter class has SupportedMediaTypes
             {
               WriteLine(" {0}, Media types: {1}",
-                arg0: mediaFormatter.GetType().Name, 
-                arg1: string.Join(", ", 
+                arg0: mediaFormatter.GetType().Name,
+                arg1: string.Join(", ",
                   mediaFormatter.SupportedMediaTypes));
             }
           }
@@ -71,8 +71,8 @@ namespace NorthwindService
       // for Northwind service 
       services.AddSwaggerGen(options =>
         {
-          options.SwaggerDoc(name: "v1", info: new OpenApiInfo 
-            { Title = "Northwind Service API", Version = "v1" });
+          options.SwaggerDoc(name: "v1", info: new OpenApiInfo
+          { Title = "Northwind Service API", Version = "v1" });
         });
 
       services.AddHealthChecks().AddDbContextCheck<Northwind>();
@@ -84,6 +84,17 @@ namespace NorthwindService
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
+
+        app.UseSwagger();
+        app.UseSwaggerUI(c =>
+        {
+          c.SwaggerEndpoint("/swagger/v1/swagger.json",
+            "Northwind Service API Version 1");
+
+          c.SupportedSubmitMethods(new[] {
+            SubmitMethod.Get, SubmitMethod.Post,
+            SubmitMethod.Put, SubmitMethod.Delete });
+        });
       }
 
       // commented out for mobile app in Chapter 21
@@ -94,7 +105,7 @@ namespace NorthwindService
       app.UseAuthorization();
 
       // must be after UseRouting and before UseEndpoints
-      app.UseCors(configurePolicy: options => 
+      app.UseCors(configurePolicy: options =>
       {
         options.WithMethods("GET", "POST", "PUT", "DELETE");
         options.WithOrigins(
@@ -124,16 +135,6 @@ namespace NorthwindService
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllers();
-      });
-
-      app.UseSwagger();
-      app.UseSwaggerUI(options =>
-      {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json",
-          "Northwind Service API Version 1");
-        options.SupportedSubmitMethods(new[] { 
-          SubmitMethod.Get, SubmitMethod.Post,
-          SubmitMethod.Put, SubmitMethod.Delete });
       });
     }
   }

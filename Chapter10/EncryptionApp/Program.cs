@@ -1,6 +1,6 @@
-﻿using System;
-using System.Security.Cryptography;
-using Packt.Shared;
+﻿using System;                       // Exception
+using System.Security.Cryptography; // CryptographicException
+using Packt.Shared;                 // Protector
 using static System.Console;
 
 namespace EncryptionApp

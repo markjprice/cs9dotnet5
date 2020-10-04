@@ -1,15 +1,18 @@
 using System;
 
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, 
-  AllowMultiple = true)]
-public class CoderAttribute : Attribute
+namespace Packt.Shared
 {
-  public string Coder { get; set; }
-  public DateTime LastModified { get; set; }
-
-  public CoderAttribute(string coder, string lastModified)
+  [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method,
+    AllowMultiple = true)]
+  public class CoderAttribute : Attribute
   {
-    Coder = coder;
-    LastModified = DateTime.Parse(lastModified);
+    public string Coder { get; set; }
+    public DateTime LastModified { get; set; }
+
+    public CoderAttribute(string coder, string lastModified)
+    {
+      Coder = coder;
+      LastModified = DateTime.Parse(lastModified);
+    }
   }
 }

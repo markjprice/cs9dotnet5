@@ -48,7 +48,7 @@ namespace LinqWithEFCore
           innerKeySelector: product => product.CategoryID,
           resultSelector: (c, p) =>
             new { c.CategoryName, p.ProductName, p.ProductID })
-          .OrderBy(cp => cp.ProductID);
+          .OrderBy(cp => cp.CategoryName);
 
         foreach (var item in queryJoin)
         {
@@ -181,7 +181,7 @@ namespace LinqWithEFCore
 
     static void Main(string[] args)
     {
-      // FilterAndSort();
+      FilterAndSort();
       // JoinCategoriesAndProducts();
       // GroupJoinCategoriesAndProducts();
       // AggregateProducts();

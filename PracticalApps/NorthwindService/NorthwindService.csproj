@@ -14,7 +14,7 @@
       Version="5.5.1" />
     <PackageReference Include=
       "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" 
-      Version="5.0.0-preview.*" />
+      Version="5.0.0-rc.*" />
   </ItemGroup>
 
 </Project>

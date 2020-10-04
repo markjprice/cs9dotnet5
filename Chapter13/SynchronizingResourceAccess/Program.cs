@@ -17,14 +17,19 @@ namespace SynchronizingResourceAccess
     {
       try
       {
-        Monitor.TryEnter(conch, TimeSpan.FromSeconds(15));
-
-        for (int i = 0; i < 5; i++)
+        if (Monitor.TryEnter(conch, TimeSpan.FromSeconds(15)))
         {
-          Thread.Sleep(r.Next(2000));
-          Message += "A";
-          Interlocked.Increment(ref Counter);
-          Write(".");
+          for (int i = 0; i < 5; i++)
+          {
+            Thread.Sleep(r.Next(2000));
+            Message += "A";
+            Interlocked.Increment(ref Counter);
+            Write(".");
+          }
+        }
+        else
+        {
+          WriteLine("Method A failed to enter a monitor lock.");
         }
       }
       finally
@@ -37,14 +42,19 @@ namespace SynchronizingResourceAccess
     {
       try
       {
-        Monitor.TryEnter(conch, TimeSpan.FromSeconds(15));
-        
-        for (int i = 0; i < 5; i++)
+        if (Monitor.TryEnter(conch, TimeSpan.FromSeconds(15)))
         {
-          Thread.Sleep(r.Next(2000));
-          Message += "B";
-          Interlocked.Increment(ref Counter);
-          Write(".");
+          for (int i = 0; i < 5; i++)
+          {
+            Thread.Sleep(r.Next(2000));
+            Message += "B";
+            Interlocked.Increment(ref Counter);
+            Write(".");
+          }
+        }
+        else
+        {
+          WriteLine("Method B failed to enter a monitor lock.");
         }
       }
       finally

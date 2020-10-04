@@ -22,6 +22,8 @@ namespace Packt.Shared
 
     [Key]
     [Column(TypeName = "nchar (5)")]
+    [StringLength(5)]
+    [RegularExpression("[A-Z]{5}")]
     public string CustomerID { get; set; }
 
     [Required]

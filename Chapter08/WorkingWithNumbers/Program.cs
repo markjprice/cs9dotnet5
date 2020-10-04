@@ -1,6 +1,6 @@
-﻿using System;
-using static System.Console;
+﻿using System; // to use Half
 using System.Numerics; // to use BigInteger
+using static System.Console;
 
 namespace WorkingWithNumbers
 {
@@ -8,6 +8,10 @@ namespace WorkingWithNumbers
   {
     static void Main(string[] args)
     {
+      // Working with 16-bit floats
+
+      Half smallFloat = (Half)64000.5;
+
       // Working with big integers
 
       var largest = ulong.MaxValue;

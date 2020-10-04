@@ -44,7 +44,6 @@ namespace Exercise02
       using (FileStream xmlStream = File.Create(
         Combine(CurrentDirectory, xmlFile)))
       {
-
         using (XmlWriter xml = XmlWriter.Create(xmlStream,
           new XmlWriterSettings { Indent = true }))
         {
