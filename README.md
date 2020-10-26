@@ -1,5 +1,6 @@
 # Important
 - [Errata](errata.md)
+- [Free Chapter 5 Building Your Own Types with Object-Oriented Programming](B16689_05.pdf)
 - Color images of the screenshots/diagrams used in this book (coming soon)
 - Appendix A, Answers to the Test Your Knowledge Questions (coming soon)
 - Appendix B, Building Windows Desktop Apps (coming soon)
