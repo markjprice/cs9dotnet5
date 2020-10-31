@@ -42,13 +42,13 @@ namespace Packt.Shared
     public decimal UnitPrice { get; set; }
 
     [Column(TypeName = "smallint")]
-    public long? UnitsInStock { get; set; }
+    public short? UnitsInStock { get; set; }
 
     [Column(TypeName = "smallint")]
-    public long? UnitsOnOrder { get; set; }
+    public short? UnitsOnOrder { get; set; }
 
     [Column(TypeName = "smallint")]
-    public long? ReorderLevel { get; set; }
+    public short? ReorderLevel { get; set; }
 
     [Required]
     [Column(TypeName = "bit")]
