@@ -39,10 +39,10 @@ namespace Packt.Shared
     public string TitleOfCourtesy { get; set; }
 
     [Column(TypeName = "datetime")]
-    public byte[] BirthDate { get; set; }
+    public DateTime? BirthDate { get; set; }
 
     [Column(TypeName = "datetime")]
-    public byte[] HireDate { get; set; }
+    public DateTime? HireDate { get; set; }
 
     [Column(TypeName = "nvarchar (60)")]
     [StringLength(60)]
