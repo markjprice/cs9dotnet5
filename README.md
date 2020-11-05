@@ -1,9 +1,14 @@
-# Important
+# Useful links
+## Important
+A list of corrections for typos and other mistakes.
 - [Errata](errata.md)
-- [Free Chapter 5 Building Your Own Types with Object-Oriented Programming](B16689_05.pdf)
-- Color images of the screenshots/diagrams used in this book (coming soon)
-- Appendix A, Answers to the Test Your Knowledge Questions (coming soon)
-- Appendix B, Building Windows Desktop Apps (coming soon)
+## Online book materials
+Supplementary materials available to download.
+- [Free chapter for evaluation: Chapter 5 Building Your Own Types with Object-Oriented Programming](B16689_05.pdf)
+- [Color images of the screenshots/diagrams used in this book](https://static.packt-cdn.com/downloads/9781800568105_ColorImages.pdf)
+- [Appendices](https://static.packt-cdn.com/downloads/Appendices.pdf)
+  - Appendix A, Answers to the Test Your Knowledge Questions
+  - Appendix B, Building Windows Desktop Apps
 ## Podcast interviews
 Podcast interviews with me about the fourth edition:
 - [The .NET Core Podcast](https://dotnetcore.show/episode-44-learning-net-core-with-mark-j-price/)
