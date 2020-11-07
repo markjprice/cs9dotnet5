@@ -25,10 +25,10 @@ namespace Packt.Shared
       byte[] plainBytes = Encoding.Unicode.GetBytes(plainText);
 
       var aes = Aes.Create(); // abstract class factory method
-      
+
       var pbkdf2 = new Rfc2898DeriveBytes(
         password, salt, iterations);
-      
+
       aes.Key = pbkdf2.GetBytes(32); // set a 256-bit key 
       aes.IV = pbkdf2.GetBytes(16); // set a 128-bit IV 
 
@@ -52,10 +52,10 @@ namespace Packt.Shared
       byte[] cryptoBytes = Convert.FromBase64String(cryptoText);
 
       var aes = Aes.Create();
-      
+
       var pbkdf2 = new Rfc2898DeriveBytes(
         password, salt, iterations);
-      
+
       aes.Key = pbkdf2.GetBytes(32);
       aes.IV = pbkdf2.GetBytes(16);
 
@@ -72,7 +72,8 @@ namespace Packt.Shared
       return Encoding.Unicode.GetString(plainBytes);
     }
 
-    private static Dictionary<string, User> Users =
+    // make the field public to simplify exercises
+    public static Dictionary<string, User> Users =
       new Dictionary<string, User>();
 
     public static User Register(string username, string password,

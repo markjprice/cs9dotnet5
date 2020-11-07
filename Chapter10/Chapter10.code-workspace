@@ -17,6 +17,12 @@
 		},
 		{
 			"path": "SecureApp"
+		},
+		{
+			"path": "Exercise02"
+		},
+		{
+			"path": "Exercise03"
 		}
 	]
 }
