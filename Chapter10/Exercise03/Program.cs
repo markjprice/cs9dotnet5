@@ -59,14 +59,6 @@ namespace Exercise03
             Password = passwordHashed,
             Salt = salt
           });
-
-          // load the customers as users to check their password
-          Protector.Users.Add(name, new User
-          {
-            Name = name,
-            Salt = salt,
-            SaltedHashedPassword = passwordHashed
-          });
         }
       }
 
@@ -110,7 +102,10 @@ namespace Exercise03
       string attemptPassword = ReadLine();
 
       if (Protector.CheckPassword(
-        customers[number].Name, attemptPassword))
+        username: customers[number].Name, 
+        password: attemptPassword,
+        salt: customers[number].Salt, 
+        hashedPassword: customers[number].Password))
       {
         WriteLine("Correct!");
       }

@@ -72,8 +72,7 @@ namespace Packt.Shared
       return Encoding.Unicode.GetString(plainBytes);
     }
 
-    // make the field public to simplify exercises
-    public static Dictionary<string, User> Users =
+    private static Dictionary<string, User> Users =
       new Dictionary<string, User>();
 
     public static User Register(string username, string password,
@@ -101,19 +100,30 @@ namespace Packt.Shared
       return user;
     }
 
+    // check a user's password that is stored
+    // in the private static dictionary Users
     public static bool CheckPassword(string username, string password)
     {
       if (!Users.ContainsKey(username))
       {
         return false;
       }
+
       var user = Users[username];
 
+      return CheckPassword(username, password, 
+        user.Salt, user.SaltedHashedPassword);
+    }
+
+    // check a user's password using salt and hashed password
+    public static bool CheckPassword(string username, string password, 
+      string salt, string hashedPassword)
+    {
       // re-generate the salted and hashed password 
       var saltedhashedPassword = SaltAndHashPassword(
-        password, user.Salt);
+        password, salt);
 
-      return (saltedhashedPassword == user.SaltedHashedPassword);
+      return (saltedhashedPassword == hashedPassword);
     }
 
     private static string SaltAndHashPassword(
