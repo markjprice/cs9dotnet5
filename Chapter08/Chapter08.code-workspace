@@ -38,6 +38,9 @@
 		},
 		{
 			"path": "WorkingWithImages"
+		},
+		{
+			"path": "Exercise03UnitTests"
 		}
 	]
 }
