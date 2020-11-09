@@ -12,7 +12,7 @@ Corrections for typos and other mistakes.
 
 ## Online book materials
 Supplementary materials available to download.
-- Free chapter for evaluation: [Chapter 5 - Building Your Own Types with Object-Oriented Programming](B16689_05.pdf)
+<!-- - Free chapter for evaluation: [Chapter 5 - Building Your Own Types with Object-Oriented Programming](B16689_05.pdf) -->
 - [Color images](https://static.packt-cdn.com/downloads/9781800568105_ColorImages.pdf) of the screenshots/diagrams used in this book
 - [Appendices](https://static.packt-cdn.com/downloads/9781800568105_Appendices.pdf) for this book
   - Appendix A, Answers to the Test Your Knowledge Questions
