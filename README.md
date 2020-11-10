@@ -16,6 +16,8 @@ Supplementary materials available to download and useful links post-publishing.
 - [Announcing the Release of EF Core 5.0](https://devblogs.microsoft.com/dotnet/announcing-the-release-of-ef-core-5-0/)
 - [Announcing ASP.NET Core in .NET 5](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/)
 - [Breaking changes for migration from version 3.1 to 5.0](https://docs.microsoft.com/en-us/dotnet/core/compatibility/3.1-5.0)
+- [C# 9.0 on the record](https://devblogs.microsoft.com/dotnet/c-9-0-on-the-record/)
+- [.NET 5.0 Examples](https://gist.github.com/richlander/50c34a8714eb3436e5d9d4d5d420776e)
 - [Color images](https://static.packt-cdn.com/downloads/9781800568105_ColorImages.pdf) of the screenshots/diagrams used in this book
 - [Appendices](https://static.packt-cdn.com/downloads/9781800568105_Appendices.pdf) for this book
   - Appendix A, Answers to the Test Your Knowledge Questions
