@@ -7,8 +7,8 @@ Order the book today!
 - [Amazon.co.uk](https://www.amazon.co.uk/dp/180056810X/)
 
 ## Important
-Corrections for typos and other mistakes.
-- [Errata](errata.md)
+Corrections for typos and other mistakes, and improvements like refactoring code.
+- [Errata & Improvements](errata.md)
 
 ## Online materials
 Supplementary book materials available to download as PDFs: 
