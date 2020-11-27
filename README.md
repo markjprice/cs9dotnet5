@@ -16,6 +16,7 @@ Supplementary book materials available to download as PDFs:
 - [Appendices](https://static.packt-cdn.com/downloads/9781800568105_Appendices.pdf) for this book
   - Appendix A, Answers to the Test Your Knowledge Questions
   - Appendix B, Building Windows Desktop Apps
+- The [cs9dotnet5-extras](https://github.com/markjprice/cs9dotnet5-extras) repository contains articles that support the book, for example, instructions for using a Raspberry Pi to complete the coding tasks in the book.
 
 Useful links post-publishing: 
 - [Announcing .NET 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0/)
