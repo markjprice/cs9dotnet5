@@ -4,9 +4,16 @@ If you find any mistakes in the fifth edition, C# 9 and .NET 5, or if you have s
 
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
-The code uses 2000 iterations for PBKDF2 and I said this is "double the recommended salt size and iteration count". I first wrote that code and statement in the fall of 2015 for the first edition and I have neglected to keep it updated. More than five years later, 2000 is not enough! 
+The code in the book uses 2000 iterations for PBKDF2 to generate a key and initialization vector (IV) for the encryption algorithm. I said that this is "double the recommended salt size and iteration count". I first wrote that code and statement in the fall of 2015 for the first edition and I have neglected to keep it updated. More than five years later, 2000 is not enough! I have updated the project in GitHub to use 50,000 iterations, as shown in the following code:
 
-To avoid updating the value every edition, what I will say in the sixth edition is that the best iteration count for PBKDF2 is whatever number takes about 100ms on the target machine. Now that anyone can buy a $699 Apple Mac mini with amazing performance, that recommendation could be closer to 100,000 iterations. And that value will only increase as time passes. 
+```
+// iterations should be high enough to take at least 100ms to 
+// generate a Key and IV on the target machine. 50,000 iterations
+// takes 131ms on my 3.3 GHz Dual-Core Intel Core i7 MacBook Pro.
+private static readonly int iterations = 50_000;
+```
+
+To avoid updating the value every edition, what I will say in the sixth edition is that the best iteration count for PBKDF2 is whatever number takes about 100ms on the target machine. Now that anyone can buy a $699 Apple Mac mini with amazing performance, that recommendation could be closer to a million iterations! And that value will only increase as time passes. 
 
 As I said on page 334, "If security is important to you (and it should be!), then hire an experienced security expert for guidance rather than relying on advice found online." Or in a generalist programming book.
 
