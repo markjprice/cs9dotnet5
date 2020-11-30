@@ -47,6 +47,9 @@ Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int
 
 If you uncomment the statement that assigns an array of `int` values, then the code works without throwing an exception because all arrays have a `Length` property.
 
+## Page 113 - Writing a function that returns a value
+The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
+
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
 The code in the book uses 2000 iterations for PBKDF2 to generate a key and initialization vector (IV) for the encryption algorithm. I said that this is "double the recommended salt size and iteration count". I first wrote that code and statement in the fall of 2015 for the first edition and I have neglected to keep it updated. More than five years later, 2000 is not enough! I have updated the project in GitHub to use 50,000 iterations, as shown in the following code:
