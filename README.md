@@ -26,11 +26,14 @@ Useful links post-publishing:
 - [C# 9.0 on the record](https://devblogs.microsoft.com/dotnet/c-9-0-on-the-record/)
 - [.NET 5.0 Examples](https://gist.github.com/richlander/50c34a8714eb3436e5d9d4d5d420776e)
 
-## Podcast interviews
-Podcast interviews with me about the fourth edition:
+## Interviews with me
+Podcast interviews with me:
 - [The .NET Core Podcast](https://dotnetcore.show/episode-44-learning-net-core-with-mark-j-price/)
 - [Yet Another Podcast with Jesse Liberty](http://jesseliberty.com/2020/02/23/mark-price-c-net-core/)
 - [Packt Podcasts](https://soundcloud.com/packt-podcasts/csharp-8-dotnet-core-3-the-evolution-of-the-microsoft-ecosystem)
+
+Written interviews with me:
+- [Q&A with Episerver's Mark J. Price, author of C# 9 and .NET 5 - Modern Cross-Platform Development](https://www.episerver.com/articles/q-and-a-with-mark-price)
 
 ## Book cover
 ![C# 9 and .NET 5 by Packt Publishing](B16689_cover.png)
