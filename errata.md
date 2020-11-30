@@ -2,6 +2,38 @@
 
 If you find any mistakes in the fifth edition, C# 9 and .NET 5, or if you have suggestions for improvements, then please raise an issue in this repository or email me at markjprice (at) gmail.com.
 
+## Page 53 - Storing dynamic types
+
+In the code example, I show assigning a string value to a dynamically-typed variable, as shown in the following code:
+```
+// storing a string in a dynamic object
+dynamic anotherName = "Ahmed";
+
+// this compiles but would throw an exception at run-time
+// if you later store a data type that does not have a 
+// property named Length
+int length = anotherName.Length;
+```
+
+The example would have been clearer if I had shown some examples of assigning values with other data types that do and do not have a Length property, as shown in the following code:
+
+```
+// storing a string in a dynamic object
+// string has a Length property
+dynamic anotherName = "Ahmed";
+
+// int does not have a Length property
+anotherName = 12;
+
+// an array of any type has a Length property
+// anotherName = new[] { 3, 5, 7 };
+
+// this compiles but would throw an exception at run-time
+// if you had stored a value with a data type that does not 
+// have a property named Length
+int length = anotherName.Length;
+```
+
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
 The code in the book uses 2000 iterations for PBKDF2 to generate a key and initialization vector (IV) for the encryption algorithm. I said that this is "double the recommended salt size and iteration count". I first wrote that code and statement in the fall of 2015 for the first edition and I have neglected to keep it updated. More than five years later, 2000 is not enough! I have updated the project in GitHub to use 50,000 iterations, as shown in the following code:
