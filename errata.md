@@ -4,7 +4,7 @@ If you find any mistakes in the fifth edition, C# 9 and .NET 5, or if you have s
 
 ## Page 53 - Storing dynamic types
 
-In the code example, I show assigning a string value to a dynamically-typed variable, as shown in the following code:
+In the code example, I show assigning a `string` value to a dynamically-typed variable, as shown in the following code:
 ```
 // storing a string in a dynamic object
 dynamic anotherName = "Ahmed";
@@ -15,7 +15,9 @@ dynamic anotherName = "Ahmed";
 int length = anotherName.Length;
 ```
 
-The example would have been clearer if I had shown some examples of assigning values with other data types that do and do not have a Length property, as shown in the following code:
+The above example code does not throw an exception because at the time we get the `Length` property, the value stored in `anotherName` is a `string` which does have a `Length` property.
+
+The example would have been clearer if I had shown some examples of assigning values with other data types that do and do not have a `Length` property, as shown in the following code:
 
 ```
 // storing a string in a dynamic object
@@ -33,6 +35,17 @@ anotherName = 12;
 // have a property named Length
 int length = anotherName.Length;
 ```
+
+The above example code does throw an exception because at the time we get the `Length` property, the value stored in `anotherName` is an `int` which does not have a `Length` property, as shown in the following output:
+
+```
+Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int' does not contain a definition for 'Length'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at Variables.Program.Main(String[] args) in /Users/markjprice/Code/Chapter02/Variables/Program.cs:line 34
+```
+
+If you uncomment the statement that assigns an array of `int` values, then the code works without throwing an exception because all arrays have a `Length` property.
 
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
