@@ -50,6 +50,25 @@ If you uncomment the statement that assigns an array of `int` values, then the c
 ## Page 113 - Writing a function that returns a value
 The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
 
+## Page 163 - Deconstructing tuples
+The code example is about deconstructing tuples into individual parts. It shows that you do not have to return a named tuple because during deconstruction the syntax allows explicit naming of the individual parts, as shown in the following code:
+
+```
+public (string, int) GetFruit()
+{
+  return ("Apples", 5);
+}
+
+public (string Name, int Number) GetNamedFruit()
+{
+  return (Name: "Apples", Number: 5);
+}
+
+(string fruitName, int fruitNumber) = bob.GetFruit() // GetNamedFruit would also work but is not necessary
+
+WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
+```
+
 ## Page 180 - Positional records
 In Step 1, the code in the book to define a positional record uses the original keywords, `data class`, that were used in early previews of .NET 5, as shown in the following code:
 ```
