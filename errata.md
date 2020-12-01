@@ -50,6 +50,19 @@ If you uncomment the statement that assigns an array of `int` values, then the c
 ## Page 113 - Writing a function that returns a value
 The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
 
+## Page 180 - Positional records
+In Step 1, the code in the book to define a positional record uses the original keywords, `data class`, that were used in early previews of .NET 5, as shown in the following code:
+```
+// simpler way to define a record that does the equivalent
+public data class ImmutableAnimal(string Name, string Species);
+```
+It should have been updated to use the keyword, `record`, that was used in later previews and the final release of .NET 5, as shown in the following code:
+```
+// simpler way to define a record that does the equivalent
+public record ImmutableAnimal(string Name, string Species);
+```
+The code in the GitHub repository was already correct. It is only the print book that has this errata.
+
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
 The code in the book uses 2000 iterations for PBKDF2 to generate a key and initialization vector (IV) for the encryption algorithm. I said that this is "double the recommended salt size and iteration count". I first wrote that code and statement in the fall of 2015 for the first edition and I have neglected to keep it updated. More than five years later, 2000 is not enough! I have updated the project in GitHub to use 50,000 iterations, as shown in the following code:
