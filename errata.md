@@ -2,6 +2,14 @@
 
 If you find any mistakes in the fifth edition, C# 9 and .NET 5, or if you have suggestions for improvements, then please raise an issue in this repository or email me at markjprice (at) gmail.com.
 
+## Page 51 - Comparing double and decimal types
+
+In the book, I say that the `double` type has some special static members, including one named `Infinity`. This is wrong. There are two members named `PositiveInfinity` and `NegativeInfinity`.
+
+## Page 51 - Using Visual Studio Code workspaces
+
+The book says, "Visual Studio has a feature called workspaces that enables this." It should have said, "Visual Studio **Code** has a feature called workspaces that enables this."
+
 ## Page 53 - Storing dynamic types
 
 In the code example, I show assigning a `string` value to a dynamically-typed variable, as shown in the following code:
