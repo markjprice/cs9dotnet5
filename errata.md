@@ -55,6 +55,29 @@ Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int
 
 If you uncomment the statement that assigns an array of `int` values, then the code works without throwing an exception because all arrays have a `Length` property.
 
+## Page 94 - Rounding numbers
+
+In Step 1, the code uses `ToInt` as a label for the output. It should use `ToInt32` to match the actual method name. The following code:
+```
+double[] doubles = new[] 
+  { 9.49, 9.5, 9.51, 10.49, 10.5, 10.51 };
+
+foreach (double n in doubles)
+{
+  WriteLine($"ToInt({n}) is {ToInt32(n)}");
+}
+```
+Should be:
+```
+double[] doubles = new[] 
+  { 9.49, 9.5, 9.51, 10.49, 10.5, 10.51 };
+
+foreach (double n in doubles)
+{
+  WriteLine($"ToInt32({n}) is {ToInt32(n)}");
+}
+```
+
 ## Page 113 - Writing a function that returns a value
 The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
 
