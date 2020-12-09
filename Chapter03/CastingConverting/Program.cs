@@ -35,7 +35,7 @@ namespace CastingConverting
 
       foreach (double n in doubles)
       {
-        WriteLine($"ToInt({n}) is {ToInt32(n)}");
+        WriteLine($"ToInt32({n}) is {ToInt32(n)}");
       }
 
       // Taking control of rounding rules
