@@ -77,6 +77,15 @@ foreach (double n in doubles)
   WriteLine($"ToInt32({n}) is {ToInt32(n)}");
 }
 ```
+The output shown in Step 2 would then look like the following:
+```
+ToInt32(9.49) is 9
+ToInt32(9.5) is 10
+ToInt32(9.51) is 10
+ToInt32(10.49) is 10
+ToInt32(10.5) is 10
+ToInt32(10.51) is 11
+```
 
 ## Page 113 - Writing a function that returns a value
 The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
