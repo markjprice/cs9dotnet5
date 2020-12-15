@@ -117,6 +117,10 @@ public (string Name, int Number) GetNamedFruit()
 WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
 ```
 
+## Page 178 - Init-only properties
+
+In Step 5, the book says to "Comment out the attempt to set the `LastName` property after instantiation." This should have said, "Comment out the attempt to set the `FirstName` property after instantiation."
+
 ## Page 180 - Positional records
 In Step 1, the code in the book to define a positional record uses the original keywords, `data class`, that were used in early previews of .NET 5, as shown in the following code:
 ```
@@ -174,3 +178,10 @@ public static bool CheckPassword(string username, string password,
   return (saltedhashedPassword == hashedPassword);
 }
 ```
+
+## Appendix A - Chapter 3 - Question 10
+
+10. What interface must an object implement to be enumerated over by using the foreach statement?
+Answer: An object must implement the IEnumerable interface.
+
+Although an object does not have to implement an interface to be enumerable using foreach, the question asks "What interface", so the answer must be the name of an interface and IEnumerable is that interface.
