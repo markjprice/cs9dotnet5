@@ -181,7 +181,8 @@ public static bool CheckPassword(string username, string password,
 
 ## Appendix A - Chapter 3 - Question 10
 
-10. What interface must an object implement to be enumerated over by using the foreach statement?
-Answer: An object must implement the IEnumerable interface.
+10. What interface must an object implement to be enumerated over by using the `foreach` statement?
 
-Although an object does not have to implement an interface to be enumerable using foreach, the question asks "What interface", so the answer must be the name of an interface and IEnumerable is that interface.
+Answer: An object must implement the `IEnumerable` interface.
+
+Although an object does not have to formally implement an interface to be enumerable using `foreach`, the question asks "What interface...", so the answer must be the name of an interface. `IEnumerable` is that interface. In the next edition, I will put quote-marks around "implement" so it is clear that it can either formally implement the `IEnumerable` interface or just have matching members.
