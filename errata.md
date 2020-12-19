@@ -8,7 +8,7 @@ Hi! This isn't an errata.
 
 I know that I've submitted a few potential errata, but I just wanted to say that this is one of the most cleanly written programming books I've read in quite a while. The author clearly cares about the quality of his book and takes time to anticipate what a reader might run into. It is a pleasure working through it. Keep up the great work! 
 
-I hope you share this comment with the author to let him know that is work is greatly enjoyed and appreciated.
+I hope you share this comment with the author to let him know that his work is greatly enjoyed and appreciated.
 
 ## Page 51 - Comparing double and decimal types
 
