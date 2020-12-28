@@ -134,6 +134,14 @@ public record ImmutableAnimal(string Name, string Species);
 ```
 The code in the GitHub repository was already correct. It is only the print book that has this errata.
 
+## Page 196 - Comparing objects when sorting
+
+Step 3 says to "add a colon and enter `IComparable<Person>`". This works if you started a new project in Chapter 6. But if you continued with your project from Chapter 5 then the Person class already has a colon and inherits from `System.Object`. So the instruction in that case should be, "add a comma and enter `IComparable<Person>`", as shown in the following code:
+   
+```
+public class Person : System.Object, IComparable<Person>
+```
+
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
 The code in the book uses 2000 iterations for PBKDF2 to generate a key and initialization vector (IV) for the encryption algorithm. I said that this is "double the recommended salt size and iteration count". I first wrote that code and statement in the fall of 2015 for the first edition and I have neglected to keep it updated. More than five years later, 2000 is not enough! I have updated the project in GitHub to use 50,000 iterations, as shown in the following code:
