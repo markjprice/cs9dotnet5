@@ -187,6 +187,12 @@ public static bool CheckPassword(string username, string password,
 }
 ```
 
+## Page 365 - Setting up SQLite for Windows
+
+In Step 3, when downloading SQLite for Windows, make sure to download the tools ZIP not the dll ZIPs, as shown in the following screenshot:
+
+![Download links for SQLite on Windows](download-sqlite.png)
+
 ## Appendix A - Chapter 3 - Question 10
 
 10. What interface must an object implement to be enumerated over by using the `foreach` statement?
