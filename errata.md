@@ -186,3 +186,9 @@ public static bool CheckPassword(string username, string password,
 Answer: An object must implement the `IEnumerable` interface.
 
 Although an object does not have to formally implement an interface to be enumerable using `foreach`, the question asks "What interface...", so the answer must be the name of an interface. `IEnumerable` is that interface. In the next edition, I will put quote-marks around "implement" so it is clear that it can either formally implement the `IEnumerable` interface or just have matching members.
+
+## Appendix A - Chapter 4 - Question 3
+
+3. In Visual Studio Code, what is the difference between pressing F5; Ctrl or Cmd + F5; Shift + F5; and Ctrl or Cmd + Shift + F5?
+
+"Ctrl or Cmd + F5 saves, compiles, and runs the application with the debugger attached" should be "Ctrl or Cmd + F5 saves, compiles, and runs the application with**out** the debugger attached"
