@@ -2,6 +2,14 @@
 
 If you find any mistakes in the fifth edition, C# 9 and .NET 5, or if you have suggestions for improvements, then please raise an issue in this repository or email me at markjprice (at) gmail.com.
 
+## A message from a reader
+
+Hi! This isn't an errata. 
+
+I know that I've submitted a few potential errata, but I just wanted to say that this is one of the most cleanly written programming books I've read in quite a while. The author clearly cares about the quality of his book and takes time to anticipate what a reader might run into. It is a pleasure working through it. Keep up the great work! 
+
+I hope you share this comment with the author to let him know that his work is greatly enjoyed and appreciated.
+
 ## Page 51 - Comparing double and decimal types
 
 In the book, I say that the `double` type has some special static members, including one named `Infinity`. This is wrong. There are two members named `PositiveInfinity` and `NegativeInfinity`.
@@ -109,6 +117,10 @@ public (string Name, int Number) GetNamedFruit()
 WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
 ```
 
+## Page 178 - Init-only properties
+
+In Step 5, the book says to "Comment out the attempt to set the `LastName` property after instantiation." This should have said, "Comment out the attempt to set the `FirstName` property after instantiation."
+
 ## Page 180 - Positional records
 In Step 1, the code in the book to define a positional record uses the original keywords, `data class`, that were used in early previews of .NET 5, as shown in the following code:
 ```
@@ -121,6 +133,14 @@ It should have been updated to use the keyword, `record`, that was used in later
 public record ImmutableAnimal(string Name, string Species);
 ```
 The code in the GitHub repository was already correct. It is only the print book that has this errata.
+
+## Page 196 - Comparing objects when sorting
+
+Step 3 says to "add a colon and enter `IComparable<Person>`". This works if you started a new project in Chapter 6. But if you continued with your project from Chapter 5 then the Person class already has a colon and inherits from `System.Object`. So the instruction in that case should be, "add a comma and enter `IComparable<Person>`", as shown in the following code:
+   
+```
+public class Person : System.Object, IComparable<Person>
+```
 
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
@@ -166,3 +186,17 @@ public static bool CheckPassword(string username, string password,
   return (saltedhashedPassword == hashedPassword);
 }
 ```
+
+## Appendix A - Chapter 3 - Question 10
+
+10. What interface must an object implement to be enumerated over by using the `foreach` statement?
+
+Answer: An object must implement the `IEnumerable` interface.
+
+Although an object does not have to formally implement an interface to be enumerable using `foreach`, the question asks "What interface...", so the answer must be the name of an interface. `IEnumerable` is that interface. In the next edition, I will put quote-marks around "implement" so it is clear that it can either formally implement the `IEnumerable` interface or just have matching members.
+
+## Appendix A - Chapter 4 - Question 3
+
+3. In Visual Studio Code, what is the difference between pressing F5; Ctrl or Cmd + F5; Shift + F5; and Ctrl or Cmd + Shift + F5?
+
+"Ctrl or Cmd + F5 saves, compiles, and runs the application with the debugger attached" should be "Ctrl or Cmd + F5 saves, compiles, and runs the application with**out** the debugger attached"
