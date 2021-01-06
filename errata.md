@@ -10,6 +10,10 @@ I know that I've submitted a few potential errata, but I just wanted to say that
 
 I hope you share this comment with the author to let him know that his work is greatly enjoyed and appreciated.
 
+## Page 34 - Discovering your C# compiler versions
+
+In steps 5 and 6, I show the C# compiler (`csc`) command listing the supported language versions on macOS. There is also a note explaining that the `csc` command is not in the default path on Windows so you get an error. So I include a link to a Microsoft article explaining how to fix this. I regret including steps 5 and 6 because they cause some readers problems without adding any real value because the `csc` command is never used again. In the next edition I will remove steps 5 and 6.
+
 ## Page 51 - Comparing double and decimal types
 
 In the book, I say that the `double` type has some special static members, including one named `Infinity`. This is wrong. There are two members named `PositiveInfinity` and `NegativeInfinity`.
