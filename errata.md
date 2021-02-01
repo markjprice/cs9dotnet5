@@ -10,6 +10,16 @@ I know that I've submitted a few potential errata, but I just wanted to say that
 
 I hope you share this comment with the author to let him know that his work is greatly enjoyed and appreciated.
 
+## Page 13 - Removing old versions of .NET
+I wrote that the command to remove all but the latest preview version is:
+```
+dotnet-core-uninstall --all-previews-but-latest --sdk
+```
+It should have been:
+```
+dotnet-core-uninstall remove --all-previews-but-latest --sdk
+```
+
 ## Page 34 - Discovering your C# compiler versions
 
 In steps 5 and 6, I show the C# compiler (`csc`) command listing the supported language versions on macOS. There is also a note explaining that the `csc` command is not in the default path on Windows so you get an error. So I include a link to a Microsoft article explaining how to fix this. I regret including steps 5 and 6 because they cause some readers problems without adding any real value because the `csc` command is never used again. In the next edition I will remove steps 5 and 6.
@@ -67,6 +77,11 @@ Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int
 
 If you uncomment the statement that assigns an array of `int` values, then the code works without throwing an exception because all arrays have a `Length` property.
 
+## Page 83 - Branching with the switch statement
+The third bullet point states, "Or they should have no statements (like case 3 in the following code)," 
+
+This is an example of a switch section with multiple case labels. A similar code example is on page 113 in the CalculateTax function. Microsoft uses the term "fall through" for switch sections with statements that do not explicitly exit and therefore "fall through" to another switch section. "Fall throughs" are not allowed and will generate the compiler error, `CS0163: "Control cannot fall through from one case label (<case label>) to another."`
+
 ## Page 94 - Rounding numbers
 
 In Step 1, the code uses `ToInt` as a label for the output. It should use `ToInt32` to match the actual method name. The following code:
@@ -101,6 +116,9 @@ ToInt32(10.51) is 11
 
 ## Page 113 - Writing a function that returns a value
 The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
+
+## Page 134 - Switching trace levels
+In Step 14, I wrote "Step **into** the call to the Bind method by clicking the Step Into or Step Over buttons or pressing F11 or F10." I should have written, "Step **over** the call to the Bind method by clicking the Step Into or Step Over buttons or pressing F11 or F10." In the context of being on an external assembly method call, Step Into has the same affect as Step Over.
 
 ## Page 163 - Deconstructing tuples
 The code example is about deconstructing tuples into individual parts. It shows that you do not have to return a named tuple because during deconstruction the syntax allows explicit naming of the individual parts, as shown in the following code:
