@@ -80,7 +80,9 @@ If you uncomment the statement that assigns an array of `int` values, then the c
 ## Page 83 - Branching with the switch statement
 The third bullet point states, "Or they should have no statements (like case 3 in the following code)," 
 
-This is an example of a switch section with multiple case labels. A similar code example is on page 113 in the CalculateTax function. Microsoft uses the term "fall through" for switch sections with statements that do not explicitly exit and therefore "fall through" to another switch section. "Fall throughs" are not allowed and will generate the compiler error, `CS0163: "Control cannot fall through from one case label (<case label>) to another."`
+This is an example of a switch section with multiple case labels. A match on any of the case labels will execute that switch section. A similar code example is on page 113 in the CalculateTax function. 
+
+Some developers call this "fall through" although Microsoft uses the term "fall through" for switch sections with statements that do not explicitly exit and therefore "fall through" to another switch section. "Fall throughs" are not allowed and will generate the compiler error, `CS0163: "Control cannot fall through from one case label (<case label>) to another."`
 
 ## Page 94 - Rounding numbers
 
@@ -118,7 +120,7 @@ ToInt32(10.51) is 11
 The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
 
 ## Page 134 - Switching trace levels
-In Step 14, I wrote "Step **into** the call to the Bind method by clicking the Step Into or Step Over buttons or pressing F11 or F10." I should have written, "Step **over** the call to the Bind method by clicking the Step Into or Step Over buttons or pressing F11 or F10." In the context of being on an external assembly method call, Step Into has the same affect as Step Over.
+In Step 14, I wrote "Step **into** the call to the `Bind` method by clicking the Step Into or Step Over buttons or pressing F11 or F10." I should have written, "Step **over** the call to the `Bind` method by clicking the Step Into or Step Over buttons or pressing F11 or F10." In the context of being on an external assembly method call, Step Into has the same affect as Step Over.
 
 ## Page 163 - Deconstructing tuples
 The code example is about deconstructing tuples into individual parts. It shows that you do not have to return a named tuple because during deconstruction the syntax allows explicit naming of the individual parts, as shown in the following code:
