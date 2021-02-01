@@ -166,6 +166,10 @@ Step 3 says to "add a colon and enter `IComparable<Person>`". This works if you 
 public class Person : System.Object, IComparable<Person>
 ```
 
+## Page 210 - Extending classes to add functionality
+
+In Step 2, I should have made it clear that the statements should be written **after** the previous code that calls the `WriteToConsole` method to ensure that your output matches the book on page 211. 
+
 ## Pages 338 to 340 - Encrypting symmetrically with AES
 
 The code in the book uses 2000 iterations for PBKDF2 to generate a key and initialization vector (IV) for the encryption algorithm. I said that this is "double the recommended salt size and iteration count". I first wrote that code and statement in the fall of 2015 for the first edition and I have neglected to keep it updated. More than five years later, 2000 is not enough! I have updated the project in GitHub to use 50,000 iterations, as shown in the following code:
