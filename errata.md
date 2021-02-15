@@ -119,6 +119,9 @@ ToInt32(10.51) is 11
 ## Page 113 - Writing a function that returns a value
 The `switch case` value of `ME` is commented as Maryland. `ME` is the abbreviation for Maine.
 
+## Pages 120 and 121 - Using lambdas in function implementations
+At the bottom of page 120, I list the numbers in the Fibonacci sequence but I wrote the last number as 65 when it should have been 55. I repeat the mistake at the top of page 121. I should have written, 34 + **55**, which is 89.
+
 ## Page 134 - Switching trace levels
 In Step 14, I wrote "Step **into** the call to the `Bind` method by clicking the Step Into or Step Over buttons or pressing F11 or F10." I should have written, "Step **over** the call to the `Bind` method by clicking the Step Into or Step Over buttons or pressing F11 or F10." In the context of being on an external assembly method call, Step Into has the same affect as Step Over.
 
