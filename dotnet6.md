@@ -5,9 +5,8 @@ Microsoft will release previews of .NET 6 regularly until the final version on T
 - November 9, 2021: Announcing .NET 6.0
 - October, 2021: Announcing .NET 6 RC 2
 - September, 2021: Announcing .NET 6 RC 1
-- August, 2021: Announcing .NET 6 Preview 8
-- July, 2021: Announcing .NET 6 Preview 7
-- June, 2021: Announcing .NET 6 Preview 6
+- August, 2021: Announcing .NET 6 Preview 7
+- July, 2021: Announcing .NET 6 Preview 6
 - June, 2021: Announcing .NET 6 Preview 5
 - May, 2021: Announcing .NET 6 Preview 4 
 - April, 2021: Announcing .NET 6 Preview 3
