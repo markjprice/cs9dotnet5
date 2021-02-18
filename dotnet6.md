@@ -16,13 +16,9 @@ Microsoft will release previews of .NET 6 regularly until the final version on T
 ## Chapters 1 to 19
 After [downloading](https://dotnet.microsoft.com/download/dotnet/6.0) and installing .NET 6.0 SDK, follow the step-by-step instructions in the book and they should work as expected since the project file will automatically reference .NET 6.0 as the target framework. 
 
-To upgrade a project in the GitHub repository from .NET Core 3.1 or .NET 5.0 to .NET 6.0 just requires a target framework change in your project file.
+To upgrade a project in the GitHub repository from .NET 5.0 to .NET 6.0 just requires a target framework change in your project file.
 
 Change this:
-```
-<TargetFramework>netcoreapp3.1</TargetFramework>
-```
-Or this:
 ```
 <TargetFramework>net5.0</TargetFramework>
 ```
@@ -61,10 +57,10 @@ For the `CalculatorLibUnitTests` project, the additional referenced NuGet packag
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.0-preview*" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
-    <PackageReference Include="coverlet.collector" Version="1.3.0" />
+    <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -75,7 +71,7 @@ For the `CalculatorLibUnitTests` project, the additional referenced NuGet packag
 </Project>
 ```
 ## Chapter 11 - Working with Databases Using Entity Framework Core
-For the `WorkingWithEFCore` project, the additional referenced NuGet packages should use the .NET 6.0 versions, as shown in the following markup:
+For the `WorkingWithEFCore` project, the additional referenced NuGet packages should use the .NET 6.0 preview versions, as shown in the following markup:
 ```
 <Project Sdk="Microsoft.NET.Sdk">
 
@@ -92,7 +88,7 @@ For the `WorkingWithEFCore` project, the additional referenced NuGet packages sh
 </Project>
 ```
 ## Chapter 12 - Querying and Manipulating Data Using LINQ
-For the `LinqWithEFCore` and `Exercise02` projects, the additional referenced NuGet package should use the .NET 5.0 version, as shown in the following markup:
+For the `LinqWithEFCore` and `Exercise02` projects, the additional referenced NuGet package should use the .NET 6.0 preview version, as shown in the following markup:
 ```
 <Project Sdk="Microsoft.NET.Sdk">
 
@@ -108,7 +104,7 @@ For the `LinqWithEFCore` and `Exercise02` projects, the additional referenced Nu
 </Project>
 ```
 ## Chapter 14 - Practical Applications of C# and .NET
-For the `NorthwindContextLib` project, the referenced NuGet package for SQLite should use the .NET 6.0 version, as shown in the following markup:
+For the `NorthwindContextLib` project, the referenced NuGet package for SQLite should use the .NET 6.0 preview version, as shown in the following markup:
 ```
 <Project Sdk="Microsoft.NET.Sdk">
 
@@ -170,15 +166,15 @@ For the `NorthwindCms` project, the referenced NuGet packages should use the lat
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0-preview.*" />
-    <PackageReference Include="Piranha" Version="8.4.2" />
-    <PackageReference Include="Piranha.AspNetCore" Version="8.4.1" />
-    <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="8.4.0" />
-    <PackageReference Include="Piranha.AttributeBuilder" Version="8.4.0" />
-    <PackageReference Include="Piranha.Data.EF.SQLite" Version="8.4.0" />
-    <PackageReference Include="Piranha.ImageSharp" Version="8.4.0" />
-    <PackageReference Include="Piranha.Local.FileStorage" Version="8.4.0" />
-    <PackageReference Include="Piranha.Manager" Version="8.4.1" />
-    <PackageReference Include="Piranha.Manager.TinyMCE" Version="8.4.0" />
+    <PackageReference Include="Piranha" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.AspNetCore" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.AttributeBuilder" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.Data.EF.SQLite" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.ImageSharp" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.Local.FileStorage" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.Manager" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha.Manager.TinyMCE" Version="9.0.0-rc2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -200,7 +196,7 @@ For the `NorthwindService` project, the referenced NuGet packages should use the
   <ItemGroup>
     <ProjectReference Include="..\NorthwindContextLib\NorthwindContextLib.csproj" />
 
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" 
                       Version="6.0.0-preview.*" />
   </ItemGroup>
@@ -219,8 +215,8 @@ For the `NorthwindML` project, the referenced NuGet packages should use the late
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0-preview.*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0-preview.*" />
-    <PackageReference Include="Microsoft.ML" Version="1.5.2" />
-    <PackageReference Include="Microsoft.ML.Recommender" Version="0.17.2" />
+    <PackageReference Include="Microsoft.ML" Version="1.5.4" />
+    <PackageReference Include="Microsoft.ML.Recommender" Version="0.17.4" />
   </ItemGroup>
 
   <ItemGroup>
