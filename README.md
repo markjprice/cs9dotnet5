@@ -6,6 +6,8 @@ Order the book today!
 - [Amazon.com](https://www.amazon.com/dp/180056810X/)
 - [Amazon.co.uk](https://www.amazon.co.uk/dp/180056810X/)
 
+Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/
+
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Errata & Improvements](errata.md)
