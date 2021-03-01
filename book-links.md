@@ -98,11 +98,57 @@ If you bought the paper edition of C# 9 and .NET 5 then this page contains all t
 
 ## Chapter 4 - Writing, Debugging, and Testing Functions
 
+- Recursion versus interation: https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursion_versus_iteration
+- Visual Studio Code debugger: https://code.visualstudio.com/docs/editor/debugging
+- Debug class: https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debug
+- Trace listeners: https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.tracelistener
+- Test Driven Development (TDD): https://en.wikipedia.org/wiki/Test-driven_development
+- Microsoft's NuGet feed: https://www.nuget.org/
+- Instructions for setting up the .NET debugger: https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md
+- System.Diagnostics Namespace: https://docs.microsoft.com/en-us/dotnet/core/api/system.diagnostics
+- Unit testing in .NET: https://docs.microsoft.com/en-us/dotnet/core/testing/
+- xUnit.net: http://xunit.github.io/
+
 ## Chapter 5 - Building Your Own Types with Object-Oriented Programming
+
+- Visual Studio Code user interface: https://code.visualstudio.com/docs/getstarted/userinterface
+- Deconstruct method: https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct
+- params keyword: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/params
+- ref keyword: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/ref-returns
+- How to calculate someone's age: https://stackoverflow.com/questions/9/how-do-i-calculate-someones-age-in-c
+- Encapsulation of fields using properties: https://stackoverflow.com/questions/1568091/why-use-getters-and-setters-accessors
+- Pattern matching tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/pattern-matching
+- Fields (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/fields
+- Access modifiers (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/language-reference/keywords/access-modifiers
+- Enumeration types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum
+- Constructors (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/constructors
+- Methods (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/methods
+- Properties (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/properties
 
 ## Chapter 6 - Implementing Interfaces and Inheriting Classes
 
+- Symbols that can be overloaded: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/overloadable-operators
+- Custom EventArgs: https://docs.microsoft.com/en-us/dotnet/standard/events/how-to-raise-and-consume-events
+- Explicit interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation
+- Design decisions for default interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/default-interface-methods
+- Default interface implementations tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-members-versions
+- Technical details of the internal memory layout of types in .NET: https://adamsitnik.com/Value-Types-vs-Reference-Types/
+- Garbage collection: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/
+- Finalizers and disposing: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/unmanaged
+- IDisposable interface: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects
+- Operator (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
+- Delegates: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features-delegates-and-lambda-expressions
+- Events (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event
+- Interfaces: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-interfaces
+- Generics (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics
+- Reference Types (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types
+- Value Types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types
+- Inheritance (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance
+- Finalizers (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors
+
 ## Chapter 7 - Understanding and Packaging .NET Types
+
+
 
 ## Chapter 8 - Working with Common .NET Types
 
