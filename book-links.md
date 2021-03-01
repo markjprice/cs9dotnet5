@@ -1,6 +1,6 @@
 # Book links
 
-This page contains all the links from the book. 
+If you bought the paper edition of C# 9 and .NET 5 then this page contains all the links from the book for ease-of-use.
 
 ## Chapter 1 - Hello, C#! Welcome, .NET!
 
@@ -48,7 +48,53 @@ This page contains all the links from the book.
 
 ## Chapter 2 - Speaking C#
 
+-  Current status of the C# language: https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md
+-  C# Language Specification 5.0: https://www.microsoft.com/en-us/download/details.aspx?id=7029
+-  Draft proposals for C# Language Specifications for 6.0 and later: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
+-  What's new in C# 7.3: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-3
+-  New C# 9.0 features: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9
+-  List of .NET versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
+-  C# language versioning: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
+-  An Arabic programming language: https://youtu.be/dkO8cdwf6v8
+-  Naming guidelines: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
+-  Escape sequences: https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/
+-  Verbatim strings: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
+-  Floating point numbers: https://ciechanow.ski/exposing-floating-point/
+-  Why 0.1 does not exist in floating-point numbers? https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
+-  Patriot missile battery disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
+-  The inventor of null, Sir Charles Antony Richard Hoare, admits his mistake in a recorded hour-long talk: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
+-  The tweet about achieving 80% annotations in .NET 5: https://twitter.com/terrajobst/status/1296566363880742917
+-  Video to learn how to get rid of null reference exceptions forever: https://channel9.msdn.com/Shows/On-NET/This-is-how-you-get-rid-of-null-reference-exceptions-forever
+-  Null-conditional operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators
+-  Null-coalescing operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator
+-  Formatting types: https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types
+-  Composite Formatting: https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting
+-  C# Keywords: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
+-  Main() and command-line arguments (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
+-  Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/ programming-guide/types/
+-  Statements, Expressions, and Operators (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/
+-  Strings (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
+-  Nullable Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/
+-  Nullable reference types: https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references
+-  Console Class: https://docs.microsoft.com/en-us/dotnet/api/system.console
+
 ## Chapter 3 - Controlling Flow and Converting Types
+
+-  Truth tables: https://en.wikipedia.org/wiki/Truth_table
+-  Side effects: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
+-  Member access operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators
+-  Goto Fail bug: https://gotofail.com/
+-  goto keyword and examples of when it can be used: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto
+-  Pattern matching: https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching
+-  Patterns and switch expressions: https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/
+-  Taking control of rounding: https://docs.microsoft.com/en-us/dotnet/api/system.math.round
+-  Format codes for common scenarios: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+-  Why can't programmers program? http://blog.codinghorror.com/why-cant-programmers-program/
+-  FizzBuzz for programming interviews: http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/
+-  C# operators: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/operators
+-  Bitwise and shift operators: https://docs.microsoft.com/en-us/dotnet/csharp/ language-reference/operators/bitwise-and-shift-operators
+-  Statement keywords (C# Reference): https://docs.microsoft.com/en-us/dotnet/ csharp/language-reference/keywords/statement-keywords
+-  Casting and type conversions (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/types/casting-and-type-conversions
 
 ## Chapter 4 - Writing, Debugging, and Testing Functions
 
