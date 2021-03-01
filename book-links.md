@@ -92,8 +92,8 @@ If you bought the paper edition of C# 9 and .NET 5 then this page contains all t
 -  Why can't programmers program? http://blog.codinghorror.com/why-cant-programmers-program/
 -  FizzBuzz for programming interviews: http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/
 -  C# operators: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/operators
--  Bitwise and shift operators: https://docs.microsoft.com/en-us/dotnet/csharp/ language-reference/operators/bitwise-and-shift-operators
--  Statement keywords (C# Reference): https://docs.microsoft.com/en-us/dotnet/ csharp/language-reference/keywords/statement-keywords
+-  Bitwise and shift operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators
+-  Statement keywords (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/statement-keywords
 -  Casting and type conversions (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/types/casting-and-type-conversions
 
 ## Chapter 4 - Writing, Debugging, and Testing Functions
