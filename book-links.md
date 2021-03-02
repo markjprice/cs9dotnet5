@@ -148,9 +148,64 @@ If you bought the paper edition of C# 9 and .NET 5 then this page contains all t
 
 ## Chapter 7 - Understanding and Packaging .NET Types
 
-
+- .NET Standard 2.1 APIs and a comparison with .NET Standard 2.0: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md
+- Future of .NET Standard: https://devblogs.microsoft.com/dotnet/the-future-of-net-standard/
+- Search and browse all .NET APIs: https://docs.microsoft.com/en-us/dotnet/api/
+- .NET Core 1.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-1-0/
+- .NET Core 1.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-1-1/
+- .NET Core 2.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/
+- .NET Core 2.2 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2/
+- .NET Core 3.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/
+- .NET 5 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-5-0
+- Performance improvements in .NET 5: https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/
+- Roslyn compiler: https://github.com/dotnet/roslyn
+- .NET Standard 2.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/
+- How to solve a circular reference using an interface: https://stackoverflow.com/questions/6928387/how-to-solve-circular-reference
+- .NET project SDKs: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview
+- How packages and their APIs relate to frameworks: https://gist.github.com/davidfowl/8939f305567e1755412d6dc0b8baf1b7
+- Example .NET package and the frameworks it supports: https://www.nuget.org/packages/System.IO.FileSystem/
+- Currently supported Runtime Identifier (RID) values: https://docs.microsoft.com/en-us/dotnet/articles/core/rid-catalog
+- Additional `dotnet new` templates: https://dotnetnew.azurewebsites.net/
+- PDB files: https://www.wintellect.com/pdb-files-what-every-developer-must-know/
+- Single-file app issue: https://github.com/dotnet/runtime/issues/36590
+- App trimming: https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5/
+- The PackageReference format: https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets
+- UWP apps can be created using C++, JavaScript, C#, and Visual Basic using a custom version of .NET Core: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
+- NuGet packages: https://www.nuget.org/packages
+- Overview of porting from .NET Framework to .NET Core: https://docs.microsoft.com/en-us/dotnet/core/porting/
+- .NET Core application publishing overview: https://docs.microsoft.com/en-us/dotnet/core/deploying/
+- Tutorial: Create an item template: https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-item-template
+- What .NET Developers ought to know: https://www.hanselman.com/blog/WhatNETDevelopersOughtToKnowToStartIn2017.aspx
+- CoreFX README.md: https://github.com/dotnet/corefx/blob/master/Documentation/README.md
 
 ## Chapter 8 - Working with Common .NET Types
+
+- Numerics types: https://docs.microsoft.com/en-us/dotnet/standard/numerics
+- The Half type: https://devblogs.microsoft.com/dotnet/introducing-the-half-type/
+- Unicode in regular expressions: https://www.regular-expressions.info/unicode.html
+- Using a regular expression to split a comma-separated string: https://stackoverflow.com/questions/18144431/regex-to-split-a-csv
+- Regular expressions: https://www.regular-expressions.info
+- Performance improvements in .NET 5: https://devblogs.microsoft.com/dotnet/regex-performance-improvements-in-net-5/
+- Collections: https://docs.microsoft.com/en-us/dotnet/standard/collections
+- Concurrent collections: https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent
+- Span<T>: https://docs.microsoft.com/en-us/dotnet/api/system.span-1
+- How spans work internally: https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/january/csharp-all-about-span-exploring-a-new-net-mainstay
+- Semantic versioning: http://semver.org
+- Compiler-generated display class: http://stackoverflow.com/a/2509524/55847
+- Dynamically load assemblies that are not currently referenced: https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability-howto
+- Dynamically execute code: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
+- Dynamically generate new code and assemblies: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
+- ImageSharp: https://github.com/SixLabors/ImageSharp
+- Time zones: https://devblogs.microsoft.com/dotnet/cross-platform-time-zones-with-net-core/
+- Names of large numbers: https://en.wikipedia.org/wiki/Names_of_large_numbers
+- .NET API Reference: https://docs.microsoft.com/en-us/dotnet/api/
+- String Class: https://docs.microsoft.com/en-us/dotnet/api/system.string
+- Regex Class: https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex
+- Regular expressions in .NET: https://docs.microsoft.com/en-us/dotnet/articles/standard/base-types/regular-expressions
+- Regular Expression Language – Quick Reference: https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
+- Collections (C# and Visual Basic): https://docs.microsoft.com/en-us/dotnet/api/system.collections
+- Extending Metadata Using Attributes: https://docs.microsoft.com/en-us/dotnet/standard/attributes/
+- Globalizing and localizing .NET applications: https://docs.microsoft.com/en-us/dotnet/standard/globalization-localization/
 
 ## Chapter 9 - Working with Files, Streams, and Serialization
 
