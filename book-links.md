@@ -71,7 +71,7 @@ If you bought the paper edition of C# 9 and .NET 5 then this page contains all t
 -  Composite Formatting: https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting
 -  C# Keywords: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
 -  Main() and command-line arguments (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
--  Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/ programming-guide/types/
+-  Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/
 -  Statements, Expressions, and Operators (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/
 -  Strings (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
 -  Nullable Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/
@@ -209,15 +209,98 @@ If you bought the paper edition of C# 9 and .NET 5 then this page contains all t
 
 ## Chapter 9 - Working with Files, Streams, and Serialization
 
+- How pipelines help with I/O performance: https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/
+- Async streams tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/generate-consume-asynchronous-stream
+- System.Text.Json APIs: https://devblogs.microsoft.com/dotnet/try-the-new-system-text-json-apis/
+- Issues solved by the new JSON APIs, including JamesNK's comments: https://github.com/dotnet/corefx/issues/33115
+- How to migrate from Newtonsoft.Json to System.Text.Json: https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to
+- File System and the Registry (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/
+- Character encoding in .NET: https://docs.microsoft.com/en-us/dotnet/articles/standard/base-types/character-encoding
+- Serialization (C#): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/concepts/serialization/
+- Serializing to Files, TextWriters, and XmlWriters: https://docs.microsoft.com/en-us/dotnet/standard/linq/serialize-files-textwriters-xmlwriters
+- Newtonsoft Json.NET: https://www.newtonsoft.com/json
+
 ## Chapter 10 - Protecting Your Data and Applications
+
+- Features supported by which OS: https://docs.microsoft.com/en-us/dotnet/standard/security/cross-platform-cryptography
+- Dictionary Attacks 101: https://blog.codinghorror.com/dictionary-attacks-101/
+- The first publicly known SHA1 collision happened in 2017: https://arstechnica.co.uk/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/
+- The RSA algorithm is based on the factorization of large integers: http://mathworld.wolfram.com/RSAEncryption.html
+- Key Security Concepts: https://docs.microsoft.com/en-us/dotnet/standard/security/key-security-concepts
+- Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
+- Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
 
 ## Chapter 11 - Working with Databases Using Entity Framework Core
 
+- Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
+- Use NoSQL databases as a persistence infrastructure: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure
+- Document Database Providers for Entity Framework Core: https://github.com/BlueshiftSoftware/EntityFrameworkCore
+- Entity Framework 6.3 and its .NET Core 3.0 and later support: https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/
+- EF Core team's plans: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/plan
+- New features in EF Core 5: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/whatsnew
+- Download SQLite: https://www.sqlite.org/download.html
+- SQL statements supported by SQLite: https://sqlite.org/lang.html
+- Download SQLiteStudio: http://sqlitestudio.pl
+- EF Core database providers: https://docs.microsoft.com/en-us/ef/core/providers/
+- Devart database providers: https://www.devart.com/dotconnect/entityframework.html
+- Check the latest NuGet package version: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/
+- EF Core model conventions: https://docs.microsoft.com/en-us/ef/core/modeling/
+- Data seeding: https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding
+- Humanizer library: http://humanizr.net
+- Scaffolding: https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=dotnet-core-cli
+- Filtered include: https://docs.microsoft.com/en-us/ef/core/querying/related-data/eager#filtered-include
+- Query tags: https://docs.microsoft.com/en-us/ef/core/querying/tags
+- Loading patterns: https://docs.microsoft.com/en-us/ef/core/querying/related-data
+- Pooling database contexts: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-2.0#dbcontext-pooling
+- EF Core documentation: https://docs.microsoft.com/en-us/ef/core/
+
 ## Chapter 12 - Querying and Manipulating Data Using LINQ
+
+- Expression trees: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/expression-trees/
+- LINQ queries no longer evaluated at client: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-3.x/breaking-changes#linq-queries-are-no-longer-evaluated-on-the-client
+- LINQ comprehension syntax: https://stackoverflow.com/questions/6229187/linq-why-is-it-called-comprehension-syntax
+- LINQ in C#: https://docs.microsoft.com/en-us/dotnet/csharp/linq/linq-in-csharp
+- 101 LINQ Samples: https://docs.microsoft.com/en-us/samples/dotnet/try-samples/101-linq-samples/
+- Parallel LINQ (PLINQ): https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/introduction-to-plinq
+- LINQ to XML Overview (C#): https://docs.microsoft.com/en-gb/dotnet/csharp/programming-guide/concepts/linq/linq-to-xml-overview
+- LINQPad: https://www.linqpad.net/
 
 ## Chapter 13 - Improving Performance and Scalability Using Multitasking
 
+- Thread pool: https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool
+- Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
+- Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
+- Stephen Cleary's thoughts on events and thread-safety: https://blog.stephencleary.com/2009/06/threadsafe-events.html
+- Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading
+- Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
+- await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await
+- Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
+- Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
+
 ## Chapter 14 - Introducing Practical Applications of C# and .NET
+
+- .NET Application Architecture Guidance: https://www.microsoft.com/net/learn/architecture
+- TypeScript: https://www.typescriptlang.org
+- Books from Packt about .NET and SPAs:
+  - ASP.NET Core 2 and Vue.js: https://www.packtpub.com/product/asp-net-core-2-and-vue-js/9781788839464
+  - ASP.NET Core 3 and React:https://www.packtpub.com/product/asp-net-core-3-and-react/9781789950229
+  - ASP.NET Core 3 and Angular 9:https://www.packtpub.com/product/asp-net-core-3-and-angular-9-third-edition/9781789612165
+- ASP.NET Core 1.0 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-1-0/
+- ASP.NET Core 1.1 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-1-1/
+- ASP.NET Core 2.0 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-2-0/
+- ASP.NET Core 2.1 announcement: https://devblogs.microsoft.com/aspnet/asp-net-core-2-1-0-now-available/
+- ASP.NET Core 2.2 announcement: https://devblogs.microsoft.com/aspnet/asp-net-core-2-2-available-today/
+- ASP.NET Core 3.0 announcement: https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/
+- ASP.NET Core 3.1 announcement: https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/
+- Blazor WebAssembly announcement: https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/
+- WebSocket: https://en.wikipedia.org/wiki/WebSocket
+- MessagePack: https://msgpack.org
+- SignalR: https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction
+- WebAssembly: https://webassembly.org
+- Blazor: https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor
+- Introduction to .NET MAUI: https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/
+- GitHub repository for .NET MAUI: https://github.com/dotnet/maui
+- Packt book about building WPF apps: https://www.packtpub.com/product/mastering-windows-presentation-foundation/9781785883002
 
 ## Chapter 15 - Building Websites Using ASP.NET Core Razor Pages
 
