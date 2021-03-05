@@ -2,6 +2,30 @@
 
 If you bought the paper edition of C# 9 and .NET 5 then this page contains all the links from the book for ease-of-use.
 
+- [Book links](#book-links)
+  - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
+  - [Chapter 2 - Speaking C](#chapter-2---speaking-c)
+  - [Chapter 3 - Controlling Flow and Converting Types](#chapter-3---controlling-flow-and-converting-types)
+  - [Chapter 4 - Writing, Debugging, and Testing Functions](#chapter-4---writing-debugging-and-testing-functions)
+  - [Chapter 5 - Building Your Own Types with Object-Oriented Programming](#chapter-5---building-your-own-types-with-object-oriented-programming)
+  - [Chapter 6 - Implementing Interfaces and Inheriting Classes](#chapter-6---implementing-interfaces-and-inheriting-classes)
+  - [Chapter 7 - Understanding and Packaging .NET Types](#chapter-7---understanding-and-packaging-net-types)
+  - [Chapter 8 - Working with Common .NET Types](#chapter-8---working-with-common-net-types)
+  - [Chapter 9 - Working with Files, Streams, and Serialization](#chapter-9---working-with-files-streams-and-serialization)
+  - [Chapter 10 - Protecting Your Data and Applications](#chapter-10---protecting-your-data-and-applications)
+  - [Chapter 11 - Working with Databases Using Entity Framework Core](#chapter-11---working-with-databases-using-entity-framework-core)
+  - [Chapter 12 - Querying and Manipulating Data Using LINQ](#chapter-12---querying-and-manipulating-data-using-linq)
+  - [Chapter 13 - Improving Performance and Scalability Using Multitasking](#chapter-13---improving-performance-and-scalability-using-multitasking)
+  - [Chapter 14 - Introducing Practical Applications of C# and .NET](#chapter-14---introducing-practical-applications-of-c-and-net)
+  - [Chapter 15 - Building Websites Using ASP.NET Core Razor Pages](#chapter-15---building-websites-using-aspnet-core-razor-pages)
+  - [Chapter 16 - Building Websites Using the Model-View-Controller Pattern](#chapter-16---building-websites-using-the-model-view-controller-pattern)
+  - [Chapter 17 - Building Websites Using a Content Management System](#chapter-17---building-websites-using-a-content-management-system)
+  - [Chapter 18 - Building and Consuming Web Services](#chapter-18---building-and-consuming-web-services)
+  - [Chapter 19 - Building Intelligent Apps Using Machine Learning](#chapter-19---building-intelligent-apps-using-machine-learning)
+    - [Practice with sample ML.NET projects](#practice-with-sample-mlnet-projects)
+  - [Chapter 20 - Building Web User Interfaces Using Blazor](#chapter-20---building-web-user-interfaces-using-blazor)
+  - [Chapter 21 - Building Cross-Platform Mobile Apps](#chapter-21---building-cross-platform-mobile-apps)
+
 ## Chapter 1 - Hello, C#! Welcome, .NET!
 
 -  Stack Overflow survey 2019: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
@@ -304,14 +328,189 @@ If you bought the paper edition of C# 9 and .NET 5 then this page contains all t
 
 ## Chapter 15 - Building Websites Using ASP.NET Core Razor Pages
 
+- HTML5 and CSS3: Building Responsive Websites: https://www.packtpub.com/producthtml5-and-css3-building-responsive-websites/9781787124813h
+- Kestrel web server: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
+- Free TLS/SSL certificates: https://letsencrypt.org
+- ASP.NET Core hosting environments: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments
+- Content Delivery Network (CDN): https://en.wikipedia.org/wiki/Content_delivery_network
+- Bootstrap: https://getbootstrap.com/
+- Compact Folders feature: https://github.com/microsoft/vscode-docs/blob/vnext/release-notes/v1_41.md#compact-folders-in-explorer
+- The `<partial>` tag helper: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/partial-tag-helper
+- Registering a database context for use as a dependency service: https://docs.microsoft.com/en-us/ef/core/miscellaneous/configuring-dbcontext#using-dbcontext-with-dependency-injection
+- HttpContext class: https://docs.microsoft.com/en-us/dotnet/api/system.web.httpcontext
+- Simple examples of Run, Map, and Use: https://www.vaughanreid.com/2020/05/using-in-line-middleware-in-asp-net-core/
+- Automatically visualize your endpoints: https://andrewlock.net/visualizing-asp-net-core-endpoints-using-graphvizonline-and-the-dot-language/
+- Configuring the HTTP pipeline with middleware: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware
+- ASP.NET Core fundamentals: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/
+- Static files in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files
+- Introduction to Razor Pages in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/razor-pages/
+- Razor syntax reference for ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor
+- Layout in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout
+- Tag Helpers in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro
+- ASP.NET Core Razor Pages with EF Core: https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro
+- DEEP DIVE: HOW IS THE ASP.NET CORE MIDDLEWARE PIPELINE BUILT? https://www.stevejgordon.co.uk/how-is-the-asp-net-core-middleware-pipeline-built
+
 ## Chapter 16 - Building Websites Using the Model-View-Controller Pattern
+
+- Built-in features for compliance with modern privacy requirements like GDPR: https://docs.microsoft.com/en-us/aspnet/core/security/gdpr
+- ASP.NET Core's support for authenticator apps: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-enable-qrcodes
+- Default configuration of web hosts: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host
+- Identity UI library: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?tabs=netcore-cli
+- Dependency injection for ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
+- Configuring middleware: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
+- How to unit test controllers: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing
+- Filters for cross-concern functionality: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters
+- Authorization: https://docs.microsoft.com/en-us/aspnet/core/security/authorization/introduction
+- Response caching: https://docs.microsoft.com/en-us/aspnet/core/performance/caching/response
+- Why it is good to put <script> elements at the bottom of the <body>: https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+- How cache busting using query strings works: https://stackoverflow.com/questions/9692665/cache-busting-via-params
+- Free stock photos for commercial use with no attribution: https://www.pexels.com/
+- Images of eight categories: https://github.com/markjprice/cs9dotnet5/tree/master/Assets/Categories
+- Create your own model binders by implementing the IModelBinder interface: https://docs.microsoft.com/en-us/aspnet/core/mvc/advanced/custom-model-binding
+- Model validation: https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation
+- Anti-forgery tokens: https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery
+- HtmlHelper class: https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.viewfeatures.htmlhelper
+- dotnet new templates: https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new
+- Overview of ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/overview
+- Tutorial: Get started with EF Core in an ASP.NET MVC web app: https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro
+- Handle requests with controllers in ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/actions
+- Model Binding in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/models/model-binding
+- Views in ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview
 
 ## Chapter 17 - Building Websites Using a Content Management System
 
+- Orchard Core CMS: https://orchardcore.readthedocs.io/en/dev/
+- Piranha CMS: https://piranhacms.org/
+- Font Awesome, the web's most popular icon set and toolkit: https://fontawesome.com
+- AutoMapper, a convention-based object-object mapper: https://automapper.org
+- Markdig, a fast, powerful, CommonMark-compliant, extensible Markdown processor for .NET: https://github.com/lunet-io/markdig
+- Newtonsoft Json.NET, a popular high-performance JSON framework for .NET: https://www.newtonsoft.com/json
+- OpenGraph metadata: https://ogp.me/
+- Bootstrap's navbar: https://getbootstrap.com/docs/4.5/components/navbar/
+- Advanced routing for Piranha CMS: http://piranhacms.org/docs/application/advanced-routing
+- Programmatically uploading media using the Piranha CMS APIs: http://piranhacms.org/docs/content/media
+- Piranha CMS sites: https://piranhacms.org/docs/content/sites
+- TinyMCE documentation: https://www.tiny.cloud/docs/
+- Bootstrap grid system: https://getbootstrap.com/docs/4.1/layout/grid/
+- Piranha CMS repository: https://github.com/PiranhaCMS/piranha.core
+- Piranha questions on Stack Overflow: https://stackoverflow.com/questions/tagged/piranha-cms
+
 ## Chapter 18 - Building and Consuming Web Services
+
+- Media types: http://en.wikipedia.org/wiki/Media_type
+- WS-* standards: https://en.wikipedia.org/wiki/List_of_web_service_specifications
+- gRPC as an alternative to WCF: https://devblogs.microsoft.com/premier-developer/grpc-asp-net-core-as-a-migration-path-for-wcfs-in-net-core/
+- Verifying that the tokens used to call your web APIs are requested with the expected claims: https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-protected-web-api-verification-scope-app-roles
+- Route constraints: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/routing#route-constraint-reference
+- Benefits of setting version compatibility: https://docs.microsoft.com/en-us/aspnet/core/mvc/compatibility-version
+- Redis: https://redis.io
+- HTTP OPTIONS method and other HTTP methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
+- Dependency injection for ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
+- Proposed standard for Problem Details for HTTP APIs: https://tools.ietf.org/html/rfc7807
+- Implementing problem details: https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.problemdetails
+- REST Client: https://github.com/Huachao/vscode-restclient/blob/master/README.md
+- HTTP POST requests: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST
+- Swagger: https://swagger.io/
+- How Swagger can support multiple versions of an API: https://stackoverflow.com/questions/30789045/leverage-multipleapiversions-in-swagger-with-attribute-versioning/30789944
+- Importance of documenting services: https://idratherbewriting.com/learnapidoc/
+- It is the BaseAddress and DefaultRequestHeaders properties that you should treat with caution with multiple threads: https://medium.com/@nuno.caneco/c-httpclient-should-not-be-disposed-or-should-it-45d2a8f568bc
+- You're using HttpClient wrong and it is destabilizing your software: https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/
+- How to initiate HTTP requests: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests
+- HttpClient extension methods for easily working with JSON: https://github.com/dotnet/designs/blob/main/accepted/2020/json-http-extensions/json-http-extensions.md
+- CORS can be enabled to allow different origin requests: https://docs.microsoft.com/en-us/aspnet/core/security/cors
+- How to extend the health check response: https://blogs.msdn.microsoft.com/webdev/2018/08/22/asp-net-core-2-2-0-preview1-healthcheck/
+- Check latest version of analyzers package: http://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Api.Analyzers/
+- How Polly can make your web services more reliable: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly
+- Design decisions around endpoint routing: https://devblogs.microsoft.com/aspnet/asp-net-core-2-2-0-preview1-endpoint-routing/
+- Endpoint routing: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/routing
+- Previous routing system: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/routing?view=aspnetcore-2.1
+- Common HTTP security headers that you might want to add: https://www.meziantou.net/security-headers-in-asp-net-core.htm
+- Core WCF repository: https://github.com/CoreWCF/CoreWCF
+- gRPC: https://grpc.io
+- How to use gRPC with ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/grpc/aspnetcore
+- Create web APIs with ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/web-api/
+- Swagger Tools: https://swagger.io/tools/
+- Swashbuckle for ASP.NET Core: https://github.com/domaindrivendev/Swashbuckle.AspNetCore
+- Health checks in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks
+- Use HttpClientFactory to implement resilient HTTP requests: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
 
 ## Chapter 19 - Building Intelligent Apps Using Machine Learning
 
+- You can learn the science behind one of the most popular and successful data science techniques by enrolling in Harvard University's free Data Science: Machine Learning 8-week course: https://www.edx.org/course/data-science-machine-learning-2
+- To learn about machine learning in depth, read Python Machine Learning, Third Edition by Sebastian Raschka and Vahid Mirjalili: https://www.packtpub.com/product/python-machine-learning-third-edition/9781789955750
+- Job roles who are involved with machine learning: https://www.datasciencecentral.com/profiles/blogs/difference-between-machine-learning-data-science-ai-deep-learning
+- Overfitting and underfitting and how to compensate for it: https://elitedatascience.com/overfitting-in-machine-learning
+- Announcement for ML.NET: https://devblogs.microsoft.com/dotnet/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/
+- Accord.NET Framework: http://accord-framework.net
+- Microsoft Infer.NET: https://www.microsoft.com/en-us/research/blog/the-microsoft-infer-net-machine-learning-framework-goes-open-source/
+- How to create a game match up list app with Infer.NET and probabilistic programming: https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/matchup-app-infer-net
+- The traditional "Hello World" app for machine learning is one that can predict the type of iris flower based on four features: petal length, petal width, sepal length, and sepal width. You can follow a 10-minute tutorial: https://dotnet.microsoft.com/learn/machinelearning-ai/ml-dotnet-get-started-tutorial/intro
+- Design of the IDataView interface: https://github.com/dotnet/machinelearning/blob/master/docs/code/IDataViewDesignPrinciples.md
+- Simon Funk's use of SVD: https://sifter.org/~simon/journal/20061027.2.html
+- Use of matrix factorization in recommender systems: https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)
+- August 2020 ML.NET API and Tooling Updates: https://devblogs.microsoft.com/dotnet/august-ml-net-api-and-tooling-updates/
+- What is ML.Net and how does it work?: https://docs.microsoft.com/en-us/dotnet/machine-learning/how-does-mldotnet-work
+- Machine learning glossary of important terms: https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/glossary
+- Channel 9 ML.NET videos: https://aka.ms/dotnet3-mlnet
+- YouTube ML.NET videos: https://aka.ms/mlnetyoutube
+- Machine Learning Explainability vs Interpretability: Two concepts that could help restore trust in AI: https://www.kdnuggets.com/2018/12/machine-learning-explainability-interpretability-ai.html
+- Machine learning tasks in ML.NET: https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/tasks
+- Machine learning data transforms - ML.NET: https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/transforms
+- ML.NET Samples: https://github.com/dotnet/machinelearning-samples/blob/master/README.md
+- Community Samples: https://github.com/dotnet/machinelearning-samples/blob/master/docs/COMMUNITY-SAMPLES.md
+- ML.NET API reference: https://docs.microsoft.com/en-gb/dotnet/api/?view=ml-dotnet
+- ML.NET: The Machine Learning Framework for .NET Developers: https://msdn.microsoft.com/en-us/magazine/mt848634
+- Building recommendation engine for .NET applications using Azure Machine Learning: https://devblogs.microsoft.com/dotnet/dot-net-recommendation-system-for-net-applications-using-azure-machine-learning/
+
+### Practice with sample ML.NET projects
+
+- Sentiment Analysis for User Reviews: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/BinaryClassification_SentimentAnalysis
+- Customer Segmentation - Clustering sample: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Clustering_CustomerSegmentation
+- Spam Detection for Text Messages: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/BinaryClassification_SpamDetection
+- GitHub Issues Labeler: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler
+- Movie Recommendation - Matrix Factorization problem sample: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation
+- Taxi Fare Prediction: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Regression_TaxiFarePrediction
+- Bike Sharing Demand - Regression problem sample: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Regression_BikeSharingDemand
+- eShopDashboardML - Sales forecasting: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Forecasting-Sales
+
 ## Chapter 20 - Building Web User Interfaces Using Blazor
 
+- Official list of supported Blazor platforms: https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms
+- Blazor hosting models: https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models
+- Blazor Mobile Bindings: https://devblogs.microsoft.com/aspnet/mobile-blazor-bindings-experiment/
+- Blazor Hybrid apps: https://devblogs.microsoft.com/aspnet/hybrid-blazor-apps-in-mobile-blazor-bindings-july-update/
+- The reason for needing CSS isolation for Blazor components: https://github.com/dotnet/aspnetcore/issues/10170
+- OI icons: https://iconify.design/icon-sets/oi/
+- Setting `<head>` elements: https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/additional-scenarios-influence-html-head-tag-elements
+- Forms and validation: https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation
+- NavigationManager with Blazor routes: https://docs.microsoft.com/en-us/aspnet/core/blazor/fundamentals/routing#uri-and-navigation-state-helpers
+- Implementing offline support for Blazor WebAssembly projects: https://docs.microsoft.com/en-us/aspnet/core/blazor/progressive-web-app#offline-support
+- Lazy loading assemblies: https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0
+- Awesome Blazor: A collection of awesome Blazor resources: https://github.com/AdrienTorris/awesome-blazor
+- Blazor University: Learn the new .NET SPA framework from Microsoft: https://blazor-university.com
+- Blazor - app building workshop: In this workshop, we will build a complete Blazor app and learn about the various Blazor framework features along the way: https://github.com/dotnet-presentations/blazor-workshop/
+- Carl Franklin's Blazor Train: https://www.youtube.com/playlist?list=PL8h4jt35t1wjvwFnvcB2LlYL4jLRzRmoz
+- Routing in Blazor Apps: Comparing the routing of popular web frameworks like React and Angular with Blazor: https://devblogs.microsoft.com/premier-developer/routing-in-blazor-apps/
+- Welcome to PACMAN written in C# and running on Blazor WebAssembly: https://github.com/SteveDunn/PacManBlazor
+
 ## Chapter 21 - Building Cross-Platform Mobile Apps
+
+- Packt has two books about Xamarin.Forms with 4.5 stars on Amazon:
+  - Xamarin.Forms Projects: https://www.packtpub.com/product/xamarin-forms-projects-second-edition/9781839210051
+  - Mastering Xamarin.Forms: https://www.packtpub.com/product/mastering-xamarin-forms-third-edition/9781839213380
+- Xamarin supports creating Tizen mobile apps for Samsung devices: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/platform/other/tizen
+- If you want to use Visual Studio 2019 to create a mobile app, then you can read how to connect to a Mac build host: https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/windows/connecting-to-mac/
+- Pros and cons of the two major mobile platforms based on aspects such as revenue generation and user engagement: https://fueled.com/blog/app-store-vs-google-play/
+- Xamarin dependency services: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/dependency-service/introduction
+- Xamarin.Forms Pages: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages
+- Entry control: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/entry
+- Editor control: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/editor
+- ListView control: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/
+- ATS: https://docs.microsoft.com/en-us/xamarin/ios/app-fundamentals/ats
+- Handling self-signed certificates: https://docs.remotingsdk.com/Clients/Tasks/HandlingSelfSignedCertificates/NET/
+- Android and cleartext support: https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/
+- Xamarin.Forms documentation: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
+- Xamarin.Essentials provides developers with cross-platform APIs for their mobile applications: https://docs.microsoft.com/en-us/xamarin/essentials/
+- Self Signed iOS Certifcates and Certificate Pinning in a Xamarin.Forms application: https://nicksnettravels.builttoroam.com/ios-certificate/
+- Protecting your users with certificate pinning: https://www.basdecort.com/protecting-your-users-with-certificate-pinning/
+- HttpClient and SSL/TLS implementation selector for iOS/macOS: https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/http-stack
