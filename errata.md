@@ -228,6 +228,28 @@ In Step 3, when downloading SQLite for Windows, make sure to download the tools 
 
 ![Download links for SQLite on Windows](download-sqlite.png)
 
+## Page 549 - Defining a typed view
+
+In Step 3, the code to output the unit price of a product at the bottom of page 549 needs the `Value` property, as shown in the following code:
+```
+// before
+@item.UnitPrice.ToString("C")
+
+// after
+@item.UnitPrice.Value.ToString("C")
+```
+This is required because on page 481, in Step 5, I tell you to change any `money` properties, for example, in Order.cs, to use a nullable `decimal` instead of an array of bytes, as shown in the following code:
+```
+// before
+[Column(TypeName = "money")]
+public byte[] Freight { get; set; }
+
+// after
+[Column(TypeName = "money")]
+public decimal? Freight { get; set; }
+```
+When I wrote the solution code, I neglected to add the `?` to make the `decimal` property nullable, so later I did not need to use `.Value`.
+
 ## Appendix A - Chapter 3 - Question 10
 
 10. What interface must an object implement to be enumerated over by using the `foreach` statement?
