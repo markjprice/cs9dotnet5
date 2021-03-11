@@ -10,7 +10,7 @@ Microsoft will release previews of .NET 6 regularly until the final version on T
 - June, 2021: Announcing .NET 6 Preview 5
 - May, 2021: Announcing .NET 6 Preview 4 
 - April, 2021: Announcing .NET 6 Preview 3
-- March, 2021: Announcing .NET 6 Preview 2
+- March 11, 2021: [Announcing .NET 6 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-2/)
 - February 17, 2021: [Announcing .NET 6 Preview 1](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-1/)
 
 ## Chapters 1 to 19
@@ -71,13 +71,15 @@ For the `CalculatorLibUnitTests` project, the additional referenced NuGet packag
 </Project>
 ```
 ## Chapter 11 - Working with Databases Using Entity Framework Core
+Currently, EF Core still targets .NET 5.0, so I have not updated the target framework in the project file below.
+
 For the `WorkingWithEFCore` project, the additional referenced NuGet packages should use the .NET 6.0 preview versions, as shown in the following markup:
 ```
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
