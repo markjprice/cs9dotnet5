@@ -13,6 +13,7 @@ Corrections for typos and other mistakes, and improvements like refactoring code
 - [Errata & Improvements](errata.md)
 - [Fifth Edition's support for .NET 6.0](dotnet6.md)
 - [Book links](book-links.md)
+- [Five Years of Ratings](five-years-of-ratings.md)
 
 ## Online materials
 Supplementary book materials available to download as PDFs: 
