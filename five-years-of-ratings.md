@@ -26,7 +26,7 @@ Nice jump in five-star ratings to over 70%. But another small increase in one-st
 
 ## 6th edition (coming November 2021)
 
-Regardless of the benefits of Visual Studio Code, I do not want any reader to feel that I make them use a specific coding tool, so I am making some changes in the sixth edition that I hope will please readers who want to use Visual Studio or other coding tools to complete the coding tasks in the book. 
+Regardless of the benefits of Visual Studio Code, I do not want any reader to feel that I make them use a specific coding tool, so I am making some changes in the sixth edition that I hope will please readers who want to use Visual Studio or other coding tools to complete the coding tasks in the book. Plus there will be improvements throughout the book, expanded coverage of data management APIs, and a whole new chapter about .NET MAUI (Multi-platform App User Interface) for building cross-platform apps for mobile and desktop.
 
 ## Link to live ratings
 
