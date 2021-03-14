@@ -24,6 +24,20 @@ dotnet-core-uninstall remove --all-previews-but-latest --sdk
 
 In steps 5 and 6, I show the C# compiler (`csc`) command listing the supported language versions on macOS. There is also a note explaining that the `csc` command is not in the default path on Windows so you get an error. So I include a link to a Microsoft article explaining how to fix this. I regret including steps 5 and 6 because they cause some readers problems without adding any real value because the `csc` command is never used again. In the next edition I will remove steps 5 and 6.
 
+## Page 40 - Verbs are methods
+
+In the book I say that the `WriteLine` method outputs a carriage-return, as shown in the following code:
+```
+// outputs a carriage-return
+Console.WriteLine();
+```
+I should have said that the `WriteLine` method outputs the current line terminator string that by default are two characters, a carriage-return followed by a line feed, as shown in the following code:
+```
+// outputs the current line terminator string
+// by default, this is a carriage-return and line feed
+Console.WriteLine();
+```
+
 ## Page 51 - Comparing double and decimal types
 
 In the book, I say that the `double` type has some special static members, including one named `Infinity`. This is wrong. There are two members named `PositiveInfinity` and `NegativeInfinity`.
