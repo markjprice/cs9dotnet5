@@ -47,7 +47,7 @@ I should have also pointed out that the `\b` in `\bravia` would be interpreted a
 Also, the compiler would  complain about the `\s` in `\sony` because `\s` is not a valid escape sequence, as shown in the following exception message: `error CS1009: Unrecognized escape sequence`.
 
 You can read more about character escapes, including a list of valid characters, at the following link: 
-https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/#string-escape-sequences
 
 ## Page 51 - Comparing double and decimal types
 
