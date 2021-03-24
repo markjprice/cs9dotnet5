@@ -40,8 +40,11 @@ Console.WriteLine();
 
 ## Page 45 - Understanding verbatim strings
 
-In the book, I say that the code `string filePath = "C:\televisions\sony\bravia.txt";` has the problem that compiler will convert `\t` to as escape sequence and damage the actual data. I should change the example as `\s` will genereate `error CS1009: Unrecognized escape sequence` so that the code will not even compile.
-The example that illustrates my idea `string filePath = "C:\televisions\toshiba\repairinstruction.txt";`
+In the book, I say that the code `string filePath = "C:\televisions\sony\bravia.txt";` has the problem that compiler will convert `\t` to the tab character because it processes `\t` as an escape sequence. 
+
+I should have also pointed out that the `\b` in `\bravia` would be interpretted as a backspace. Also, the compiler would  complain about the `\s` in `\sony` because `\s` is not a valid escape sequence, as shown in the following exception message: `error CS1009: Unrecognized escape sequence`.
+
+[Character Escapes](https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions)
 
 ## Page 51 - Comparing double and decimal types
 
