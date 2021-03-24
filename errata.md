@@ -99,6 +99,19 @@ Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int
 
 If you uncomment the statement that assigns an array of `int` values, then the code works without throwing an exception because all arrays have a `Length` property.
 
+## Page 69 - Setting options with arguments
+Written:
+```
+`dotnet run red yellow 50`
+On Linux, this will work correctly. On Windows, this will run, but the cursor will not change size. On macOS, you'll see an unhandled exception ...
+```
+According to `Console.cs` version 5.0.0.0 `System.Console.CursorSize` throws `System.PlatformNotSupportedException` if ```The set operation is invoked on an operating system other than Windows```. So the text should be:
+
+```
+`dotnet run red yellow 50`
+On Windows, this will run, but the cursor will not change size. On other operating systems including macOS and Linux, you'll see an unhandled exception ...
+```
+
 ## Page 83 - Branching with the switch statement
 The third bullet point states, "Or they should have no statements (like case 3 in the following code)," 
 
