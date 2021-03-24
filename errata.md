@@ -40,11 +40,14 @@ Console.WriteLine();
 
 ## Page 45 - Understanding verbatim strings
 
-In the book, I say that the code `string filePath = "C:\televisions\sony\bravia.txt";` has the problem that compiler will convert `\t` to the tab character because it processes `\t` as an escape sequence. 
+In the book, I say that the code `string filePath = "C:\televisions\sony\bravia.txt";` has the problem that compiler will interpret `\t` as the tab character because it processes `\t` as an escape sequence. 
 
-I should have also pointed out that the `\b` in `\bravia` would be interpretted as a backspace. Also, the compiler would  complain about the `\s` in `\sony` because `\s` is not a valid escape sequence, as shown in the following exception message: `error CS1009: Unrecognized escape sequence`.
+I should have also pointed out that the `\b` in `\bravia` would be interpreted as a backspace character. 
 
-[Character Escapes](https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions)
+Also, the compiler would  complain about the `\s` in `\sony` because `\s` is not a valid escape sequence, as shown in the following exception message: `error CS1009: Unrecognized escape sequence`.
+
+You can read more about character escapes, including a list of valid characters, at the following link: 
+https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions
 
 ## Page 51 - Comparing double and decimal types
 
@@ -100,17 +103,16 @@ Unhandled exception. Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'int
 If you uncomment the statement that assigns an array of `int` values, then the code works without throwing an exception because all arrays have a `Length` property.
 
 ## Page 69 - Setting options with arguments
-Written:
+In the book, I get you to write code to set the console cursor size to a value passed as the last argument and then I say to enter the following command:
 ```
-`dotnet run red yellow 50`
-On Linux, this will work correctly. On Windows, this will run, but the cursor will not change size. On macOS, you'll see an unhandled exception ...
+dotnet run red yellow 50
 ```
-According to `Console.cs` version 5.0.0.0 `System.Console.CursorSize` throws `System.PlatformNotSupportedException` if ```The set operation is invoked on an operating system other than Windows```. So the text should be:
 
-```
-`dotnet run red yellow 50`
-On Windows, this will run, but the cursor will not change size. On other operating systems including macOS and Linux, you'll see an unhandled exception ...
-```
+This will attempt to set the cursor size to 50%.
+
+In the book, I say that "On Linux, this will work correctly. On Windows, this will run, but the cursor will not change size. On macOS, you'll see an unhandled exception." But according to `Console.cs` version 5.0.0.0 `System.Console.CursorSize` throws `System.PlatformNotSupportedException` if the set operation is invoked on an operating system other than Windows. I should have said, "On Windows, this will run, but the cursor will not change size. On other operating systems including macOS and Linux, you'll see an unhandled exception."
+
+In the sixth edition, I will try to find different example code that does something more interesting! ;-)
 
 ## Page 83 - Branching with the switch statement
 The third bullet point states, "Or they should have no statements (like case 3 in the following code)," 
