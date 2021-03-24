@@ -38,6 +38,11 @@ I should have said that the `WriteLine` method outputs the current line terminat
 Console.WriteLine();
 ```
 
+## Page 45 - Understanding verbatim strings
+
+In the book, I say that the code `string filePath = "C:\televisions\sony\bravia.txt";` has the problem that compiler will convert `\t` to as escape sequence and damage the actual data. I should change the example as `\s` will genereate `error CS1009: Unrecognized escape sequence` so that the code will not even compile.
+The example that illustrates my idea `string filePath = "C:\televisions\toshiba\repairinstruction.txt";`
+
 ## Page 51 - Comparing double and decimal types
 
 In the book, I say that the `double` type has some special static members, including one named `Infinity`. This is wrong. There are two members named `PositiveInfinity` and `NegativeInfinity`.
