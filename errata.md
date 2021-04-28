@@ -162,16 +162,6 @@ At the bottom of page 120, I list the numbers in the Fibonacci sequence but I wr
 ## Page 134 - Switching trace levels
 In Step 14, I wrote "Step **into** the call to the `Bind` method by clicking the Step Into or Step Over buttons or pressing F11 or F10." I should have written, "Step **over** the call to the `Bind` method by clicking the Step Into or Step Over buttons or pressing F11 or F10." In the context of being on an external assembly method call, Step Into has the same affect as Step Over.
 
-## Page 241 - Publishing a single-file app
-In the book, I say that to embed the `pdb` file in the `exe` file, add an element to your `csproj` file, as shown in the following code:
-```
-<DebugType>embed</DebugType>
-```
-It should have a value of `embedded`, as shown in the following code:
-```
-<DebugType>embedded</DebugType>
-```
-
 ## Page 163 - Deconstructing tuples
 The code example is about deconstructing tuples into individual parts. It shows that you do not have to return a named tuple because during deconstruction the syntax allows explicit naming of the individual parts, as shown in the following code:
 
@@ -219,6 +209,16 @@ public class Person : System.Object, IComparable<Person>
 ## Page 210 - Extending classes to add functionality
 
 In Step 2, I should have made it clear that the statements should be written **after** the previous code that calls the `WriteToConsole` method to ensure that your output matches the book on page 211. 
+
+## Page 241 - Publishing a single-file app
+In the book, I say that to embed the `pdb` file in the `exe` file, add an element to your `csproj` file, as shown in the following code:
+```
+<DebugType>embed</DebugType>
+```
+It should have a value of `embedded`, as shown in the following code:
+```
+<DebugType>embedded</DebugType>
+```
 
 ## Page 314 - Compressing streams
 
