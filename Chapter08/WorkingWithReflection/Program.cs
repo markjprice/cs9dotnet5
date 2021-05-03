@@ -45,7 +45,7 @@ namespace WorkingWithReflection
         if (compilerGenerated != null) break;
 
         WriteLine();
-        WriteLine($"Type: {type.FullName}");
+        WriteLine($"Type: {type.Name}");
         MemberInfo[] members = type.GetMembers();
         foreach (MemberInfo member in members)
         {

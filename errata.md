@@ -220,6 +220,17 @@ It should have a value of `embedded`, as shown in the following code:
 <DebugType>embedded</DebugType>
 ```
 
+## Page 287 - Creating custom attributes
+
+In Step 5, although writing the `FullName` property works and outputs `Packt.Shared.CoderAttribute`, in the output shown in the book I wrote the `Name` property to keep it shorter as `CoderAttribute`. To match the output, change the following code:
+```
+WriteLine($"Type: {type.FullName}");
+```
+To:
+```
+WriteLine($"Type: {type.Name}");
+```
+
 ## Page 314 - Compressing streams
 
 In Step 2, I say, `GZipSteam`. It should say, `GZipStream`.
