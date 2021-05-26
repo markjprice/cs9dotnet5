@@ -8,7 +8,7 @@ Microsoft will release previews of .NET 6 regularly until the final version on T
 - August, 2021: Announcing .NET 6 Preview 7
 - July, 2021: Announcing .NET 6 Preview 6
 - June, 2021: Announcing .NET 6 Preview 5
-- May, 2021: Announcing .NET 6 Preview 4 
+- May 25, 2021: [Announcing .NET 6 Preview 4](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-4/)
 - April 8, 2021: [Announcing .NET 6 Preview 3](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-3/)
 - March 11, 2021: [Announcing .NET 6 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-2/)
 - February 17, 2021: [Announcing .NET 6 Preview 1](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-1/)
@@ -57,7 +57,7 @@ For the `CalculatorLibUnitTests` project, the additional referenced NuGet packag
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.0-preview*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
@@ -143,7 +143,7 @@ For the `NorthwindMvc` project, the referenced NuGet packages should use the .NE
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0-preview.*" />
     
     <!-- added in Chapter 18 to call a web service -->
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -168,15 +168,15 @@ For the `NorthwindCms` project, the referenced NuGet packages should use the lat
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0-preview.*" />
-    <PackageReference Include="Piranha" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.AspNetCore" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.AttributeBuilder" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.Data.EF.SQLite" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.ImageSharp" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.Local.FileStorage" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.Manager" Version="9.0.0-rc2" />
-    <PackageReference Include="Piranha.Manager.TinyMCE" Version="9.0.0-rc2" />
+    <PackageReference Include="Piranha" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.AspNetCore" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.AttributeBuilder" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.Data.EF.SQLite" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.ImageSharp" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.Local.FileStorage" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.Manager" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha.Manager.TinyMCE" Version="9.1.0-beta1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -198,7 +198,7 @@ For the `NorthwindService` project, the referenced NuGet packages should use the
   <ItemGroup>
     <ProjectReference Include="..\NorthwindContextLib\NorthwindContextLib.csproj" />
 
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" 
                       Version="6.0.0-preview.*" />
   </ItemGroup>
