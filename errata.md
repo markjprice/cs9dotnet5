@@ -219,6 +219,11 @@ It should have a value of `embedded`, as shown in the following code:
 ```
 <DebugType>embedded</DebugType>
 ```
+In Step 1 at the bottom of the page, I say, "In Visual Studio Code, navigate to TERMINAL, and enter the following command to 
+build the release version of the console application for Windows 10:" but the command shown is for macOS (`osx-x64`), as shown in the following command:
+```
+dotnet publish -c Release -r osx-x64 /p:PublishSingleFile=true
+```
 
 ## Page 287 - Creating custom attributes
 
