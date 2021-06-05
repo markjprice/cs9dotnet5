@@ -291,6 +291,22 @@ In Step 3, when downloading SQLite for Windows, make sure to download the tools 
 
 ![Download links for SQLite on Windows](download-sqlite.png)
 
+## Page 480 - Manually improving the class-to-table mapping
+
+To avoid needing to rename the Id properties because the SQL script uses names like CategoryID and EF Core uses names like CategoryId, for the sixth edition, I modified the SQL script to use Id too. You can get Northwind4SQLite.sql from the following GitHub repo: https://github.com/markjprice/cs10dotnet6/tree/main/sql-scripts
+
+Instead of manually adding `[StringLength]` attributes you can use your code editor's find and replace feature with regular expressions, as shown in the following search expression:
+```
+\[Column\(TypeName = "(nchar|nvarchar) \((.*)\)"\)\]
+```
+Replace expression:
+```
+$&\n[StringLength($2)]
+```
+Visual Studio find and replace, as shown in the following screenshot:
+
+![Visual Studio find and replace](vs2019-find-replace.png)
+
 ## Page 549 - Defining a typed view
 
 In Step 3, the code to output the unit price of a product at the bottom of page 549 needs the `Value` property, as shown in the following code:
