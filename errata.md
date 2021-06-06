@@ -293,17 +293,25 @@ In Step 3, when downloading SQLite for Windows, make sure to download the tools 
 
 ## Page 480 - Manually improving the class-to-table mapping
 
-To avoid needing to rename the Id properties because the SQL script uses names like CategoryID and EF Core uses names like CategoryId, for the sixth edition, I modified the SQL script to use Id too. You can get Northwind4SQLite.sql from the following GitHub repo: https://github.com/markjprice/cs10dotnet6/tree/main/sql-scripts
+There are two improvements that can be made to this section.
 
-Instead of manually adding `[StringLength]` attributes you can use your code editor's find and replace feature with regular expressions, as shown in the following search expression:
+### Column names and property names
+
+The `Northwind.sql` script that I provide with the fifth edition uses column names like `CategoryID` for primary keys. But the `dotnet-ef` tool wants to use property names like `CategoryId` so it adds a `[Column(Name = "CategoryID")]`. In the fifth edition, I say to remove them and instead change the property names to match the columns named. 
+
+For the sixth edition, I modified the SQL script to use columns names like `CategoryId` too so that the `dotnet-ef` tool does not need to add those attributes. You can get improved `Northwind4SQLite.sql` script from the following GitHub repo: https://github.com/markjprice/cs10dotnet6/tree/main/sql-scripts
+
+### 
+
+Instead of manually adding `[StringLength]` attributes to match the maximum number of characters that should be stored in text columns, you can use your code editor's find and replace feature with a regular expression that finds all instances of the `[Column]` attribute with either `nchar` or `nvarchar` and then extracts the length value as a reference, as shown in the following search expression:
 ```
 \[Column\(TypeName = "(nchar|nvarchar) \((.*)\)"\)\]
 ```
-Replace expression:
+Then you can use the following replace expression to add the `[StringLength]` attribute after the `[Column]` attribute with the referenced length:
 ```
 $&\n[StringLength($2)]
 ```
-Visual Studio find and replace, as shown in the following screenshot:
+As an example of this in action, see Visual Studio's find and replace, as shown in the following screenshot:
 
 ![Visual Studio find and replace](vs2019-find-replace.png)
 
