@@ -301,7 +301,7 @@ The `Northwind.sql` script that I provide with the fifth edition uses column nam
 
 For the sixth edition, I modified the SQL script to use columns names like `CategoryId` so that the `dotnet-ef` tool does not need to add those mappings. You can get the improved `Northwind4SQLite.sql` script from the following GitHub repo for the sixth edition: https://github.com/markjprice/cs10dotnet6/tree/main/sql-scripts
 
-### 
+### Limiting the length of text values
 
 Instead of manually adding `[StringLength]` attributes to match the maximum number of characters that should be stored in text columns, you can use your code editor's find and replace feature with a regular expression that finds all instances of the `[Column]` attribute with either `nchar` or `nvarchar` and then extracts the length value as a reference, as shown in the following search expression:
 ```
