@@ -315,6 +315,17 @@ As an example of this in action, see Visual Studio's find and replace, as shown 
 
 ![Visual Studio find and replace](vs2019-find-replace.png)
 
+## Page 514 - Implementing the employees feature using EF Core
+
+In Step 8, in the `employees.cshtml` file, the HTML defines a heading element, as shown in the following markup:
+```
+<h1 class="display-2">Employees</h2>
+```
+The end tag should be an h1, as shown in the following markup:
+```
+<h1 class="display-2">Employees</h1>
+```
+
 ## Page 549 - Defining a typed view
 
 In Step 3, the code to output the unit price of a product at the bottom of page 549 needs the `Value` property, as shown in the following code:
