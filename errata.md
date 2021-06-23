@@ -303,6 +303,8 @@ For the sixth edition, I modified the SQL script to use columns names like `Cate
 
 ### Limiting the length of text values
 
+The `dotnet-ef` tool generates entity classes from a database using the database provider that you specify. The SQL Server database provider respects the length limitations like `nvarchar(30)` and decorates the mapped property with `[StringLength(30)]` but the Sqlite database provider does not. Instead, it stores the information about the length limitations in a `[Column(TypeName = "nvarchar(30)")]` attribute. If you later want ASP.NET Core or mobile or desktop apps to validate the entity models, it can only do so if properties are decorated with validation attributes like `[StringLength]` and `[RegularExpression]`. 
+
 Instead of manually adding `[StringLength]` attributes to match the maximum number of characters that should be stored in text columns, you can use your code editor's find and replace feature with a regular expression that finds all instances of the `[Column]` attribute with either `nchar` or `nvarchar` and then extracts the length value as a reference, as shown in the following search expression:
 ```
 \[Column\(TypeName = "(nchar|nvarchar) \((.*)\)"\)\]
