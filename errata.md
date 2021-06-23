@@ -297,7 +297,7 @@ There are two improvements that can be made to this section.
 
 ### Column names and property names
 
-The `Northwind.sql` script that I provide with the fifth edition uses column names like `CategoryID` for primary keys. But the `dotnet-ef` tool wants to use property names like `CategoryId` so it adds a `[Column(Name = "CategoryID")]` attribute to map between them. In the fifth edition, I say to remove those clumn name mappings and instead change the property names to match the column names. This is a lot of work! Hopefully most readers download the solution classes from this GitHub repository instead. 
+The `Northwind.sql` script that I provide with the fifth edition uses column names like `CategoryID` for primary keys. But the `dotnet-ef` tool wants to use property names like `CategoryId` so it adds a `[Column(Name = "CategoryID")]` attribute to map between them. In the fifth edition, I say to remove those column name mappings and instead change the property names to match the column names. This is a lot of work! Hopefully most readers download the solution classes from this GitHub repository instead. 
 
 For the sixth edition, I modified the SQL script to use columns names like `CategoryId` so that the `dotnet-ef` tool does not need to add those mappings. You can get the improved `Northwind4SQLite.sql` script from the following GitHub repo for the sixth edition: https://github.com/markjprice/cs10dotnet6/tree/main/sql-scripts
 
