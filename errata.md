@@ -348,6 +348,10 @@ public decimal? Freight { get; set; }
 ```
 When I wrote the solution code, I neglected to add the `?` to make the `decimal` property nullable, so later I did not need to use `.Value`.
 
+## Page 566 - Using other project templates
+
+In Step 1, the switch for the `dotnet new` command should be `--list` instead of `--help`.
+
 ## Appendix A - Chapter 3 - Question 10
 
 10. What interface must an object implement to be enumerated over by using the `foreach` statement?
