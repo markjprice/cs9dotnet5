@@ -71,15 +71,13 @@ For the `CalculatorLibUnitTests` project, the additional referenced NuGet packag
 </Project>
 ```
 ## Chapter 11 - Working with Databases Using Entity Framework Core
-Currently, EF Core 6.0 previews still target .NET 5.0, so I have not updated the target framework in the project file below.
-
 For the `WorkingWithEFCore` project, the additional referenced NuGet packages should use the .NET 6.0 preview versions, as shown in the following markup:
 ```
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -96,7 +94,7 @@ For the `LinqWithEFCore` and `Exercise02` projects, the additional referenced Nu
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -168,15 +166,15 @@ For the `NorthwindCms` project, the referenced NuGet packages should use the lat
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0-preview.*" />
-    <PackageReference Include="Piranha" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.AspNetCore" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.AttributeBuilder" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.Data.EF.SQLite" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.ImageSharp" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.Local.FileStorage" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.Manager" Version="9.1.0-beta1" />
-    <PackageReference Include="Piranha.Manager.TinyMCE" Version="9.1.0-beta1" />
+    <PackageReference Include="Piranha" Version="9.1.1" />
+    <PackageReference Include="Piranha.AspNetCore" Version="9.1.0" />
+    <PackageReference Include="Piranha.AspNetCore.Identity.SQLite" Version="9.1.0" />
+    <PackageReference Include="Piranha.AttributeBuilder" Version="9.1.0" />
+    <PackageReference Include="Piranha.Data.EF.SQLite" Version="9.1.0" />
+    <PackageReference Include="Piranha.ImageSharp" Version="9.1.0" />
+    <PackageReference Include="Piranha.Local.FileStorage" Version="9.1.0" />
+    <PackageReference Include="Piranha.Manager" Version="9.1.1" />
+    <PackageReference Include="Piranha.Manager.TinyMCE" Version="9.1.0" />
   </ItemGroup>
 
   <ItemGroup>
