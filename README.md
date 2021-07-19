@@ -11,7 +11,7 @@ Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/
 
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
-- [Errata & Improvements](errata.md)
+- [Improvements & Errata - list of corrections](errata.md)
 - [Fifth Edition's support for .NET 6.0](dotnet6.md)
 - [Book links](book-links.md)
 - [Five Years of Ratings](five-years-of-ratings.md)
