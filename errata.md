@@ -210,6 +210,10 @@ public class Person : System.Object, IComparable<Person>
 
 In Step 2, I should have made it clear that the statements should be written **after** the previous code that calls the `WriteToConsole` method to ensure that your output matches the book on page 211. 
 
+## Page 222 - Exercise 6.3 – Explore topics
+
+The link for Delegates should be: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features#delegates-and-lambda-expressions
+
 ## Page 241 - Publishing a single-file app
 In the book, I say that to embed the `pdb` file in the `exe` file, add an element to your `csproj` file, as shown in the following code:
 ```
