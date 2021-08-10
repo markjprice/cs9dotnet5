@@ -161,7 +161,7 @@ If you bought the paper edition of C# 9 and .NET 5 then this page contains all t
 - Finalizers and disposing: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/unmanaged
 - IDisposable interface: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects
 - Operator (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
-- Delegates: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features-delegates-and-lambda-expressions
+- Delegates: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features#delegates-and-lambda-expressions
 - Events (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event
 - Interfaces: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-interfaces
 - Generics (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics
