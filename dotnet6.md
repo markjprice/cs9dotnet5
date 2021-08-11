@@ -16,6 +16,12 @@ Microsoft will release previews of .NET 6 regularly until the final version on T
 ## Chapters 1 to 19
 After [downloading](https://dotnet.microsoft.com/download/dotnet/6.0) and installing .NET 6.0 SDK, follow the step-by-step instructions in the book and they should work as expected since the project file will automatically reference .NET 6.0 as the target framework. 
 
+However, with .NET 6 Preview 7 and later, the default project template for console apps has changed. To retain the existing behaviour, when creating a console app, use the following command that tells the SDK to use the .NET 5.0 template:
+```
+dotnet new console -f net5.0
+```
+Then manually change the target framework from 5 to 6. You do this in the same way as you upgrade a project from the GitHub repo.
+
 To upgrade a project in the GitHub repository from .NET 5.0 to .NET 6.0 just requires a target framework change in your project file.
 
 Change this:
