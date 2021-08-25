@@ -289,6 +289,10 @@ public static bool CheckPassword(string username, string password,
 }
 ```
 
+## Page 389 - Logging EF Core
+
+Before Step 5, there is a missing step that should tell you to comment out the `FilteredIncludes` method call in `Main` and uncomment the call to `QueryingProducts`.
+
 ## Page 365 - Setting up SQLite for Windows
 
 In Step 3, when downloading SQLite for Windows, make sure to download the tools ZIP not the dll ZIPs, as shown in the following screenshot:
