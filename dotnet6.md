@@ -1,8 +1,8 @@
 # Fifth Edition's support for .NET 6
-Microsoft will release previews of .NET 6 regularly until the final version on Tuesday, November 9, 2021.
+Microsoft will release previews of .NET 6 regularly until the final version on Monday, November 8, 2021.
 
 - [Download .NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-- November 9, 2021: Announcing .NET 6.0
+- November 8, 2021: [Announcing .NET 6.0 — The Fastest .NET Yet](https://devblogs.microsoft.com/dotnet/announcing-net-6/)
 - October 12, 2021: [Announcing .NET 6 Release Candidate 2](https://devblogs.microsoft.com/dotnet/announcing-net-6-release-candidate-2/)
 - September 14, 2021: [Announcing .NET 6 Release Candidate 1](https://devblogs.microsoft.com/dotnet/announcing-net-6-rc1/)
 - August 10, 2021: [Announcing .NET 6 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-net-6-preview-7/)
