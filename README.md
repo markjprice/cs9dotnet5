@@ -1,5 +1,8 @@
 # Repository for the Packt Publishing book
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/markjprice/cs9dotnet5)
+
+> .NET 5 reaches end-of-life on May 8, 2022. I recommend upgrading to [.NET 6](https://github.com/markjprice/cs10dotnet6/blob/main/README.md) or [.NET 7](https://github.com/markjprice/cs11dotnet7/blob/main/README.md).
+
 ## C# 9 and .NET 5 - Modern Cross-Platform Development, Fifth Edition
 
 Order the book today!
