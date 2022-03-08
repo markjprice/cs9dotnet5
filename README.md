@@ -1,16 +1,9 @@
 # Repository for the Packt Publishing book
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/markjprice/cs9dotnet5)
 
-> .NET 5 reaches end-of-life on May 8, 2022. I recommend upgrading to [.NET 6](https://github.com/markjprice/cs10dotnet6/blob/main/README.md) or [.NET 7](https://github.com/markjprice/cs11dotnet7/blob/main/README.md).
-
 ## C# 9 and .NET 5 - Modern Cross-Platform Development, Fifth Edition
 
-Order the book today!
-- [Packt](https://www.packtpub.com/product/c-9-and-net-5-modern-cross-platform-development-fifth-edition/9781800568105)
-- [Amazon.com](https://www.amazon.com/dp/180056810X/)
-- [Amazon.co.uk](https://www.amazon.co.uk/dp/180056810X/)
-
-Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/
+> .NET 5 reaches end-of-life on [May 8, 2022](https://dotnet.microsoft.com/en-us/download/dotnet). I recommend upgrading to [.NET 6](https://github.com/markjprice/cs10dotnet6/blob/main/README.md) or [.NET 7](https://github.com/markjprice/cs11dotnet7/blob/main/README.md).
 
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
