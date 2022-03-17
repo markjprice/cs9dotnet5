@@ -1,5 +1,4 @@
 # Repository for the Packt Publishing book
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/markjprice/cs9dotnet5)
 
 ## C# 9 and .NET 5 - Modern Cross-Platform Development, Fifth Edition
 
