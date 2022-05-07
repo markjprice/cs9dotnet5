@@ -2,7 +2,7 @@
 
 ## C# 9 and .NET 5 - Modern Cross-Platform Development, Fifth Edition
 
-> .NET 5 reaches end-of-life on [May 8, 2022](https://dotnet.microsoft.com/en-us/download/dotnet). I recommend upgrading to [.NET 6](https://github.com/markjprice/cs10dotnet6/blob/main/README.md) or [.NET 7](https://github.com/markjprice/cs11dotnet7/blob/main/README.md).
+> .NET 5 reaches end-of-life on [Tuesday, May 10, 2022](https://dotnet.microsoft.com/en-us/download/dotnet). I recommend upgrading to [.NET 6](https://github.com/markjprice/cs10dotnet6/blob/main/README.md) or [.NET 7](https://github.com/markjprice/cs11dotnet7/blob/main/README.md).
 
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
