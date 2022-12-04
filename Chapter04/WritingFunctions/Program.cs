@@ -139,11 +139,11 @@ namespace WritingFunctions
 
     static int Factorial(int number)
     {
-      if (number < 1)
+      if (number < 0)
       {
-        return 0;
+        throw new ArgumentException("The factorial function is defined for non-negative integers only.");
       }
-      else if (number == 1)
+      else if (number == 0)
       {
         return 1;
       }
